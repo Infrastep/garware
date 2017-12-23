@@ -1,0 +1,48 @@
+declare @existingAddon varchar(500), @existingAddons varchar(500),@replaceAddon varchar(500)
+	select @existingAddon= COALESCE (@existingAddon+',' ,'') + CONVERT(varchar(500), BAAddonID) 
+	from BasketItemAddon where BABasketID=@BasketID group by BAAddonID
+
+	select @existingAddons= COALESCE (@existingAddons+',' ,'') + CONVERT(varchar(500), BMPackageReferenceID) 
+	from BasketItemMainUnit where BMBasketID=@BasketID group by BMPackageReferenceID
+
+select * from [dbo].[Addons]  as aa inner join [dbo].[AddonSpecification] as asp on aa.AddOnID = asp.AddOnID 
+where aa.AddOnIsDeleted='false' and aa.AddOnIsDisabled='false'  and aa.AddOnID not in (SELECT CAST(Item AS INTEGER) 
+from [InfrontHRMS].[SplitString]
+ (@existingAddon,',') ) and aa.AddOnID not in (SELECT CAST(Item AS INTEGER) 
+from [InfrontHRMS].[SplitString]
+ (@existingAddons,',') ) and asp.ASIsDeleted='false' 
+  and asp.ASIsDisabled='false'
+
+
+ declare @existingAddon varchar(500), @existingAddons varchar(500),@replaceAddon varchar(500),@replaceAddons varchar(500),@existingpackageId varchar(500)
+
+	select @existingAddon= COALESCE (@existingAddon+',' ,'') + CONVERT(varchar(500), BAAddonID) 
+	from BasketItemAddon where BABasketID=33 group by BAAddonID
+
+	select @existingpackageId= COALESCE (@existingpackageId+',' ,'') + CONVERT(varchar(500), BMPackageReferenceID) 
+	from BasketItemMainUnit where BMBasketID=33 group by BMPackageReferenceID
+
+	select @existingAddons= COALESCE (@existingAddons+',' ,'') + CONVERT(varchar(500), [addOnList]) 
+	from [dbo].[PackageContains] where [PackageID] in (@existingpackageId) 
+
+    select @replaceAddon=  COALESCE (@replaceAddon+',' ,'') +   ISNULL([addOnList],0) from [dbo].[PackageContains]
+	WHERE ',' + @existingAddon + ',' LIKE '%,' + CAST([PackageID] AS varchar) + ',%'
+
+	select @replaceAddons=  COALESCE (@replaceAddons+',' ,'') +   ISNULL([addOnList],0) from [dbo].[PackageContains]
+	WHERE ',' + @existingAddons + ',' LIKE '%,' + CAST([PackageID] AS varchar) + ',%'
+	
+
+select * from [dbo].[Addons]  as aa inner join [dbo].[AddonSpecification] as asp on aa.AddOnID = asp.AddOnID 
+where aa.AddOnIsDeleted='false' and aa.AddOnIsDisabled='false'  and aa.AddOnID not in (SELECT CAST(Item AS INTEGER) 
+from [InfrontHRMS].[SplitString]
+ (@replaceAddon,',') )  and aa.AddOnID not in (SELECT CAST(Item AS INTEGER) 
+from [InfrontHRMS].[SplitString]
+ (@replaceAddons,',') )  and asp.ASIsDeleted='false' 
+  and asp.ASIsDisabled='false'
+
+  print @existingAddon 
+  print @existingpackageId
+  print @replaceAddon
+  print @replaceAddons
+
+

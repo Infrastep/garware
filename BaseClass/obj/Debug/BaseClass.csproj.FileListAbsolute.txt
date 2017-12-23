@@ -1,0 +1,18 @@
+D:\Garware Prjt\Garware\BaseClass\bin\Debug\BaseClass.dll
+D:\Garware Prjt\Garware\BaseClass\bin\Debug\BaseClass.pdb
+D:\Garware Prjt\Garware\BaseClass\obj\Debug\BaseClass.dll
+D:\Garware Prjt\Garware\BaseClass\obj\Debug\BaseClass.pdb
+F:\Garware\Garware\BaseClass\bin\Debug\BaseClass.dll
+F:\Garware\Garware\BaseClass\bin\Debug\BaseClass.pdb
+F:\Garware\Garware\BaseClass\obj\Debug\BaseClass.dll
+F:\Garware\Garware\BaseClass\obj\Debug\BaseClass.pdb
+D:\Garware\BaseClass\bin\Debug\BaseClass.dll
+D:\Garware\BaseClass\bin\Debug\BaseClass.pdb
+D:\Garware\BaseClass\obj\Debug\BaseClass.csprojResolveAssemblyReference.cache
+D:\Garware\BaseClass\obj\Debug\BaseClass.dll
+D:\Garware\BaseClass\obj\Debug\BaseClass.pdb
+C:\Users\sony\Documents\project\garware\BaseClass\bin\Debug\BaseClass.dll
+C:\Users\sony\Documents\project\garware\BaseClass\bin\Debug\BaseClass.pdb
+C:\Users\sony\Documents\project\garware\BaseClass\obj\Debug\BaseClass.dll
+C:\Users\sony\Documents\project\garware\BaseClass\obj\Debug\BaseClass.pdb
+C:\Users\sony\Documents\project\garware\BaseClass\obj\Debug\BaseClass.csprojResolveAssemblyReference.cache

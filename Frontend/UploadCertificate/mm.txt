@@ -1,0 +1,86 @@
+<div class="Warp" style="padding: 20px;font-family: 'Berlin Sans FB';color: #6B6B6B;font-size: x-large;">
+    <div class="header" style="font-size: 40px;font-weight: lighter;color: #FFCC99;margin: 5px auto;max-width: 900px;">
+        ##PROPERTY_NAME##
+    </div>
+    <div class="banner" style="margin: 10px auto;max-width: 900px;position: relative;">
+        <img alt="" src="http://aauris.infronthrs.com/images/slider/aauris_building_kolkata.jpg" style="width: 100%;"/>
+        
+    </div>
+    <div class="main" style="margin: auto;max-width: 900px;">
+    <div class="blue mailheadtxt" style="font-size: 20px;color: #003580;">Resarvation Cancellation:</div>
+        <p class="mailheadtxt" style="font-size: 20px;">
+            Dear ##CLIENT_NAME##,
+        </p>
+        <p class="mailbodytxt" style="font-size: 16px;">
+            You Can find Entire Booking Details Here.
+        </p>
+
+        <div class="blockheader" style="margin: 10px auto;padding: 4px;background-color: #6B6B6B;color: #FFFFFF;font-size: 14px;width:60%;min-width: 230px;text-align: center;">
+
+        Reservation Cancellation Details
+
+        </div>
+
+        <div class="blockbody" style="margin: 10px auto;color: #6B6B6B;font-size: 13px;width: 60%;min-width: 230px;text-align: left;display: table;">
+
+        <table style="width: 100%">
+<tbody><tr><td style="width: 50%;">Cancelation Number :</td><td style="width:50%;">##CANCEL_NUMBER##</td></tr>
+        <tbody><tr><td style="width: 50%;">Confirmation Number :</td><td style="width:50%;">##CONFIRM_NUMBER##</td></tr>
+        <tr><td style="width: 50%;">Guest Name :</td><td style="width: 50%;">##CLIENT_NAME##</td></tr>
+<tr><td style="width: 50%;">Guest Address:</td><td style="width: 50%;">##ADDRESS##</td></tr>
+<tr><td style="width: 50%;">Guest Zip Code:</td><td style="width: 50%;">##ZIPCODE##</td></tr>
+<tr><td style="width: 50%;">Guest Phone:</td><td style="width: 50%;">##PHONE##</td></tr>
+<tr><td style="width: 50%;">Guest Email:</td><td style="width: 50%;">##EMAIL##</td></tr>
+        <tr><td style="width: 50%;">Check In Date :</td><td style="width: 50%;">##CHECKIN_DATE##</td></tr>
+        <tr><td style="width: 50%;">Check Out Date :</td><td style="width: 50%;">##CHECKOUT_DATE##</td></tr>
+<tr><td style="width: 50%;">Room(s) :</td><td style="width: 50%;">##ROOMS_NAME##</td></tr>
+<tr><td style="width: 50%;">Package(s) :</td><td style="width: 50%;">##PACKAGENAME##</td></tr>
+        </tbody></table>
+           
+        </div>
+
+
+        <div class="blockheader" style="margin: 10px auto;padding: 4px;background-color: #6B6B6B;color: #FFFFFF;font-size: 14px;width:60%;min-width: 230px;text-align: center;">
+
+        Travel Details
+
+        </div>
+
+        <div class="blockbody" style="margin: 10px auto;color: #6B6B6B;font-size: 13px;width: 60%;min-width: 230px;text-align: left;display: table;">
+
+        <table style="width: 100%">
+<tbody> <tr><td style="width: 50%;">Check In Time :</td><td style="width: 50%;">##CHECKIN_TIME##</td></tr>
+        <tr><td style="width: 50%;">Check Out Time :</td><td style="width: 50%;">##CHECKOUT_TIME##</td></tr>
+<tr><td style="width: 50%;">Visit Purpose :</td><td style="width: 50%;">##VISIT_PURPOSE##</td></tr>
+<tr><td style="width: 50%;">Arrival By :</td><td style="width: 50%;">##ARRIVEBY##</td></tr>
+<tr><td style="width: 50%;">Departure By :</td><td style="width: 50%;">##DEPARTUREBY##</td></tr>
+        </tbody></table>
+           
+        </div>
+
+        <div class="blockheader" style="margin: 10px auto;padding: 4px;background-color: #6B6B6B;color: #FFFFFF;font-size: 14px;width: 60%;min-width: 230px;text-align: center;">
+        Policies
+        </div>
+         <div class="blockbody" style="margin: 10px auto;color: #6B6B6B;font-size: 13px;width: 60%;min-width: 230px;text-align: left;display: table;">
+
+        <table style="width: 100%">
+        <tbody><tr><td style="width: 50%;">Canceletion Policy :</td><td style="width:50%;">##CANCELATION##</td></tr>
+      
+       
+        </tbody></table>
+        <br/>
+           Early arrival before 1200hrs or a late departure beyond 1400hrs will be charged @ 50% of the rate (on
+availability). Early arrival before 0800hrs or late departure after 1800hrs will be charged @ 100% of the
+rate (on availability). Early departures will be charged one night retention.
+        </div>
+          <div class="blockheader" style="margin: 10px auto;padding: 4px;background-color: #6B6B6B;color: #FFFFFF;font-size: 14px;width: 60%;min-width: 230px;text-align: center;">
+        Contact Info
+        </div>
+        <div class="blockbody" style="margin: 10px auto;color: #6B6B6B;font-size: 13px;width: 60%;min-width: 230px;text-align: left;display: table;">In case of any queries, feel free to contact us. Please quote your confirmation number
+ in all future correspondence and at the time of check in.<br/><br/>##PROPERTY_ADDRESS##<br/>
+T : ##PROPERTY_PHONE##<br/>F : ##PROPERTY_FAX## <br/>E : ##PROPERTY_EMAIL##<br/> W : ##PROPERTY_WEBSITE##</div>
+        <p class="mailbodytxt" style="font-size: 16px;">
+        It is mandatory to produce Positive Photo identification at the time of Check-in.
+        </p>
+    </div>
+</div>

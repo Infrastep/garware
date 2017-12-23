@@ -1,0 +1,58 @@
+D:\Garware\Garware\bin\Garware.dll.config
+D:\Garware\Garware\bin\Garware.dll
+D:\Garware\Garware\bin\Garware.pdb
+D:\Garware\Garware\bin\BaseClass.dll
+D:\Garware\Garware\bin\BuisnessController.dll
+D:\Garware\Garware\bin\System.Data.dll
+D:\Garware\Garware\bin\DataAccess.dll
+D:\Garware\Garware\bin\BaseClass.pdb
+D:\Garware\Garware\bin\BuisnessController.pdb
+D:\Garware\Garware\bin\DataAccess.pdb
+D:\Garware\Garware\obj\Debug\Garware.csprojResolveAssemblyReference.cache
+D:\Garware\Garware\obj\Debug\Garware.dll
+D:\Garware\Garware\obj\Debug\Garware.pdb
+D:\Garware Prjt\Garware\Garware\bin\Garware.dll.config
+D:\Garware Prjt\Garware\Garware\bin\Garware.dll
+D:\Garware Prjt\Garware\Garware\bin\Garware.pdb
+D:\Garware Prjt\Garware\Garware\bin\BaseClass.dll
+D:\Garware Prjt\Garware\Garware\bin\BuisnessController.dll
+D:\Garware Prjt\Garware\Garware\bin\System.Data.dll
+D:\Garware Prjt\Garware\Garware\bin\DataAccess.dll
+D:\Garware Prjt\Garware\Garware\bin\BaseClass.pdb
+D:\Garware Prjt\Garware\Garware\bin\BuisnessController.pdb
+D:\Garware Prjt\Garware\Garware\bin\DataAccess.pdb
+D:\Garware Prjt\Garware\Garware\obj\Debug\Garware.csprojResolveAssemblyReference.cache
+D:\Garware Prjt\Garware\Garware\obj\Debug\Garware.dll
+D:\Garware Prjt\Garware\Garware\obj\Debug\Garware.pdb
+F:\Garware\Garware\Garware\bin\Garware.dll.config
+F:\Garware\Garware\Garware\bin\Garware.dll
+F:\Garware\Garware\Garware\bin\Garware.pdb
+F:\Garware\Garware\Garware\bin\BaseClass.dll
+F:\Garware\Garware\Garware\bin\BuisnessController.dll
+F:\Garware\Garware\Garware\bin\System.Data.dll
+F:\Garware\Garware\Garware\bin\DataAccess.dll
+F:\Garware\Garware\Garware\bin\AutoMapper.dll
+F:\Garware\Garware\Garware\bin\BaseClass.pdb
+F:\Garware\Garware\Garware\bin\BuisnessController.pdb
+F:\Garware\Garware\Garware\bin\DataAccess.pdb
+F:\Garware\Garware\Garware\bin\AutoMapper.xml
+F:\Garware\Garware\Garware\obj\Debug\Garware.csprojResolveAssemblyReference.cache
+F:\Garware\Garware\Garware\obj\Debug\Garware.dll
+F:\Garware\Garware\Garware\obj\Debug\Garware.pdb
+D:\Garware\Garware\bin\AutoMapper.dll
+D:\Garware\Garware\bin\AutoMapper.xml
+C:\Users\sony\Documents\project\garware\Garware\bin\Garware.dll.config
+C:\Users\sony\Documents\project\garware\Garware\bin\Garware.dll
+C:\Users\sony\Documents\project\garware\Garware\bin\Garware.pdb
+C:\Users\sony\Documents\project\garware\Garware\bin\BaseClass.dll
+C:\Users\sony\Documents\project\garware\Garware\bin\BuisnessController.dll
+C:\Users\sony\Documents\project\garware\Garware\bin\System.Data.dll
+C:\Users\sony\Documents\project\garware\Garware\bin\DataAccess.dll
+C:\Users\sony\Documents\project\garware\Garware\bin\AutoMapper.dll
+C:\Users\sony\Documents\project\garware\Garware\bin\BaseClass.pdb
+C:\Users\sony\Documents\project\garware\Garware\bin\BuisnessController.pdb
+C:\Users\sony\Documents\project\garware\Garware\bin\DataAccess.pdb
+C:\Users\sony\Documents\project\garware\Garware\bin\AutoMapper.xml
+C:\Users\sony\Documents\project\garware\Garware\obj\Debug\Garware.csprojResolveAssemblyReference.cache
+C:\Users\sony\Documents\project\garware\Garware\obj\Debug\Garware.dll
+C:\Users\sony\Documents\project\garware\Garware\obj\Debug\Garware.pdb

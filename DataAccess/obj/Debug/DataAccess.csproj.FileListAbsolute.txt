@@ -1,0 +1,42 @@
+D:\Garware Prjt\Garware\DataAccess\bin\Debug\DataAccess.dll.config
+D:\Garware Prjt\Garware\DataAccess\bin\Debug\DataAccess.dll
+D:\Garware Prjt\Garware\DataAccess\bin\Debug\DataAccess.pdb
+D:\Garware Prjt\Garware\DataAccess\bin\Debug\BaseClass.dll
+D:\Garware Prjt\Garware\DataAccess\bin\Debug\System.Data.dll
+D:\Garware Prjt\Garware\DataAccess\bin\Debug\BaseClass.pdb
+D:\Garware Prjt\Garware\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Garware Prjt\Garware\DataAccess\obj\Debug\DataAccess.dll
+D:\Garware Prjt\Garware\DataAccess\obj\Debug\DataAccess.pdb
+F:\Garware\Garware\DataAccess\bin\Debug\DataAccess.dll.config
+F:\Garware\Garware\DataAccess\bin\Debug\DataAccess.dll
+F:\Garware\Garware\DataAccess\bin\Debug\DataAccess.pdb
+F:\Garware\Garware\DataAccess\bin\Debug\AutoMapper.dll
+F:\Garware\Garware\DataAccess\bin\Debug\BaseClass.dll
+F:\Garware\Garware\DataAccess\bin\Debug\System.Data.dll
+F:\Garware\Garware\DataAccess\bin\Debug\BaseClass.pdb
+F:\Garware\Garware\DataAccess\bin\Debug\AutoMapper.xml
+F:\Garware\Garware\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+F:\Garware\Garware\DataAccess\obj\Debug\DataAccess.dll
+F:\Garware\Garware\DataAccess\obj\Debug\DataAccess.pdb
+D:\Garware\DataAccess\bin\Debug\DataAccess.dll.config
+D:\Garware\DataAccess\bin\Debug\DataAccess.dll
+D:\Garware\DataAccess\bin\Debug\DataAccess.pdb
+D:\Garware\DataAccess\bin\Debug\AutoMapper.dll
+D:\Garware\DataAccess\bin\Debug\BaseClass.dll
+D:\Garware\DataAccess\bin\Debug\System.Data.dll
+D:\Garware\DataAccess\bin\Debug\BaseClass.pdb
+D:\Garware\DataAccess\bin\Debug\AutoMapper.xml
+D:\Garware\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Garware\DataAccess\obj\Debug\DataAccess.dll
+D:\Garware\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\sony\Documents\project\garware\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\sony\Documents\project\garware\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\sony\Documents\project\garware\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\sony\Documents\project\garware\DataAccess\bin\Debug\AutoMapper.dll
+C:\Users\sony\Documents\project\garware\DataAccess\bin\Debug\BaseClass.dll
+C:\Users\sony\Documents\project\garware\DataAccess\bin\Debug\System.Data.dll
+C:\Users\sony\Documents\project\garware\DataAccess\bin\Debug\BaseClass.pdb
+C:\Users\sony\Documents\project\garware\DataAccess\bin\Debug\AutoMapper.xml
+C:\Users\sony\Documents\project\garware\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\sony\Documents\project\garware\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\sony\Documents\project\garware\DataAccess\obj\Debug\DataAccess.pdb

@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Frontend.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency - HTML5 Booking template</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet" media="screen" />
+
+    <link href="assets/css/custom.css" rel="stylesheet" media="screen" />
+
+    <!-- Carousel -->
+    <link href="examples/carousel/carousel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300,300italic' rel='stylesheet' type='text/css'>
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" media="screen" />
+    <!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="assets/css/font-awesome-ie7.css" media="screen" /><![endif]-->
+
+    <!-- REVOLUTION BANNER CSS SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="css/fullwidth.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings2.css" media="screen" />
+
+    <!-- Picker UI-->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link href="plugins/bootstrap-toastr/toastr.css" rel="stylesheet" type="text/css" />
+    <!-- jQuery -->
+
+    <script src="assets/js/jquery.v2.0.3.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="top">
+
+    <form id="form1" runat="server" role="form" data-toggle="validator">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div class="navbar-wrapper2 navbar-fixed-top">
+            <div class="container">
+                <div class="navbar mtnav">
+
+                    <div class="container offset-3">
+                        <!-- Navigation-->
+                        <div class="navbar-header">
+                            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="default.aspx" class="navbar-brand">JAYBTEE
+                                <%--<img src="images/scanmar_logo.gif" alt="Travel Agency Logo" class="logo" />--%>
+
+                            </a>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="about.aspx">About Agency</a></li>
+                                <li><a href="associates.aspx">Our Associates</a></li>
+                              <%--  <li><a href="howitworks.aspx">How It Works</a></li>--%>
+                                <li><a href="contact.aspx">Contact</a></li>
+                                <li class="dropdown dropdown-user">
+                                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+
+                                        <asp:LoginName ID="LoginName1" runat="server" CssClass="username username-hide-on-mobile" />
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-default">
+                                        <li>
+                                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/default.aspx" LogoutAction="Redirect" />
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Navigation-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="SliderArea" runat="server">
+        </asp:ContentPlaceHolder>
+        <!-- WRAP -->
+        <div class="wrap ctup">
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <!-- FOOTER -->
+            <div class="container none">
+                <footer>
+                    <p class="pull-right"><a href="#">Back to top</a></p>
+                    <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                </footer>
+            </div>
+
+
+
+            <div class="footerbg">
+                <div class="container center grey">
+               <div class="navbar-collapse center collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="about.aspx">About Agency</a></li>
+                                <li><a href="associates.aspx">Our Associates</a></li>
+                              <%--  <li><a href="howitworks.aspx">How It Works</a></li>--%>
+                                <li><a href="contact.aspx">Contact</a></li>
+                                <li class="dropdown dropdown-user">
+                                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+
+                                        <asp:LoginName ID="LoginName2" runat="server" CssClass="username username-hide-on-mobile" />
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-default">
+                                        <li>
+                                            <asp:LoginStatus ID="LoginStatus2" runat="server" LogoutPageUrl="~/default.aspx" LogoutAction="Redirect" />
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- WRAP -->
+    </form>
+
+
+    <!-- Javascript -->
+
+
+    <!-- This page JS -->
+    <script src="assets/js/js-index7.js"></script>
+
+    <!-- Easy Pie Chart  -->
+    <script src="assets/js/jquery.easy-pie-chart.js"></script>
+
+    <!-- Custom functions -->
+    <script src="assets/js/functions.js"></script>
+
+    <!-- Picker UI-->
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <!-- Easing -->
+    <script src="assets/js/jquery.easing.js"></script>
+
+    <!-- jQuery KenBurn Slider  -->
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Counter -->
+    <script src="assets/js/counter.js"></script>
+
+    <!-- Nicescroll  -->
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
+
+    <!-- CarouFredSel -->
+    <script src="assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <script src="assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="assets/js/helper-plugins/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="assets/js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+
+    <!-- Custom Select -->
+    <script type='text/javascript' src='assets/js/jquery.customSelect.js'></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/validator.js"></script>
+    <script src="plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+    <script src="plugins/bootstrap-toastr/toastr.js" type="text/javascript"></script>
+    <script src="PageLevel_JS/utility.js"></script>
+    <script src="PageLevel_JS/common.js"></script>
+
+   
+</body>
+</html>

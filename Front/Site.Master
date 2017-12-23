@@ -1,0 +1,232 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Front.Site" %>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta charset="utf-8">
+  <title>DSG</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta content="Metronic Shop UI description" name="description">
+  <meta content="Metronic Shop UI keywords" name="keywords">
+  <meta content="keenthemes" name="author">
+
+  <meta property="og:site_name" content="-CUSTOMER VALUE-">
+  <meta property="og:title" content="-CUSTOMER VALUE-">
+  <meta property="og:description" content="-CUSTOMER VALUE-">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="-CUSTOMER VALUE-"><!-- link to image for socio -->
+  <meta property="og:url" content="-CUSTOMER VALUE-">
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Fonts START -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
+  <!-- Fonts END -->
+
+  <!-- Global styles START -->          
+  <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Global styles END --> 
+   
+  <!-- Page level plugin styles START -->
+      <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+  <!-- Page level plugin styles END -->
+
+  <!-- Theme styles START -->
+  <link href="assets/global/css/components.css" rel="stylesheet">
+  <link href="assets/frontend/layout/css/style.css" rel="stylesheet">
+  <link href="assets/frontend/pages/css/style-revolution-slider.css" rel="stylesheet"><!-- metronic revo slider styles -->
+  <link href="assets/frontend/layout/css/style-responsive.css" rel="stylesheet">
+  <link href="assets/frontend/layout/css/themes/red.css" rel="stylesheet" >
+  <link href="assets/frontend/layout/css/custom.css" rel="stylesheet">
+  <!-- Theme styles END -->
+  
+</head>
+<body class="corporate">
+    
+     <!-- BEGIN TOP BAR -->
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+                <!-- BEGIN TOP BAR LEFT PART -->
+                <div class="col-md-6 col-sm-6 additional-shop-info">
+                    <ul class="list-unstyled list-inline">
+                        <li><i class="fa fa-phone"></i><span>+1 456 6717</span></li>
+                        <li><i class="fa fa-envelope-o"></i><span>info@jaybtee.com</span></li>
+                    </ul>
+                </div>
+                <!-- END TOP BAR LEFT PART -->
+                <!-- BEGIN TOP BAR MENU -->
+                <div class="col-md-6 col-sm-6 additional-nav">
+                    <ul class="list-unstyled list-inline pull-right">
+                        <li><a href="page-login.html">Log In</a></li>
+                        <li><a href="page-reg-page.html">Registration</a></li>
+                    </ul>
+                </div>
+                <!-- END TOP BAR MENU -->
+            </div>
+        </div>        
+    </div>
+    <!-- END TOP BAR -->
+    <!-- BEGIN HEADER -->
+    <div class="header">
+      <div class="container">
+        <%--<a class="site-logo" href="index.html" style="max-height:95px"><img src="http://dsgshipservices.com/images/logo.jpg" alt="Metronic FrontEnd" ></a>--%>
+             <a class="site-logo" href="index.html"><img src="Upload/logo.jpg" alt="Metronic FrontEnd"></a>
+
+
+        <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
+
+        <!-- BEGIN NAVIGATION -->
+        <div class="header-navigation pull-right font-transform-inherit">
+          <ul>
+         
+               <li><a href="#About" >About</a></li>
+               <li><a href="#Associate" >Associate</a></li>
+               <li><a href="#Contact" >Contact</a></li>
+            <!-- END TOP SEARCH -->
+          </ul>
+        </div>
+        <!-- END NAVIGATION -->
+      </div>
+    </div>
+    <!-- Header END -->
+
+  
+
+    <form id="form1" runat="server">
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   
+    </form>
+
+    
+
+    <!-- BEGIN PRE-FOOTER -->
+    <div id="Contact" class="pre-footer">
+      
+      <div class="container">
+        <div class="row">
+          <!-- BEGIN BOTTOM ABOUT BLOCK -->
+          <div class="col-md-4 col-sm-6 pre-footer-col">
+            <h2>About us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat.</p>
+
+            <div class="photo-stream">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14739.540696101092!2d88.35792985!3d22.545973749999998!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1497951039501"  height="250" frameborder="0" style="border:0" allowfullscreen></iframe>                 
+            </div>
+          </div>
+          <!-- END BOTTOM ABOUT BLOCK -->
+
+          <!-- BEGIN BOTTOM CONTACTS -->
+          <div class="col-md-4 col-sm-6 pre-footer-col">
+            <h2>Our Contacts</h2>
+            <address class="margin-bottom-40">
+              35, Lorem Lis Street, Park Ave<br>
+              California, US<br>
+              Phone: 300 323 3456<br>
+              Fax: 300 323 1456<br>
+              Email: <a href="mailto:info@metronic.com">info@metronic.com</a><br>
+              Skype: <a href="skype:metronic">metronic</a>
+            </address>
+
+            
+          </div>
+          <!-- END BOTTOM CONTACTS -->
+
+          <!-- BEGIN TWITTER BLOCK --> 
+          <div class="col-md-4 col-sm-6 pre-footer-col">
+            <h2 class="margin-bottom-0">Mail Us</h2>
+              <br />
+          <div>
+                    <div class="form-group">
+                      <label for="contacts-name">Name</label>
+                      <input type="text" class="form-control" id="contacts-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="contacts-email">Email</label>
+                      <input type="email" class="form-control" id="contacts-email">
+                    </div>
+                    <div class="form-group">
+                      <label for="contacts-message">Message</label>
+                      <textarea class="form-control" rows="5" id="contacts-message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="icon-ok"></i> Send</button>
+                    <button type="button" class="btn btn-default">Cancel</button>
+                  </div>
+             
+                 </div>
+          <!-- END TWITTER BLOCK -->
+        </div>
+      </div>
+    </div>
+    <!-- END PRE-FOOTER -->
+
+    <!-- BEGIN FOOTER -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- BEGIN COPYRIGHT -->
+          <div class="col-md-6 col-sm-6 padding-top-10">
+            2014 © Metronic Shop UI. ALL Rights Reserved. <a href="javascript:;">Privacy Policy</a> | <a href="javascript:;">Terms of Service</a>
+          </div>
+          <!-- END COPYRIGHT -->
+          <!-- BEGIN PAYMENTS -->
+          <div class="col-md-6 col-sm-6">
+            <ul class="social-footer list-unstyled list-inline pull-right">
+              <li><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="javascript:;"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="javascript:;"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="javascript:;"><i class="fa fa-skype"></i></a></li>
+              <li><a href="javascript:;"><i class="fa fa-github"></i></a></li>
+              <li><a href="javascript:;"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="javascript:;"><i class="fa fa-dropbox"></i></a></li>
+            </ul>  
+          </div>
+          <!-- END PAYMENTS -->
+        </div>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+    
+    <!-- Load javascripts at bottom, this will reduce page load time -->
+    <!-- BEGIN CORE PLUGINS (REQUIRED FOR ALL PAGES) -->
+    <!--[if lt IE 9]>
+    <script src="assets/global/plugins/respond.min.js"></script>
+    <![endif]--> 
+    <script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>      
+    <script src="assets/frontend/layout/scripts/back-to-top.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+
+    <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+    <!-- BEGIN RevolutionSlider -->  
+    <script src="assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script> 
+    <script src="assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript"></script> 
+    <script src="assets/frontend/pages/scripts/revo-slider-init.js" type="text/javascript"></script>
+    <!-- END RevolutionSlider -->
+
+    <script src="assets/frontend/layout/scripts/layout.js" type="text/javascript"></script>
+
+       <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  
+
+</body>
+</html>

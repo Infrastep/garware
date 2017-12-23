@@ -1,0 +1,2293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="thesynaxis123_garwareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACCOUNT_MASTER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="ACTUAL_SAVINGS">
+    <Key>
+      <PropertyRef Name="ACTUAL_SAVINGS_ID" />
+    </Key>
+    <Property Name="ACTUAL_SAVINGS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FINANCIAL_YEAR" Type="varchar" MaxLength="50" />
+    <Property Name="EMP_CODE" Type="int" />
+    <Property Name="TYPE" Type="int" />
+    <Property Name="AMOUNT" Type="money" />
+    <Property Name="SAVINGS_DATE" Type="datetime" />
+    <Property Name="CERTIFICATE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="NO_MONTHS" Type="int" />
+    <Property Name="AUTH_DATE" Type="datetime" />
+    <Property Name="AUTH_BY" Type="varchar" MaxLength="50" />
+    <Property Name="AUTH_TIME" Type="datetime" />
+    <Property Name="AUTH_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="AGREEMENT_CODE" Type="int" />
+  </EntityType>
+  <EntityType Name="ADDRESSEE_MASTER">
+    <Key>
+      <PropertyRef Name="ADDRESSID" />
+    </Key>
+    <Property Name="ADDRESSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADDR0" Type="nvarchar" MaxLength="500" />
+    <Property Name="ADDR1" Type="nvarchar" MaxLength="500" />
+    <Property Name="CITY" Type="nvarchar" MaxLength="500" />
+    <Property Name="COUNTRY" Type="int" />
+    <Property Name="ZIP" Type="nvarchar" MaxLength="500" />
+    <Property Name="COMPANYID" Type="int" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="AGREEMENT_DETAILS">
+    <Key>
+      <PropertyRef Name="AGREEMENT_DETAILS_ID" />
+    </Key>
+    <Property Name="AGREEMENT_DETAILS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AGREEMENT_CODE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VCODE" Type="int" Nullable="false" />
+    <Property Name="VNAME" Type="varchar" MaxLength="50" />
+    <Property Name="EMP_CODE" Type="int" Nullable="false" />
+    <Property Name="EMP_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="CATEGORY_CODE" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="RANK_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="RANK_DESC" Type="char" MaxLength="50" />
+    <Property Name="BASIC" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="bonus" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="GROSS" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="AGENT_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SIGNING_AUTH_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SIGN_DESG" Type="varchar" MaxLength="50" />
+    <Property Name="LIMITATION" Type="varchar" MaxLength="50" />
+    <Property Name="END_CODE" Type="char" MaxLength="3" />
+    <Property Name="PF_RATE" Type="nchar" MaxLength="20" />
+    <Property Name="ALLOTMENT_AMOUNT" Type="varchar" MaxLength="50" />
+    <Property Name="ref_date" Type="datetime" />
+    <Property Name="ref_no" Type="varchar" MaxLength="50" />
+    <Property Name="appl_date" Type="datetime" />
+    <Property Name="basic_insa" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="months" Type="tinyint" />
+    <Property Name="MUI_NMB" Type="char" MaxLength="1" />
+    <Property Name="GRAT_RATE" Type="varchar" MaxLength="20" />
+    <Property Name="MED_CERT_ISS_AUTH" Type="varchar" MaxLength="50" />
+    <Property Name="MED_CERT_APPR_NO" Type="varchar" MaxLength="20" />
+    <Property Name="MED_CERT_ISS_DATE" Type="varchar" MaxLength="20" />
+    <Property Name="MED_CERT_EXP_DATE" Type="varchar" MaxLength="20" />
+    <Property Name="PLACE_AGREEMENT" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY" Type="char" MaxLength="1" />
+    <Property Name="TRAINEE_CREW" Type="bit" />
+    <Property Name="PF_APPLICABLE" Type="bit" />
+  </EntityType>
+  <EntityType Name="AREA_OPERATION_MASTER">
+    <Key>
+      <PropertyRef Name="AREAID" />
+    </Key>
+    <Property Name="AREAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AREACODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+    <Property Name="ISINDIA" Type="bit" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BANK_MASTER">
+    <Key>
+      <PropertyRef Name="BANKID" />
+    </Key>
+    <Property Name="BANKID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BANK_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ACTIVE_BANK" Type="bit" />
+    <Property Name="BANK_CODE" Type="char" MaxLength="4" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BRANCH_DETAILS">
+    <Key>
+      <PropertyRef Name="BRANCHID" />
+    </Key>
+    <Property Name="BRANCHID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IFSCCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="SWIFTCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="MICRCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRESS1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRESS2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="STATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIN" Type="nvarchar" MaxLength="50" />
+    <Property Name="COUNTRYID" Type="int" />
+    <Property Name="BANKID" Type="int" />
+  </EntityType>
+  <EntityType Name="CATEGORY">
+    <Key>
+      <PropertyRef Name="CATEGORY_ID" />
+    </Key>
+    <Property Name="CATEGORY_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CATEGORY_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="CATEGORY_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="CERTIFICATE_MASTER">
+    <Key>
+      <PropertyRef Name="CERTID" />
+    </Key>
+    <Property Name="CERTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CERT_DESC" Type="char" MaxLength="255" />
+    <Property Name="PATH" Type="nvarchar(max)" />
+    <Property Name="EMP_ID" Type="int" />
+    <Property Name="LAST_MODIFY" Type="date" />
+    <Property Name="VALIDITY" Type="date" />
+    <Property Name="ISSUE_PLACE" Type="int" />
+    <Property Name="CTID" Type="int" />
+  </EntityType>
+  <EntityType Name="CERTIFICATE_TYPE_MASTER">
+    <Key>
+      <PropertyRef Name="CTID" />
+    </Key>
+    <Property Name="CTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CT_DESC" Type="nvarchar" MaxLength="50" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="CLASS">
+    <Key>
+      <PropertyRef Name="CLASSID" />
+    </Key>
+    <Property Name="CLASSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLASS_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ACTIVE" Type="bit" />
+    <Property Name="CLASS_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COST_TO_COMP" Type="bit" />
+  </EntityType>
+  <EntityType Name="CLIENT_COMMENT">
+    <Key>
+      <PropertyRef Name="COMMENTID" />
+    </Key>
+    <Property Name="COMMENTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMMENT" Type="nvarchar(max)" />
+    <Property Name="RECEIVERUSERID" Type="int" />
+    <Property Name="SENDERUSERID" Type="int" />
+    <Property Name="EMPID" Type="int" />
+    <Property Name="COMMENTDATE" Type="datetime" />
+    <Property Name="PRIVATE" Type="bit" />
+    <Property Name="PUBLIC" Type="bit" />
+  </EntityType>
+  <EntityType Name="CLIENT_MASTER">
+    <Key>
+      <PropertyRef Name="CLIENTID" />
+    </Key>
+    <Property Name="CLIENTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENT_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DATABASE_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DATABASE_HOST" Type="nvarchar" MaxLength="100" />
+    <Property Name="DATABASE_UID" Type="nvarchar" MaxLength="50" />
+    <Property Name="DATABASE_PASS" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="500" />
+    <Property Name="CITY" Type="varchar" MaxLength="100" />
+    <Property Name="STATE" Type="varchar" MaxLength="100" />
+    <Property Name="PIN" Type="nvarchar" MaxLength="50" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FAX_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="SERVICE_TAX_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PICTURE" Type="nvarchar" MaxLength="500" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="CLIENT_LOGO" Type="nvarchar" MaxLength="500" />
+    <Property Name="COUNTRY_ID" Type="int" />
+    <Property Name="CIN_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PAN" Type="nvarchar" MaxLength="50" />
+    <Property Name="TAN" Type="nvarchar" MaxLength="50" />
+    <Property Name="WEBSITE" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CLIENT_USER">
+    <Key>
+      <PropertyRef Name="CLIENTUSERID" />
+    </Key>
+    <Property Name="CLIENTUSERID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENTID" Type="int" />
+    <Property Name="USERID" Type="int" />
+  </EntityType>
+  <EntityType Name="COMMENT">
+    <Key>
+      <PropertyRef Name="COMMENTID" />
+    </Key>
+    <Property Name="COMMENTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMMENT" Type="nvarchar(max)" />
+    <Property Name="RECEIVERUSERID" Type="int" />
+    <Property Name="SENDERUSERID" Type="int" />
+    <Property Name="EMPID" Type="int" />
+    <Property Name="COMMENTDATE" Type="datetime" />
+    <Property Name="PRIVATE" Type="bit" />
+    <Property Name="PUBLIC" Type="bit" />
+  </EntityType>
+  <EntityType Name="COMPANY_BRANCH">
+    <Key>
+      <PropertyRef Name="CBID" />
+    </Key>
+    <Property Name="CBID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BRANCHID" Type="int" />
+    <Property Name="COMPANYID" Type="int" />
+    <Property Name="CHEQUE_NAME" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COMPANY_PARAMETER">
+    <Key>
+      <PropertyRef Name="COMPANYID" />
+    </Key>
+    <Property Name="COMPANYID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_NAME" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FAX_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="SERVICE_TAX_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PAN_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="COMPANY_LOGO" Type="nvarchar" MaxLength="500" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="COUNTRY_MASTER">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="C_Name" Type="varchar" MaxLength="50" />
+    <Property Name="CCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="add_by" Type="varchar" MaxLength="50" />
+    <Property Name="add_time" Type="datetime" />
+    <Property Name="Edit_by" Type="varchar" MaxLength="50" />
+    <Property Name="Edit_time" Type="datetime" />
+    <Property Name="status" Type="bit" />
+  </EntityType>
+  <EntityType Name="CURRENCY_MASTER">
+    <Key>
+      <PropertyRef Name="Currency_id" />
+    </Key>
+    <Property Name="Currency_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="code" Type="nvarchar" MaxLength="50" />
+    <Property Name="symbol_left" Type="nvarchar" MaxLength="50" />
+    <Property Name="symbol_right" Type="nvarchar" MaxLength="50" />
+    <Property Name="decimal_place" Type="nvarchar" MaxLength="50" />
+    <Property Name="value" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="status" Type="bit" />
+  </EntityType>
+  <EntityType Name="DG_CERTIFIED_DOCTORS">
+    <Key>
+      <PropertyRef Name="DGCDID" />
+    </Key>
+    <Property Name="DGCDID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DOCTOR_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="CLINIC" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRESS1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRESS2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="STATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIN" Type="nvarchar" MaxLength="50" />
+    <Property Name="COUNTRYID" Type="int" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="DOCUMENTS_MASTER">
+    <Key>
+      <PropertyRef Name="DMID" />
+    </Key>
+    <Property Name="DMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DMCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DMDESCRIPTION" Type="nvarchar(max)" />
+    <Property Name="PATH" Type="nvarchar(max)" />
+    <Property Name="EMP_ID" Type="int" />
+    <Property Name="LAST_MODIFY" Type="date" />
+    <Property Name="VALIDITY" Type="date" />
+    <Property Name="DT_ID" Type="int" />
+    <Property Name="ISSUE_DATE" Type="date" />
+    <Property Name="ISSUE_PLACE" Type="int" />
+    <Property Name="MED_TYPE" Type="int" />
+  </EntityType>
+  <EntityType Name="DOCUMENTS_TYPE">
+    <Key>
+      <PropertyRef Name="DTID" />
+    </Key>
+    <Property Name="DTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DTNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="DUTY_TYPE_MASTER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="5" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="50" />
+    <Property Name="CATEGORY" Type="int" />
+    <Property Name="ACTIVE" Type="char" MaxLength="1" />
+    <Property Name="EMP_TYPE" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="EARNING_DEDUCTION_MASTER">
+    <Key>
+      <PropertyRef Name="EARNDEDNID" />
+    </Key>
+    <Property Name="EARNDEDNID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="EMP_BRANCH">
+    <Key>
+      <PropertyRef Name="EBID" />
+    </Key>
+    <Property Name="EBID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BRANCHID" Type="int" />
+    <Property Name="EMPID" Type="int" />
+    <Property Name="BANK_AC_NO_NRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANK_NAME_NRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANK_ADDRESS_NRE" Type="nvarchar" MaxLength="100" />
+    <Property Name="CHEQUE_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="IFSC_CODE_NRE" Type="char" MaxLength="10" />
+    <Property Name="NOT_PF" Type="bit" />
+  </EntityType>
+  <EntityType Name="EMP_EXPERIENCE">
+    <Key>
+      <PropertyRef Name="EEID" />
+    </Key>
+    <Property Name="EEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_id" Type="int" Nullable="false" />
+    <Property Name="Company_Served" Type="nvarchar" MaxLength="40" />
+    <Property Name="Ship_name" Type="varchar" MaxLength="100" />
+    <Property Name="Ship_Type" Type="int" />
+    <Property Name="DWT" Type="nvarchar" MaxLength="20" />
+    <Property Name="Engine" Type="nvarchar" MaxLength="20" />
+    <Property Name="BHP" Type="nvarchar" MaxLength="20" />
+    <Property Name="Rank" Type="varchar" MaxLength="50" />
+    <Property Name="Service_From" Type="smalldatetime" />
+    <Property Name="Service_To" Type="smalldatetime" />
+    <Property Name="Months" Type="smallint" />
+    <Property Name="Days" Type="smallint" />
+    <Property Name="DIRECT" Type="bit" />
+    <Property Name="Area_Sp_Job" Type="nvarchar" MaxLength="300" />
+    <Property Name="Area_Operation" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="EMP_FIXED">
+    <Key>
+      <PropertyRef Name="EMPID" />
+    </Key>
+    <Property Name="EMPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="SR_CITIZEN" Type="bit" />
+    <Property Name="EMP_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMP_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NAME_PREFIX" Type="varchar" MaxLength="50" />
+    <Property Name="ADDR_PRMNT1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ADDR_PRMNT2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRMNT3" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEPHONE_PRMNT" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRESENT1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ADDR_PRESENT2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRESENT3" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEPHONE_PRESENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="FATHER_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="SEX" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="BIRTH_PLACE" Type="varchar" MaxLength="50" />
+    <Property Name="NATIONALITY" Type="int" />
+    <Property Name="FAX" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOBILE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELIGIONID" Type="int" />
+    <Property Name="PHOTO" Type="nvarchar" MaxLength="500" />
+    <Property Name="ASP_USER_DETAILS" Type="uniqueidentifier" />
+    <Property Name="ALEVELVERIFY" Type="bit" />
+    <Property Name="BLEVELVERIFY" Type="bit" />
+    <Property Name="CLEVELVERIFY" Type="bit" />
+    <Property Name="SIGNINGAUTH" Type="bit" />
+    <Property Name="DESIGNATION" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE_CLIENT">
+    <Key>
+      <PropertyRef Name="EMPCLINTID" />
+    </Key>
+    <Property Name="EMPCLINTID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_ID" Type="int" />
+    <Property Name="SHIP_ID" Type="int" />
+    <Property Name="RANK_CLASS_ID" Type="int" />
+    <Property Name="STARTDATE" Type="date" />
+    <Property Name="ENDDATE" Type="date" />
+    <Property Name="STATUS" Type="int" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE_STATUS">
+    <Key>
+      <PropertyRef Name="EMPSTATID" />
+    </Key>
+    <Property Name="EMPSTATID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_ID" Type="int" />
+    <Property Name="STATUS_ID" Type="int" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="UPDATE_PERSONEL" Type="int" />
+    <Property Name="ENTRY_DATE" Type="datetime" />
+    <Property Name="REMARKS" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="GRATUITY_REMIT">
+    <Key>
+      <PropertyRef Name="GRATUITY_REMITID" />
+    </Key>
+    <Property Name="GRATUITY_REMITID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REF_NO" Type="varchar" MaxLength="50" />
+    <Property Name="REF_DT" Type="datetime" />
+    <Property Name="ADDR0" Type="varchar" MaxLength="100" />
+    <Property Name="ADDR1" Type="varchar" MaxLength="100" />
+    <Property Name="ADDR2" Type="varchar" MaxLength="100" />
+    <Property Name="ADDR3" Type="varchar" MaxLength="100" />
+    <Property Name="ADDR4" Type="varchar" MaxLength="50" />
+    <Property Name="REMIT_CHQ_NO" Type="varchar" MaxLength="20" />
+    <Property Name="REMIT_CHQ_DT" Type="datetime" />
+    <Property Name="REMIT_BANK" Type="varchar" MaxLength="50" />
+    <Property Name="REMIT_AMT" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="AUTH_SIGN" Type="varchar" MaxLength="50" />
+    <Property Name="AUTH_DESIG" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KIN_DETAILS">
+    <Key>
+      <PropertyRef Name="KINID" />
+    </Key>
+    <Property Name="KINID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="ADDRESS1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRESS2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="STATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COUNTRYID" Type="int" />
+    <Property Name="PIN" Type="nvarchar" MaxLength="50" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMPID" Type="int" />
+    <Property Name="GENDER" Type="nvarchar" MaxLength="20" />
+    <Property Name="RELATIONSHIPID" Type="int" />
+  </EntityType>
+  <EntityType Name="MAIN_TABLE">
+    <Key>
+      <PropertyRef Name="MAINTABLEID" />
+    </Key>
+    <Property Name="MAINTABLEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="RULE_TILL_DATE" Type="datetime" />
+    <Property Name="RULE_TYPE" Type="smallint" />
+    <Property Name="INPUT_TYPE" Type="char" MaxLength="1" />
+    <Property Name="TAXABLE_FLAG" Type="char" MaxLength="1" />
+    <Property Name="IT_FORECAST_INDIC" Type="char" MaxLength="1" />
+    <Property Name="ACNT_CODE" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE" Type="char" MaxLength="3" />
+    <Property Name="ACC_SUB_CODE" Type="char" MaxLength="7" />
+    <Property Name="OFF_ON_BRD_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_HRB_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_STF_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_LEAVE_EARND_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_MDCLI_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_MDCLF_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_STF_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_ON_BRD_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_RETN1_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_RETN2_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_LEAVE_EARND_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_HOSPTLSD_IND_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_HOSPTLSD_ABROAD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_MDCLI_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_UNFIT_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_ADV_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_MDCLF_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_CONTNS_SERVICE_FLAG" Type="char" MaxLength="1" />
+    <Property Name="RATE_TYPE" Type="char" MaxLength="5" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="BIFURCATE" Type="char" MaxLength="1" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="ACNT_CODE_CO_DR" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_CO_DR" Type="char" MaxLength="3" />
+    <Property Name="ACNT_CODE_CO_CR" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_CO_CR" Type="char" MaxLength="3" />
+    <Property Name="ACNT_CODE_BB" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_BB" Type="char" MaxLength="3" />
+    <Property Name="ACNT_CODE_BB_CO_DR" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_BB_CO_DR" Type="char" MaxLength="3" />
+    <Property Name="ACNT_CODE_BB_CO_CR" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_BB_CO_CR" Type="char" MaxLength="3" />
+    <Property Name="REC_ID_NO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MARITIME_HOLIDAY">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="MID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DAY" Type="int" />
+    <Property Name="MONTH" Type="int" />
+  </EntityType>
+  <EntityType Name="MISC_TAXABLE_INCOME">
+    <Key>
+      <PropertyRef Name="MISC_TAXABLE_INCOME_ID" />
+    </Key>
+    <Property Name="MISC_TAXABLE_INCOME_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FINANCIAL_YEAR" Type="varchar" MaxLength="50" />
+    <Property Name="EMP_CODE" Type="int" />
+    <Property Name="NARRATION" Type="varchar" MaxLength="50" />
+    <Property Name="AMOUNT" Type="money" />
+    <Property Name="INCOME_CODE" Type="int" />
+    <Property Name="ENTRY_DATE" Type="datetime" />
+    <Property Name="UTILISED" Type="money" />
+    <Property Name="TAX_DED" Type="money" />
+    <Property Name="TAX_AMT_DED" Type="money" />
+    <Property Name="SCHG_DED" Type="money" />
+    <Property Name="CESS_DED" Type="money" />
+    <Property Name="HCESS_DED" Type="money" />
+  </EntityType>
+  <EntityType Name="NON_RECOVERY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_CODE" Type="int" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="500" />
+    <Property Name="AMOUNT" Type="nvarchar" MaxLength="50" />
+    <Property Name="INACTIVE_BY" Type="char" MaxLength="10" />
+    <Property Name="INACTIVE_TIME" Type="datetime" />
+    <Property Name="INACTIVE_COMPUTER" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OTHER_INCOME">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="100" />
+    <Property Name="TYPE" Type="nvarchar" MaxLength="10" />
+    <Property Name="NON_TAXABLE_LIMIT" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="PAGE_MASTER">
+    <Key>
+      <PropertyRef Name="PAGEID" />
+    </Key>
+    <Property Name="PAGEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAGENAME" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PAGE_PERMISSION">
+    <Key>
+      <PropertyRef Name="PAGEPERMISSIONID" />
+    </Key>
+    <Property Name="PAGEPERMISSIONID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAGEID" Type="int" />
+    <Property Name="ROLENAME" Type="nvarchar" MaxLength="256" />
+    <Property Name="PERMISSIONID" Type="int" />
+  </EntityType>
+  <EntityType Name="PERSONNEL_MASTER">
+    <Key>
+      <PropertyRef Name="PERSONNELID" />
+    </Key>
+    <Property Name="PERSONNELID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="ASP_USER_DETAILS" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PF_REMIT">
+    <Key>
+      <PropertyRef Name="PF_REMIT_ID" />
+    </Key>
+    <Property Name="PF_REMIT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REF_NO" Type="varchar" MaxLength="50" />
+    <Property Name="REF_DT" Type="datetime" />
+    <Property Name="ADDR0" Type="varchar" MaxLength="100" />
+    <Property Name="ADDR1" Type="varchar" MaxLength="100" />
+    <Property Name="ADDR2" Type="varchar" MaxLength="100" />
+    <Property Name="ADDR3" Type="varchar" MaxLength="100" />
+    <Property Name="ADDR4" Type="varchar" MaxLength="50" />
+    <Property Name="REMIT_CHQ_NO" Type="varchar" MaxLength="20" />
+    <Property Name="REMIT_CHQ_DT" Type="datetime" />
+    <Property Name="REMIT_BANK" Type="varchar" MaxLength="50" />
+    <Property Name="REMIT_AMT" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="ADMN_CHQ_NO" Type="varchar" MaxLength="20" />
+    <Property Name="ADMN_CHQ_DT" Type="datetime" />
+    <Property Name="ADMN_BANK" Type="varchar" MaxLength="50" />
+    <Property Name="ADMN_AMT" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="AUTH_SIGN" Type="varchar" MaxLength="50" />
+    <Property Name="AUTH_DESIG" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PORT_MASTER">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PortName" Type="varchar" MaxLength="50" />
+    <Property Name="CCODE" Type="char" MaxLength="4" />
+    <Property Name="Country" Type="int" />
+    <Property Name="addby" Type="char" MaxLength="10" />
+    <Property Name="editby" Type="char" MaxLength="10" />
+    <Property Name="addtime" Type="datetime" />
+    <Property Name="editime" Type="datetime" />
+    <Property Name="Latitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="Longitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="bit" />
+  </EntityType>
+  <EntityType Name="RANK_CLASS">
+    <Key>
+      <PropertyRef Name="RCID" />
+    </Key>
+    <Property Name="RCID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RANKID" Type="int" />
+    <Property Name="CLASSID" Type="int" />
+    <Property Name="Class_Type" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="RANK_MASTER">
+    <Key>
+      <PropertyRef Name="RANKID" />
+    </Key>
+    <Property Name="RANKID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RANK_DESC" Type="varchar" MaxLength="255" />
+    <Property Name="CATEGORYID" Type="int" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Withheld_Perc_NRI" Type="nvarchar" MaxLength="50" />
+    <Property Name="Print_order" Type="int" />
+    <Property Name="Pf_Applicable" Type="bit" />
+  </EntityType>
+  <EntityType Name="RELATIONSHIP_MASTER">
+    <Key>
+      <PropertyRef Name="RELATIONSHIPID" />
+    </Key>
+    <Property Name="RELATIONSHIPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RELATION" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="RELIGION">
+    <Key>
+      <PropertyRef Name="RELIGIONID" />
+    </Key>
+    <Property Name="RELIGIONID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RELIGION_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="RULE0">
+    <Key>
+      <PropertyRef Name="RULE0ID" />
+    </Key>
+    <Property Name="RULE0ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="RANK_CODE" Type="char" MaxLength="3" />
+    <Property Name="SHIP_CODE" Type="char" MaxLength="3" />
+    <Property Name="FROM_MONTH" Type="smallint" />
+    <Property Name="TO_MONTH" Type="smallint" />
+    <Property Name="EARN_DEDN_RATE" Type="smallmoney" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RULE1">
+    <Key>
+      <PropertyRef Name="RULE1ID" />
+    </Key>
+    <Property Name="RULE1ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="AMOUNT_DPM_MPY_FLAG" Type="char" MaxLength="1" />
+    <Property Name="EARN_DEDN_RATE" Type="smallmoney" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="xx" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RULE2">
+    <Key>
+      <PropertyRef Name="RULE2ID" />
+    </Key>
+    <Property Name="RULE2ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EARN_DEDN_RATE" Type="smallmoney" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="XX" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RULE3">
+    <Key>
+      <PropertyRef Name="RULE3ID" />
+    </Key>
+    <Property Name="RULE3ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="RANK_CODE" Type="char" MaxLength="3" />
+    <Property Name="FIXED_PRCNT_DPM_FLAG" Type="char" MaxLength="1" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EARN_DEDN_RATE" Type="money" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="s" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RULE4">
+    <Key>
+      <PropertyRef Name="RULE4ID" />
+    </Key>
+    <Property Name="RULE4ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="MIN_SECONDARY_EARN_AMT" Type="money" />
+    <Property Name="MAX_SECONDARY_EARN_AMT" Type="money" />
+    <Property Name="FIXED_PRCNT_OTRATE_FLAG" Type="char" MaxLength="1" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EARN_DEDN_RATE" Type="smallmoney" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="XX" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RULE5">
+    <Key>
+      <PropertyRef Name="RULE5ID" />
+    </Key>
+    <Property Name="RULE5ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="SHIP_CODE" Type="char" MaxLength="3" />
+    <Property Name="RANK_CODE" Type="char" MaxLength="3" />
+    <Property Name="FIXED_PRCNT_DPM_FLAG" Type="char" MaxLength="1" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EARN_DEDN_RATE" Type="smallmoney" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="s" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RULE6">
+    <Key>
+      <PropertyRef Name="RULE6ID" />
+    </Key>
+    <Property Name="RULE6ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="RANK_CODE" Type="char" MaxLength="3" />
+    <Property Name="CERT_CODE" Type="char" MaxLength="3" />
+    <Property Name="FIXED_PRCNT_FLAG" Type="char" MaxLength="1" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EARN_DEDN_RATE" Type="smallmoney" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RULE7">
+    <Key>
+      <PropertyRef Name="RULE7ID" />
+    </Key>
+    <Property Name="RULE7ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="MIN_NO_OF_YRS" Type="smallint" />
+    <Property Name="MAX_NO_OF_YRS" Type="smallint" />
+    <Property Name="EARN_DEDN_RATE" Type="smallmoney" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RULE8">
+    <Key>
+      <PropertyRef Name="RULE8ID" />
+    </Key>
+    <Property Name="RULE8ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="SHIP_CODE" Type="char" MaxLength="3" />
+    <Property Name="PROLONG_FROM_MONTH" Type="smallint" />
+    <Property Name="PROLONG_TO_MONTH" Type="smallint" />
+    <Property Name="PRCNT_IN_FIRST_PERIOD" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="PRCNT_IN_SECOND_PERIOD" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="PRCNT_IN_THIRD_PERIOD" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RULE9">
+    <Key>
+      <PropertyRef Name="RULE9ID" />
+    </Key>
+    <Property Name="RULE9ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="smallint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="MIN_NO_OF_DAYS" Type="smallint" />
+    <Property Name="MAX_NO_OF_DAYS" Type="smallint" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EARN_PRCNT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SALUTATION">
+    <Key>
+      <PropertyRef Name="SalutationID" />
+    </Key>
+    <Property Name="SalutationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SalutationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="SECTION_LIMIT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SECTION" Type="nvarchar" MaxLength="20" />
+    <Property Name="MAX_LIMIT" Type="money" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="SELECTION_STATUS_MASTER">
+    <Key>
+      <PropertyRef Name="SPID" />
+    </Key>
+    <Property Name="SPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SPNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="SPDESCRIPTION" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SHIP_MASTER">
+    <Key>
+      <PropertyRef Name="SMID" />
+    </Key>
+    <Property Name="SMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VNAME" Type="varchar" MaxLength="100" />
+    <Property Name="PORT_REG_TRADE" Type="varchar" MaxLength="50" />
+    <Property Name="OFF_IMO_NO" Type="varchar" MaxLength="50" />
+    <Property Name="GT_POWER" Type="varchar" MaxLength="50" />
+    <Property Name="NO_OF_CREW" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="TYPEID" Type="int" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="NRT" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="AREA_OF_OPERATION" Type="varchar" MaxLength="50" />
+    <Property Name="OFFICIAL_NO" Type="varchar" MaxLength="50" />
+    <Property Name="POWER_KW_BHP" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTRY_FLAG" Type="int" />
+    <Property Name="CLIENT_ID" Type="int" />
+    <Property Name="PHOTO" Type="nvarchar" MaxLength="500" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="CALL_SIGN" Type="nvarchar" MaxLength="50" />
+    <Property Name="DWT" Type="nvarchar" MaxLength="50" />
+    <Property Name="ABS_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="MMSI_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="SAT_C_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOBILE_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="VSAT_NO" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SHIP_MOVEMENT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SHIP_ID" Type="int" />
+    <Property Name="COUNTRY_ID" Type="int" />
+    <Property Name="START_DATE" Type="date" />
+    <Property Name="END_DATE" Type="date" />
+  </EntityType>
+  <EntityType Name="SHIP_MOVEMENT_REGISTER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SHIPCODE" Type="int" Nullable="false" />
+    <Property Name="FROM_DATE" Type="datetime" />
+    <Property Name="TO_DATE" Type="datetime" />
+    <Property Name="WATER" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SHIP_TYPE_MASTER">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="ShipAgreement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="AgreementType" Type="int" />
+    <Property Name="Startdate" Type="date" />
+    <Property Name="Enddate" Type="date" />
+    <Property Name="ShipId" Type="int" />
+  </EntityType>
+  <EntityType Name="SHORE_PASS_MASTER">
+    <Key>
+      <PropertyRef Name="SPID" />
+    </Key>
+    <Property Name="SPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TAX_CODE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPTIONS" Type="nvarchar" MaxLength="50" />
+    <Property Name="SAVINGS_TYPE" Type="char" MaxLength="1" />
+    <Property Name="UNDER_SECTION" Type="int" />
+    <Property Name="INCOME_TYPE" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TAX_SLAB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TYPE" Type="char" MaxLength="1" />
+    <Property Name="FINANCIAL_YEAR" Type="nvarchar" MaxLength="10" />
+    <Property Name="FROM_AMT" Type="money" />
+    <Property Name="TO_AMT" Type="money" />
+    <Property Name="TAX_PER" Type="money" />
+    <Property Name="TAX_AMT" Type="money" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="WITHHELD_REFUND">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_CODE" Type="int" Nullable="false" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="500" />
+    <Property Name="AMOUNT" Type="nvarchar" MaxLength="50" />
+    <Property Name="FINANCIAL_YEAR" Type="nvarchar" MaxLength="50" />
+    <Property Name="REF_PREFIX" Type="nvarchar" MaxLength="50" />
+    <Property Name="REF_NO" Type="int" />
+    <Property Name="REF_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WITHHELD_TRANSFER">
+    <Key>
+      <PropertyRef Name="WITHHELD_TRANSFER_ID" />
+    </Key>
+    <Property Name="WITHHELD_TRANSFER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YR" Type="char" MaxLength="4" />
+    <Property Name="MON" Type="char" MaxLength="2" />
+    <Property Name="EMP_CODE" Type="int" />
+    <Property Name="TRANS_AMT" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="AGREEMENT_CODE" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.vw_EmployeeDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_EmployeeDetails">
+    <Key>
+      <PropertyRef Name="EMPID" />
+      <PropertyRef Name="EMP_CODE" />
+      <PropertyRef Name="EMP_NAME" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="SPID" />
+    </Key>
+    <Property Name="EMPID" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="EMP_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMP_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NAME_PREFIX" Type="varchar" MaxLength="50" />
+    <Property Name="ADDR_PRMNT1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ADDR_PRMNT2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRMNT3" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEPHONE_PRMNT" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRESENT1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ADDR_PRESENT2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRESENT3" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEPHONE_PRESENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="SEX" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="NATIONALITY" Type="int" />
+    <Property Name="FAX" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOBILE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELIGIONID" Type="int" />
+    <Property Name="PHOTO" Type="nvarchar" MaxLength="500" />
+    <Property Name="ASP_USER_DETAILS" Type="uniqueidentifier" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="SPNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="RELIGION_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SPID" Type="int" Nullable="false" />
+    <Property Name="SR_CITIZEN" Type="bit" />
+    <Property Name="FATHER_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="BIRTH_PLACE" Type="varchar" MaxLength="50" />
+    <Property Name="ALEVELVERIFY" Type="bit" />
+    <Property Name="BLEVELVERIFY" Type="bit" />
+    <Property Name="CLEVELVERIFY" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.vw_UserDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_UserDetails">
+    <Key>
+      <PropertyRef Name="EMPID" />
+      <PropertyRef Name="EMP_CODE" />
+      <PropertyRef Name="EMP_NAME" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+    </Key>
+    <Property Name="EMPID" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="SR_CITIZEN" Type="bit" />
+    <Property Name="EMP_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMP_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NAME_PREFIX" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_UserRoleDetails">
+    <Key>
+      <PropertyRef Name="EMPID" />
+      <PropertyRef Name="EMP_CODE" />
+      <PropertyRef Name="EMP_NAME" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="RELIGION_NAME" />
+      <PropertyRef Name="SPID" />
+    </Key>
+    <Property Name="EMPID" Type="int" Nullable="false" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="EMP_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMP_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NAME_PREFIX" Type="varchar" MaxLength="50" />
+    <Property Name="ADDR_PRMNT1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ADDR_PRMNT2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRMNT3" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEPHONE_PRMNT" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRESENT1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ADDR_PRESENT2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDR_PRESENT3" Type="nvarchar" MaxLength="50" />
+    <Property Name="TELEPHONE_PRESENT" Type="nvarchar" MaxLength="50" />
+    <Property Name="SEX" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="NATIONALITY" Type="int" />
+    <Property Name="FAX" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOBILE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="RELIGIONID" Type="int" />
+    <Property Name="PHOTO" Type="nvarchar" MaxLength="500" />
+    <Property Name="ASP_USER_DETAILS" Type="uniqueidentifier" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="SPNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="RELIGION_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SPID" Type="int" Nullable="false" />
+    <Property Name="CLIENTUSERID" Type="int" />
+    <Property Name="CLIENTID" Type="int" />
+    <Property Name="USERID" Type="int" />
+    <Property Name="CLIENT_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ClientEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="SIGNINGAUTH" Type="bit" />
+    <Property Name="DESIGNATION" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK_ACTUAL_SAVINGS_AGREEMENT_DETAILS">
+    <End Role="AGREEMENT_DETAILS" Type="Self.AGREEMENT_DETAILS" Multiplicity="0..1" />
+    <End Role="ACTUAL_SAVINGS" Type="Self.ACTUAL_SAVINGS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGREEMENT_DETAILS">
+        <PropertyRef Name="AGREEMENT_DETAILS_ID" />
+      </Principal>
+      <Dependent Role="ACTUAL_SAVINGS">
+        <PropertyRef Name="AGREEMENT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ACTUAL_SAVINGS_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="ACTUAL_SAVINGS" Type="Self.ACTUAL_SAVINGS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="ACTUAL_SAVINGS">
+        <PropertyRef Name="EMP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ACTUAL_SAVINGS_TAX_CODE">
+    <End Role="TAX_CODE" Type="Self.TAX_CODE" Multiplicity="0..1" />
+    <End Role="ACTUAL_SAVINGS" Type="Self.ACTUAL_SAVINGS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAX_CODE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ACTUAL_SAVINGS">
+        <PropertyRef Name="TYPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADDRESSEE_MASTER_COMPANY_PARAMETER">
+    <End Role="COMPANY_PARAMETER" Type="Self.COMPANY_PARAMETER" Multiplicity="0..1" />
+    <End Role="ADDRESSEE_MASTER" Type="Self.ADDRESSEE_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPANY_PARAMETER">
+        <PropertyRef Name="COMPANYID" />
+      </Principal>
+      <Dependent Role="ADDRESSEE_MASTER">
+        <PropertyRef Name="COMPANYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ADDRESSEE_MASTER_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="ADDRESSEE_MASTER" Type="Self.ADDRESSEE_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="ADDRESSEE_MASTER">
+        <PropertyRef Name="COUNTRY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AGREEMENT_DETAILS_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="1" />
+    <End Role="AGREEMENT_DETAILS" Type="Self.AGREEMENT_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="AGREEMENT_DETAILS">
+        <PropertyRef Name="EMP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AGREEMENT_DETAILS_SHIP_MASTER">
+    <End Role="SHIP_MASTER" Type="Self.SHIP_MASTER" Multiplicity="1" />
+    <End Role="AGREEMENT_DETAILS" Type="Self.AGREEMENT_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHIP_MASTER">
+        <PropertyRef Name="SMID" />
+      </Principal>
+      <Dependent Role="AGREEMENT_DETAILS">
+        <PropertyRef Name="VCODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BRANCH_DETAILS_BANK_MASTER">
+    <End Role="BANK_MASTER" Type="Self.BANK_MASTER" Multiplicity="0..1" />
+    <End Role="BRANCH_DETAILS" Type="Self.BRANCH_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BANK_MASTER">
+        <PropertyRef Name="BANKID" />
+      </Principal>
+      <Dependent Role="BRANCH_DETAILS">
+        <PropertyRef Name="BANKID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BRANCH_DETAILS_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="BRANCH_DETAILS" Type="Self.BRANCH_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="BRANCH_DETAILS">
+        <PropertyRef Name="COUNTRYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CERTIFICATE_MASTER_CERTIFICATE_MASTER">
+    <End Role="CERTIFICATE_TYPE_MASTER" Type="Self.CERTIFICATE_TYPE_MASTER" Multiplicity="0..1" />
+    <End Role="CERTIFICATE_MASTER" Type="Self.CERTIFICATE_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CERTIFICATE_TYPE_MASTER">
+        <PropertyRef Name="CTID" />
+      </Principal>
+      <Dependent Role="CERTIFICATE_MASTER">
+        <PropertyRef Name="CTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CERTIFICATE_MASTER_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="CERTIFICATE_MASTER" Type="Self.CERTIFICATE_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="CERTIFICATE_MASTER">
+        <PropertyRef Name="ISSUE_PLACE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CERTIFICATE_MASTER_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="CERTIFICATE_MASTER" Type="Self.CERTIFICATE_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="CERTIFICATE_MASTER">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENT_COMMENT_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="CLIENT_COMMENT" Type="Self.CLIENT_COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="CLIENT_COMMENT">
+        <PropertyRef Name="EMPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENT_COMMENT_EMP_FIXED1">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="CLIENT_COMMENT" Type="Self.CLIENT_COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="CLIENT_COMMENT">
+        <PropertyRef Name="SENDERUSERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENT_COMMENT_EMP_FIXED2">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="CLIENT_COMMENT" Type="Self.CLIENT_COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="CLIENT_COMMENT">
+        <PropertyRef Name="RECEIVERUSERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENT_MASTER_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="CLIENT_MASTER" Type="Self.CLIENT_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="CLIENT_MASTER">
+        <PropertyRef Name="COUNTRY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENT_USER_CLIENT_MASTER">
+    <End Role="CLIENT_MASTER" Type="Self.CLIENT_MASTER" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CLIENT_USER" Type="Self.CLIENT_USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT_MASTER">
+        <PropertyRef Name="CLIENTID" />
+      </Principal>
+      <Dependent Role="CLIENT_USER">
+        <PropertyRef Name="CLIENTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENT_USER_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="CLIENT_USER" Type="Self.CLIENT_USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="CLIENT_USER">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMENT_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="COMMENT" Type="Self.COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="COMMENT">
+        <PropertyRef Name="EMPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMENT_EMP_FIXED1">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="COMMENT" Type="Self.COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="COMMENT">
+        <PropertyRef Name="RECEIVERUSERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMENT_EMP_FIXED2">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="COMMENT" Type="Self.COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="COMMENT">
+        <PropertyRef Name="SENDERUSERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPANY_BRANCH_BRANCH_DETAILS">
+    <End Role="BRANCH_DETAILS" Type="Self.BRANCH_DETAILS" Multiplicity="0..1" />
+    <End Role="COMPANY_BRANCH" Type="Self.COMPANY_BRANCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BRANCH_DETAILS">
+        <PropertyRef Name="BRANCHID" />
+      </Principal>
+      <Dependent Role="COMPANY_BRANCH">
+        <PropertyRef Name="BRANCHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPANY_BRANCH_COMPANY_PARAMETER">
+    <End Role="COMPANY_PARAMETER" Type="Self.COMPANY_PARAMETER" Multiplicity="0..1" />
+    <End Role="COMPANY_BRANCH" Type="Self.COMPANY_BRANCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPANY_PARAMETER">
+        <PropertyRef Name="COMPANYID" />
+      </Principal>
+      <Dependent Role="COMPANY_BRANCH">
+        <PropertyRef Name="COMPANYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DG_CERTIFIED_DOCTORS_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="DG_CERTIFIED_DOCTORS" Type="Self.DG_CERTIFIED_DOCTORS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="DG_CERTIFIED_DOCTORS">
+        <PropertyRef Name="COUNTRYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENTS_MASTER_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="DOCUMENTS_MASTER" Type="Self.DOCUMENTS_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="DOCUMENTS_MASTER">
+        <PropertyRef Name="ISSUE_PLACE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENTS_MASTER_DOCUMENTS_TYPE">
+    <End Role="DOCUMENTS_TYPE" Type="Self.DOCUMENTS_TYPE" Multiplicity="0..1" />
+    <End Role="DOCUMENTS_MASTER" Type="Self.DOCUMENTS_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOCUMENTS_TYPE">
+        <PropertyRef Name="DTID" />
+      </Principal>
+      <Dependent Role="DOCUMENTS_MASTER">
+        <PropertyRef Name="DT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCUMENTS_MASTER_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="DOCUMENTS_MASTER" Type="Self.DOCUMENTS_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="DOCUMENTS_MASTER">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DUTY_TYPE_MASTER_CATEGORY">
+    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
+    <End Role="DUTY_TYPE_MASTER" Type="Self.DUTY_TYPE_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORY">
+        <PropertyRef Name="CATEGORY_ID" />
+      </Principal>
+      <Dependent Role="DUTY_TYPE_MASTER">
+        <PropertyRef Name="CATEGORY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_BRANCH_BRANCH_DETAILS">
+    <End Role="BRANCH_DETAILS" Type="Self.BRANCH_DETAILS" Multiplicity="0..1" />
+    <End Role="EMP_BRANCH" Type="Self.EMP_BRANCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BRANCH_DETAILS">
+        <PropertyRef Name="BRANCHID" />
+      </Principal>
+      <Dependent Role="EMP_BRANCH">
+        <PropertyRef Name="BRANCHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_BRANCH_EMP_FIXED1">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="EMP_BRANCH" Type="Self.EMP_BRANCH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="EMP_BRANCH">
+        <PropertyRef Name="EMPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_EXPERIENCE_EMP_EXPERIENCE">
+    <End Role="SHIP_TYPE_MASTER" Type="Self.SHIP_TYPE_MASTER" Multiplicity="0..1" />
+    <End Role="EMP_EXPERIENCE" Type="Self.EMP_EXPERIENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHIP_TYPE_MASTER">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="EMP_EXPERIENCE">
+        <PropertyRef Name="Ship_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_EXPERIENCE_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="1" />
+    <End Role="EMP_EXPERIENCE" Type="Self.EMP_EXPERIENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="EMP_EXPERIENCE">
+        <PropertyRef Name="EMP_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_FIXED_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="EMP_FIXED">
+        <PropertyRef Name="NATIONALITY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_FIXED_RELIGION">
+    <End Role="RELIGION" Type="Self.RELIGION" Multiplicity="0..1" />
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RELIGION">
+        <PropertyRef Name="RELIGIONID" />
+      </Principal>
+      <Dependent Role="EMP_FIXED">
+        <PropertyRef Name="RELIGIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_FIXED_SELECTION_STATUS_MASTER">
+    <End Role="SELECTION_STATUS_MASTER" Type="Self.SELECTION_STATUS_MASTER" Multiplicity="0..1" />
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SELECTION_STATUS_MASTER">
+        <PropertyRef Name="SPID" />
+      </Principal>
+      <Dependent Role="EMP_FIXED">
+        <PropertyRef Name="STATUS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLOYEE_CLIENT_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="EMPLOYEE_CLIENT" Type="Self.EMPLOYEE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="EMPLOYEE_CLIENT">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLOYEE_CLIENT_RANK_CLASS">
+    <End Role="RANK_CLASS" Type="Self.RANK_CLASS" Multiplicity="0..1" />
+    <End Role="EMPLOYEE_CLIENT" Type="Self.EMPLOYEE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RANK_CLASS">
+        <PropertyRef Name="RCID" />
+      </Principal>
+      <Dependent Role="EMPLOYEE_CLIENT">
+        <PropertyRef Name="RANK_CLASS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLOYEE_CLIENT_SHIP_MASTER">
+    <End Role="SHIP_MASTER" Type="Self.SHIP_MASTER" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EMPLOYEE_CLIENT" Type="Self.EMPLOYEE_CLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHIP_MASTER">
+        <PropertyRef Name="SMID" />
+      </Principal>
+      <Dependent Role="EMPLOYEE_CLIENT">
+        <PropertyRef Name="SHIP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLOYEE_STATUS_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="EMPLOYEE_STATUS" Type="Self.EMPLOYEE_STATUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="EMPLOYEE_STATUS">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLOYEE_STATUS_PERSONNEL_MASTER">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="EMPLOYEE_STATUS" Type="Self.EMPLOYEE_STATUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="EMPLOYEE_STATUS">
+        <PropertyRef Name="UPDATE_PERSONEL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLOYEE_STATUS_SELECTION_STATUS_MASTER">
+    <End Role="SELECTION_STATUS_MASTER" Type="Self.SELECTION_STATUS_MASTER" Multiplicity="0..1" />
+    <End Role="EMPLOYEE_STATUS" Type="Self.EMPLOYEE_STATUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SELECTION_STATUS_MASTER">
+        <PropertyRef Name="SPID" />
+      </Principal>
+      <Dependent Role="EMPLOYEE_STATUS">
+        <PropertyRef Name="STATUS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KIN_DETAILS_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="KIN_DETAILS" Type="Self.KIN_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="KIN_DETAILS">
+        <PropertyRef Name="COUNTRYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KIN_DETAILS_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="KIN_DETAILS" Type="Self.KIN_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="KIN_DETAILS">
+        <PropertyRef Name="EMPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KIN_DETAILS_RELATIONSHIP_MASTER">
+    <End Role="RELATIONSHIP_MASTER" Type="Self.RELATIONSHIP_MASTER" Multiplicity="0..1" />
+    <End Role="KIN_DETAILS" Type="Self.KIN_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RELATIONSHIP_MASTER">
+        <PropertyRef Name="RELATIONSHIPID" />
+      </Principal>
+      <Dependent Role="KIN_DETAILS">
+        <PropertyRef Name="RELATIONSHIPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MISC_TAXABLE_INCOME_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="MISC_TAXABLE_INCOME" Type="Self.MISC_TAXABLE_INCOME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="MISC_TAXABLE_INCOME">
+        <PropertyRef Name="EMP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MISC_TAXABLE_INCOME_OTHER_INCOME">
+    <End Role="OTHER_INCOME" Type="Self.OTHER_INCOME" Multiplicity="0..1" />
+    <End Role="MISC_TAXABLE_INCOME" Type="Self.MISC_TAXABLE_INCOME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OTHER_INCOME">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MISC_TAXABLE_INCOME">
+        <PropertyRef Name="INCOME_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NON_RECOVERY_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="NON_RECOVERY" Type="Self.NON_RECOVERY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="NON_RECOVERY">
+        <PropertyRef Name="EMP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PAGE_PERMISSION_PAGE_MASTER">
+    <End Role="PAGE_MASTER" Type="Self.PAGE_MASTER" Multiplicity="0..1" />
+    <End Role="PAGE_PERMISSION" Type="Self.PAGE_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAGE_MASTER">
+        <PropertyRef Name="PAGEID" />
+      </Principal>
+      <Dependent Role="PAGE_PERMISSION">
+        <PropertyRef Name="PAGEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PORT_MASTER_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="PORT_MASTER" Type="Self.PORT_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="PORT_MASTER">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RANK_CLASS_CLASS">
+    <End Role="CLASS" Type="Self.CLASS" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RANK_CLASS" Type="Self.RANK_CLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="CLASSID" />
+      </Principal>
+      <Dependent Role="RANK_CLASS">
+        <PropertyRef Name="CLASSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RANK_CLASS_RANK_MASTER">
+    <End Role="RANK_MASTER" Type="Self.RANK_MASTER" Multiplicity="0..1" />
+    <End Role="RANK_CLASS" Type="Self.RANK_CLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RANK_MASTER">
+        <PropertyRef Name="RANKID" />
+      </Principal>
+      <Dependent Role="RANK_CLASS">
+        <PropertyRef Name="RANKID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RANK_MASTER_CATEGORY">
+    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
+    <End Role="RANK_MASTER" Type="Self.RANK_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORY">
+        <PropertyRef Name="CATEGORY_ID" />
+      </Principal>
+      <Dependent Role="RANK_MASTER">
+        <PropertyRef Name="CATEGORYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHIP_MASTER_Country_Master">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="SHIP_MASTER" Type="Self.SHIP_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="SHIP_MASTER">
+        <PropertyRef Name="COUNTRY_FLAG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHIP_MASTER_Ship_Type_Master">
+    <End Role="SHIP_TYPE_MASTER" Type="Self.SHIP_TYPE_MASTER" Multiplicity="0..1" />
+    <End Role="SHIP_MASTER" Type="Self.SHIP_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHIP_TYPE_MASTER">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="SHIP_MASTER">
+        <PropertyRef Name="TYPEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHIP_MOVEMENT_COUNTRY_MASTER">
+    <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
+    <End Role="SHIP_MOVEMENT" Type="Self.SHIP_MOVEMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COUNTRY_MASTER">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="SHIP_MOVEMENT">
+        <PropertyRef Name="COUNTRY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHIP_MOVEMENT_REGISTER_SHIP_MASTER">
+    <End Role="SHIP_MASTER" Type="Self.SHIP_MASTER" Multiplicity="1" />
+    <End Role="SHIP_MOVEMENT_REGISTER" Type="Self.SHIP_MOVEMENT_REGISTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHIP_MASTER">
+        <PropertyRef Name="SMID" />
+      </Principal>
+      <Dependent Role="SHIP_MOVEMENT_REGISTER">
+        <PropertyRef Name="SHIPCODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHIP_MOVEMENT_SHIP_MASTER">
+    <End Role="SHIP_MASTER" Type="Self.SHIP_MASTER" Multiplicity="0..1" />
+    <End Role="SHIP_MOVEMENT" Type="Self.SHIP_MOVEMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHIP_MASTER">
+        <PropertyRef Name="SMID" />
+      </Principal>
+      <Dependent Role="SHIP_MOVEMENT">
+        <PropertyRef Name="SHIP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShipAgreement_CLIENT_MASTER">
+    <End Role="CLIENT_MASTER" Type="Self.CLIENT_MASTER" Multiplicity="0..1" />
+    <End Role="ShipAgreement" Type="Self.ShipAgreement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT_MASTER">
+        <PropertyRef Name="CLIENTID" />
+      </Principal>
+      <Dependent Role="ShipAgreement">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShipAgreement_SHIP_MASTER">
+    <End Role="SHIP_MASTER" Type="Self.SHIP_MASTER" Multiplicity="0..1" />
+    <End Role="ShipAgreement" Type="Self.ShipAgreement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHIP_MASTER">
+        <PropertyRef Name="SMID" />
+      </Principal>
+      <Dependent Role="ShipAgreement">
+        <PropertyRef Name="ShipId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TAX_CODE_SECTION_LIMIT">
+    <End Role="SECTION_LIMIT" Type="Self.SECTION_LIMIT" Multiplicity="0..1" />
+    <End Role="TAX_CODE" Type="Self.TAX_CODE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECTION_LIMIT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TAX_CODE">
+        <PropertyRef Name="UNDER_SECTION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WITHHELD_REFUND_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="1" />
+    <End Role="WITHHELD_REFUND" Type="Self.WITHHELD_REFUND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="WITHHELD_REFUND">
+        <PropertyRef Name="EMP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WITHHELD_TRANSFER_AGREEMENT_DETAILS">
+    <End Role="AGREEMENT_DETAILS" Type="Self.AGREEMENT_DETAILS" Multiplicity="0..1" />
+    <End Role="WITHHELD_TRANSFER" Type="Self.WITHHELD_TRANSFER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AGREEMENT_DETAILS">
+        <PropertyRef Name="AGREEMENT_DETAILS_ID" />
+      </Principal>
+      <Dependent Role="WITHHELD_TRANSFER">
+        <PropertyRef Name="AGREEMENT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WITHHELD_TRANSFER_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="0..1" />
+    <End Role="WITHHELD_TRANSFER" Type="Self.WITHHELD_TRANSFER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="WITHHELD_TRANSFER">
+        <PropertyRef Name="EMP_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_GetUserIdForMailsend" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmpID" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="thesynaxis123_garwareModelStoreContainer">
+    <EntitySet Name="ACCOUNT_MASTER" EntityType="Self.ACCOUNT_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ACTUAL_SAVINGS" EntityType="Self.ACTUAL_SAVINGS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADDRESSEE_MASTER" EntityType="Self.ADDRESSEE_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AGREEMENT_DETAILS" EntityType="Self.AGREEMENT_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AREA_OPERATION_MASTER" EntityType="Self.AREA_OPERATION_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BANK_MASTER" EntityType="Self.BANK_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BRANCH_DETAILS" EntityType="Self.BRANCH_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CERTIFICATE_MASTER" EntityType="Self.CERTIFICATE_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CERTIFICATE_TYPE_MASTER" EntityType="Self.CERTIFICATE_TYPE_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLASS" EntityType="Self.CLASS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENT_COMMENT" EntityType="Self.CLIENT_COMMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENT_MASTER" EntityType="Self.CLIENT_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENT_USER" EntityType="Self.CLIENT_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMMENT" EntityType="Self.COMMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPANY_BRANCH" EntityType="Self.COMPANY_BRANCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPANY_PARAMETER" EntityType="Self.COMPANY_PARAMETER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COUNTRY_MASTER" EntityType="Self.COUNTRY_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURRENCY_MASTER" EntityType="Self.CURRENCY_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DG_CERTIFIED_DOCTORS" EntityType="Self.DG_CERTIFIED_DOCTORS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOCUMENTS_MASTER" EntityType="Self.DOCUMENTS_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOCUMENTS_TYPE" EntityType="Self.DOCUMENTS_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DUTY_TYPE_MASTER" EntityType="Self.DUTY_TYPE_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EARNING_DEDUCTION_MASTER" EntityType="Self.EARNING_DEDUCTION_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMP_BRANCH" EntityType="Self.EMP_BRANCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMP_EXPERIENCE" EntityType="Self.EMP_EXPERIENCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMP_FIXED" EntityType="Self.EMP_FIXED" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPLOYEE_CLIENT" EntityType="Self.EMPLOYEE_CLIENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPLOYEE_STATUS" EntityType="Self.EMPLOYEE_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GRATUITY_REMIT" EntityType="Self.GRATUITY_REMIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KIN_DETAILS" EntityType="Self.KIN_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAIN_TABLE" EntityType="Self.MAIN_TABLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MARITIME_HOLIDAY" EntityType="Self.MARITIME_HOLIDAY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MISC_TAXABLE_INCOME" EntityType="Self.MISC_TAXABLE_INCOME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NON_RECOVERY" EntityType="Self.NON_RECOVERY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OTHER_INCOME" EntityType="Self.OTHER_INCOME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAGE_MASTER" EntityType="Self.PAGE_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAGE_PERMISSION" EntityType="Self.PAGE_PERMISSION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERSONNEL_MASTER" EntityType="Self.PERSONNEL_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PF_REMIT" EntityType="Self.PF_REMIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PORT_MASTER" EntityType="Self.PORT_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RANK_CLASS" EntityType="Self.RANK_CLASS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RANK_MASTER" EntityType="Self.RANK_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RELATIONSHIP_MASTER" EntityType="Self.RELATIONSHIP_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RELIGION" EntityType="Self.RELIGION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE0" EntityType="Self.RULE0" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE1" EntityType="Self.RULE1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE2" EntityType="Self.RULE2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE3" EntityType="Self.RULE3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE4" EntityType="Self.RULE4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE5" EntityType="Self.RULE5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE6" EntityType="Self.RULE6" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE7" EntityType="Self.RULE7" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE8" EntityType="Self.RULE8" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RULE9" EntityType="Self.RULE9" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SALUTATION" EntityType="Self.SALUTATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SECTION_LIMIT" EntityType="Self.SECTION_LIMIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SELECTION_STATUS_MASTER" EntityType="Self.SELECTION_STATUS_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SHIP_MASTER" EntityType="Self.SHIP_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SHIP_MOVEMENT" EntityType="Self.SHIP_MOVEMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SHIP_MOVEMENT_REGISTER" EntityType="Self.SHIP_MOVEMENT_REGISTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SHIP_TYPE_MASTER" EntityType="Self.SHIP_TYPE_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShipAgreement" EntityType="Self.ShipAgreement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SHORE_PASS_MASTER" EntityType="Self.SHORE_PASS_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAX_CODE" EntityType="Self.TAX_CODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAX_SLAB" EntityType="Self.TAX_SLAB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WITHHELD_REFUND" EntityType="Self.WITHHELD_REFUND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WITHHELD_TRANSFER" EntityType="Self.WITHHELD_TRANSFER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vw_EmployeeDetails" EntityType="Self.vw_EmployeeDetails" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_EmployeeDetails].[EMPID] AS [EMPID], 
+    [vw_EmployeeDetails].[STATUS] AS [STATUS], 
+    [vw_EmployeeDetails].[EMP_CODE] AS [EMP_CODE], 
+    [vw_EmployeeDetails].[EMP_NAME] AS [EMP_NAME], 
+    [vw_EmployeeDetails].[NAME_PREFIX] AS [NAME_PREFIX], 
+    [vw_EmployeeDetails].[ADDR_PRMNT1] AS [ADDR_PRMNT1], 
+    [vw_EmployeeDetails].[ADDR_PRMNT2] AS [ADDR_PRMNT2], 
+    [vw_EmployeeDetails].[ADDR_PRMNT3] AS [ADDR_PRMNT3], 
+    [vw_EmployeeDetails].[TELEPHONE_PRMNT] AS [TELEPHONE_PRMNT], 
+    [vw_EmployeeDetails].[ADDR_PRESENT1] AS [ADDR_PRESENT1], 
+    [vw_EmployeeDetails].[ADDR_PRESENT2] AS [ADDR_PRESENT2], 
+    [vw_EmployeeDetails].[ADDR_PRESENT3] AS [ADDR_PRESENT3], 
+    [vw_EmployeeDetails].[TELEPHONE_PRESENT] AS [TELEPHONE_PRESENT], 
+    [vw_EmployeeDetails].[SEX] AS [SEX], 
+    [vw_EmployeeDetails].[DOB] AS [DOB], 
+    [vw_EmployeeDetails].[NATIONALITY] AS [NATIONALITY], 
+    [vw_EmployeeDetails].[FAX] AS [FAX], 
+    [vw_EmployeeDetails].[MOBILE] AS [MOBILE], 
+    [vw_EmployeeDetails].[EMAIL] AS [EMAIL], 
+    [vw_EmployeeDetails].[RELIGIONID] AS [RELIGIONID], 
+    [vw_EmployeeDetails].[PHOTO] AS [PHOTO], 
+    [vw_EmployeeDetails].[ASP_USER_DETAILS] AS [ASP_USER_DETAILS], 
+    [vw_EmployeeDetails].[RoleId] AS [RoleId], 
+    [vw_EmployeeDetails].[RoleName] AS [RoleName], 
+    [vw_EmployeeDetails].[SPNAME] AS [SPNAME], 
+    [vw_EmployeeDetails].[RELIGION_NAME] AS [RELIGION_NAME], 
+    [vw_EmployeeDetails].[SPID] AS [SPID], 
+    [vw_EmployeeDetails].[SR_CITIZEN] AS [SR_CITIZEN], 
+    [vw_EmployeeDetails].[FATHER_NAME] AS [FATHER_NAME], 
+    [vw_EmployeeDetails].[BIRTH_PLACE] AS [BIRTH_PLACE], 
+    [vw_EmployeeDetails].[ALEVELVERIFY] AS [ALEVELVERIFY], 
+    [vw_EmployeeDetails].[BLEVELVERIFY] AS [BLEVELVERIFY], 
+    [vw_EmployeeDetails].[CLEVELVERIFY] AS [CLEVELVERIFY]
+    FROM [dbo].[vw_EmployeeDetails] AS [vw_EmployeeDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_UserDetails" EntityType="Self.vw_UserDetails" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_UserDetails].[EMPID] AS [EMPID], 
+    [vw_UserDetails].[STATUS] AS [STATUS], 
+    [vw_UserDetails].[SR_CITIZEN] AS [SR_CITIZEN], 
+    [vw_UserDetails].[EMP_CODE] AS [EMP_CODE], 
+    [vw_UserDetails].[EMP_NAME] AS [EMP_NAME], 
+    [vw_UserDetails].[NAME_PREFIX] AS [NAME_PREFIX], 
+    [vw_UserDetails].[EMAIL] AS [EMAIL], 
+    [vw_UserDetails].[UserId] AS [UserId], 
+    [vw_UserDetails].[UserName] AS [UserName], 
+    [vw_UserDetails].[RoleId] AS [RoleId], 
+    [vw_UserDetails].[RoleName] AS [RoleName]
+    FROM [dbo].[vw_UserDetails] AS [vw_UserDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_UserRoleDetails" EntityType="Self.vw_UserRoleDetails" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_UserRoleDetails].[EMPID] AS [EMPID], 
+    [vw_UserRoleDetails].[STATUS] AS [STATUS], 
+    [vw_UserRoleDetails].[EMP_CODE] AS [EMP_CODE], 
+    [vw_UserRoleDetails].[EMP_NAME] AS [EMP_NAME], 
+    [vw_UserRoleDetails].[NAME_PREFIX] AS [NAME_PREFIX], 
+    [vw_UserRoleDetails].[ADDR_PRMNT1] AS [ADDR_PRMNT1], 
+    [vw_UserRoleDetails].[ADDR_PRMNT2] AS [ADDR_PRMNT2], 
+    [vw_UserRoleDetails].[ADDR_PRMNT3] AS [ADDR_PRMNT3], 
+    [vw_UserRoleDetails].[TELEPHONE_PRMNT] AS [TELEPHONE_PRMNT], 
+    [vw_UserRoleDetails].[ADDR_PRESENT1] AS [ADDR_PRESENT1], 
+    [vw_UserRoleDetails].[ADDR_PRESENT2] AS [ADDR_PRESENT2], 
+    [vw_UserRoleDetails].[ADDR_PRESENT3] AS [ADDR_PRESENT3], 
+    [vw_UserRoleDetails].[TELEPHONE_PRESENT] AS [TELEPHONE_PRESENT], 
+    [vw_UserRoleDetails].[SEX] AS [SEX], 
+    [vw_UserRoleDetails].[DOB] AS [DOB], 
+    [vw_UserRoleDetails].[NATIONALITY] AS [NATIONALITY], 
+    [vw_UserRoleDetails].[FAX] AS [FAX], 
+    [vw_UserRoleDetails].[MOBILE] AS [MOBILE], 
+    [vw_UserRoleDetails].[EMAIL] AS [EMAIL], 
+    [vw_UserRoleDetails].[RELIGIONID] AS [RELIGIONID], 
+    [vw_UserRoleDetails].[PHOTO] AS [PHOTO], 
+    [vw_UserRoleDetails].[ASP_USER_DETAILS] AS [ASP_USER_DETAILS], 
+    [vw_UserRoleDetails].[RoleId] AS [RoleId], 
+    [vw_UserRoleDetails].[RoleName] AS [RoleName], 
+    [vw_UserRoleDetails].[SPNAME] AS [SPNAME], 
+    [vw_UserRoleDetails].[RELIGION_NAME] AS [RELIGION_NAME], 
+    [vw_UserRoleDetails].[SPID] AS [SPID], 
+    [vw_UserRoleDetails].[CLIENTUSERID] AS [CLIENTUSERID], 
+    [vw_UserRoleDetails].[CLIENTID] AS [CLIENTID], 
+    [vw_UserRoleDetails].[USERID] AS [USERID], 
+    [vw_UserRoleDetails].[CLIENT_NAME] AS [CLIENT_NAME], 
+    [vw_UserRoleDetails].[ClientEmail] AS [ClientEmail], 
+    [vw_UserRoleDetails].[SIGNINGAUTH] AS [SIGNINGAUTH], 
+    [vw_UserRoleDetails].[DESIGNATION] AS [DESIGNATION]
+    FROM [dbo].[vw_UserRoleDetails] AS [vw_UserRoleDetails]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ACTUAL_SAVINGS_AGREEMENT_DETAILS" Association="Self.FK_ACTUAL_SAVINGS_AGREEMENT_DETAILS">
+      <End Role="AGREEMENT_DETAILS" EntitySet="AGREEMENT_DETAILS" />
+      <End Role="ACTUAL_SAVINGS" EntitySet="ACTUAL_SAVINGS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ACTUAL_SAVINGS_EMP_FIXED" Association="Self.FK_ACTUAL_SAVINGS_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="ACTUAL_SAVINGS" EntitySet="ACTUAL_SAVINGS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ACTUAL_SAVINGS_TAX_CODE" Association="Self.FK_ACTUAL_SAVINGS_TAX_CODE">
+      <End Role="TAX_CODE" EntitySet="TAX_CODE" />
+      <End Role="ACTUAL_SAVINGS" EntitySet="ACTUAL_SAVINGS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADDRESSEE_MASTER_COMPANY_PARAMETER" Association="Self.FK_ADDRESSEE_MASTER_COMPANY_PARAMETER">
+      <End Role="COMPANY_PARAMETER" EntitySet="COMPANY_PARAMETER" />
+      <End Role="ADDRESSEE_MASTER" EntitySet="ADDRESSEE_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ADDRESSEE_MASTER_COUNTRY_MASTER" Association="Self.FK_ADDRESSEE_MASTER_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="ADDRESSEE_MASTER" EntitySet="ADDRESSEE_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AGREEMENT_DETAILS_EMP_FIXED" Association="Self.FK_AGREEMENT_DETAILS_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="AGREEMENT_DETAILS" EntitySet="AGREEMENT_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AGREEMENT_DETAILS_SHIP_MASTER" Association="Self.FK_AGREEMENT_DETAILS_SHIP_MASTER">
+      <End Role="SHIP_MASTER" EntitySet="SHIP_MASTER" />
+      <End Role="AGREEMENT_DETAILS" EntitySet="AGREEMENT_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BRANCH_DETAILS_BANK_MASTER" Association="Self.FK_BRANCH_DETAILS_BANK_MASTER">
+      <End Role="BANK_MASTER" EntitySet="BANK_MASTER" />
+      <End Role="BRANCH_DETAILS" EntitySet="BRANCH_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BRANCH_DETAILS_COUNTRY_MASTER" Association="Self.FK_BRANCH_DETAILS_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="BRANCH_DETAILS" EntitySet="BRANCH_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CERTIFICATE_MASTER_CERTIFICATE_MASTER" Association="Self.FK_CERTIFICATE_MASTER_CERTIFICATE_MASTER">
+      <End Role="CERTIFICATE_TYPE_MASTER" EntitySet="CERTIFICATE_TYPE_MASTER" />
+      <End Role="CERTIFICATE_MASTER" EntitySet="CERTIFICATE_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CERTIFICATE_MASTER_COUNTRY_MASTER" Association="Self.FK_CERTIFICATE_MASTER_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="CERTIFICATE_MASTER" EntitySet="CERTIFICATE_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CERTIFICATE_MASTER_EMP_FIXED" Association="Self.FK_CERTIFICATE_MASTER_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="CERTIFICATE_MASTER" EntitySet="CERTIFICATE_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENT_COMMENT_EMP_FIXED" Association="Self.FK_CLIENT_COMMENT_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="CLIENT_COMMENT" EntitySet="CLIENT_COMMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENT_COMMENT_EMP_FIXED1" Association="Self.FK_CLIENT_COMMENT_EMP_FIXED1">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="CLIENT_COMMENT" EntitySet="CLIENT_COMMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENT_COMMENT_EMP_FIXED2" Association="Self.FK_CLIENT_COMMENT_EMP_FIXED2">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="CLIENT_COMMENT" EntitySet="CLIENT_COMMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENT_MASTER_COUNTRY_MASTER" Association="Self.FK_CLIENT_MASTER_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="CLIENT_MASTER" EntitySet="CLIENT_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENT_USER_CLIENT_MASTER" Association="Self.FK_CLIENT_USER_CLIENT_MASTER">
+      <End Role="CLIENT_MASTER" EntitySet="CLIENT_MASTER" />
+      <End Role="CLIENT_USER" EntitySet="CLIENT_USER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENT_USER_EMP_FIXED" Association="Self.FK_CLIENT_USER_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="CLIENT_USER" EntitySet="CLIENT_USER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMENT_EMP_FIXED" Association="Self.FK_COMMENT_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="COMMENT" EntitySet="COMMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMENT_EMP_FIXED1" Association="Self.FK_COMMENT_EMP_FIXED1">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="COMMENT" EntitySet="COMMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMENT_EMP_FIXED2" Association="Self.FK_COMMENT_EMP_FIXED2">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="COMMENT" EntitySet="COMMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPANY_BRANCH_BRANCH_DETAILS" Association="Self.FK_COMPANY_BRANCH_BRANCH_DETAILS">
+      <End Role="BRANCH_DETAILS" EntitySet="BRANCH_DETAILS" />
+      <End Role="COMPANY_BRANCH" EntitySet="COMPANY_BRANCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPANY_BRANCH_COMPANY_PARAMETER" Association="Self.FK_COMPANY_BRANCH_COMPANY_PARAMETER">
+      <End Role="COMPANY_PARAMETER" EntitySet="COMPANY_PARAMETER" />
+      <End Role="COMPANY_BRANCH" EntitySet="COMPANY_BRANCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DG_CERTIFIED_DOCTORS_COUNTRY_MASTER" Association="Self.FK_DG_CERTIFIED_DOCTORS_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="DG_CERTIFIED_DOCTORS" EntitySet="DG_CERTIFIED_DOCTORS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENTS_MASTER_COUNTRY_MASTER" Association="Self.FK_DOCUMENTS_MASTER_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="DOCUMENTS_MASTER" EntitySet="DOCUMENTS_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENTS_MASTER_DOCUMENTS_TYPE" Association="Self.FK_DOCUMENTS_MASTER_DOCUMENTS_TYPE">
+      <End Role="DOCUMENTS_TYPE" EntitySet="DOCUMENTS_TYPE" />
+      <End Role="DOCUMENTS_MASTER" EntitySet="DOCUMENTS_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCUMENTS_MASTER_EMP_FIXED" Association="Self.FK_DOCUMENTS_MASTER_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="DOCUMENTS_MASTER" EntitySet="DOCUMENTS_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DUTY_TYPE_MASTER_CATEGORY" Association="Self.FK_DUTY_TYPE_MASTER_CATEGORY">
+      <End Role="CATEGORY" EntitySet="CATEGORY" />
+      <End Role="DUTY_TYPE_MASTER" EntitySet="DUTY_TYPE_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_BRANCH_BRANCH_DETAILS" Association="Self.FK_EMP_BRANCH_BRANCH_DETAILS">
+      <End Role="BRANCH_DETAILS" EntitySet="BRANCH_DETAILS" />
+      <End Role="EMP_BRANCH" EntitySet="EMP_BRANCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_BRANCH_EMP_FIXED1" Association="Self.FK_EMP_BRANCH_EMP_FIXED1">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="EMP_BRANCH" EntitySet="EMP_BRANCH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_EXPERIENCE_EMP_EXPERIENCE" Association="Self.FK_EMP_EXPERIENCE_EMP_EXPERIENCE">
+      <End Role="SHIP_TYPE_MASTER" EntitySet="SHIP_TYPE_MASTER" />
+      <End Role="EMP_EXPERIENCE" EntitySet="EMP_EXPERIENCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_EXPERIENCE_EMP_FIXED" Association="Self.FK_EMP_EXPERIENCE_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="EMP_EXPERIENCE" EntitySet="EMP_EXPERIENCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_FIXED_COUNTRY_MASTER" Association="Self.FK_EMP_FIXED_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_FIXED_RELIGION" Association="Self.FK_EMP_FIXED_RELIGION">
+      <End Role="RELIGION" EntitySet="RELIGION" />
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_FIXED_SELECTION_STATUS_MASTER" Association="Self.FK_EMP_FIXED_SELECTION_STATUS_MASTER">
+      <End Role="SELECTION_STATUS_MASTER" EntitySet="SELECTION_STATUS_MASTER" />
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLOYEE_CLIENT_EMP_FIXED" Association="Self.FK_EMPLOYEE_CLIENT_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="EMPLOYEE_CLIENT" EntitySet="EMPLOYEE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLOYEE_CLIENT_RANK_CLASS" Association="Self.FK_EMPLOYEE_CLIENT_RANK_CLASS">
+      <End Role="RANK_CLASS" EntitySet="RANK_CLASS" />
+      <End Role="EMPLOYEE_CLIENT" EntitySet="EMPLOYEE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLOYEE_CLIENT_SHIP_MASTER" Association="Self.FK_EMPLOYEE_CLIENT_SHIP_MASTER">
+      <End Role="SHIP_MASTER" EntitySet="SHIP_MASTER" />
+      <End Role="EMPLOYEE_CLIENT" EntitySet="EMPLOYEE_CLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLOYEE_STATUS_EMP_FIXED" Association="Self.FK_EMPLOYEE_STATUS_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="EMPLOYEE_STATUS" EntitySet="EMPLOYEE_STATUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLOYEE_STATUS_PERSONNEL_MASTER" Association="Self.FK_EMPLOYEE_STATUS_PERSONNEL_MASTER">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="EMPLOYEE_STATUS" EntitySet="EMPLOYEE_STATUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLOYEE_STATUS_SELECTION_STATUS_MASTER" Association="Self.FK_EMPLOYEE_STATUS_SELECTION_STATUS_MASTER">
+      <End Role="SELECTION_STATUS_MASTER" EntitySet="SELECTION_STATUS_MASTER" />
+      <End Role="EMPLOYEE_STATUS" EntitySet="EMPLOYEE_STATUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KIN_DETAILS_COUNTRY_MASTER" Association="Self.FK_KIN_DETAILS_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="KIN_DETAILS" EntitySet="KIN_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KIN_DETAILS_EMP_FIXED" Association="Self.FK_KIN_DETAILS_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="KIN_DETAILS" EntitySet="KIN_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KIN_DETAILS_RELATIONSHIP_MASTER" Association="Self.FK_KIN_DETAILS_RELATIONSHIP_MASTER">
+      <End Role="RELATIONSHIP_MASTER" EntitySet="RELATIONSHIP_MASTER" />
+      <End Role="KIN_DETAILS" EntitySet="KIN_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MISC_TAXABLE_INCOME_EMP_FIXED" Association="Self.FK_MISC_TAXABLE_INCOME_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="MISC_TAXABLE_INCOME" EntitySet="MISC_TAXABLE_INCOME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MISC_TAXABLE_INCOME_OTHER_INCOME" Association="Self.FK_MISC_TAXABLE_INCOME_OTHER_INCOME">
+      <End Role="OTHER_INCOME" EntitySet="OTHER_INCOME" />
+      <End Role="MISC_TAXABLE_INCOME" EntitySet="MISC_TAXABLE_INCOME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NON_RECOVERY_EMP_FIXED" Association="Self.FK_NON_RECOVERY_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="NON_RECOVERY" EntitySet="NON_RECOVERY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PAGE_PERMISSION_PAGE_MASTER" Association="Self.FK_PAGE_PERMISSION_PAGE_MASTER">
+      <End Role="PAGE_MASTER" EntitySet="PAGE_MASTER" />
+      <End Role="PAGE_PERMISSION" EntitySet="PAGE_PERMISSION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PORT_MASTER_COUNTRY_MASTER" Association="Self.FK_PORT_MASTER_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="PORT_MASTER" EntitySet="PORT_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RANK_CLASS_CLASS" Association="Self.FK_RANK_CLASS_CLASS">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="RANK_CLASS" EntitySet="RANK_CLASS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RANK_CLASS_RANK_MASTER" Association="Self.FK_RANK_CLASS_RANK_MASTER">
+      <End Role="RANK_MASTER" EntitySet="RANK_MASTER" />
+      <End Role="RANK_CLASS" EntitySet="RANK_CLASS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RANK_MASTER_CATEGORY" Association="Self.FK_RANK_MASTER_CATEGORY">
+      <End Role="CATEGORY" EntitySet="CATEGORY" />
+      <End Role="RANK_MASTER" EntitySet="RANK_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHIP_MASTER_Country_Master" Association="Self.FK_SHIP_MASTER_Country_Master">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="SHIP_MASTER" EntitySet="SHIP_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHIP_MASTER_Ship_Type_Master" Association="Self.FK_SHIP_MASTER_Ship_Type_Master">
+      <End Role="SHIP_TYPE_MASTER" EntitySet="SHIP_TYPE_MASTER" />
+      <End Role="SHIP_MASTER" EntitySet="SHIP_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHIP_MOVEMENT_COUNTRY_MASTER" Association="Self.FK_SHIP_MOVEMENT_COUNTRY_MASTER">
+      <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
+      <End Role="SHIP_MOVEMENT" EntitySet="SHIP_MOVEMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHIP_MOVEMENT_REGISTER_SHIP_MASTER" Association="Self.FK_SHIP_MOVEMENT_REGISTER_SHIP_MASTER">
+      <End Role="SHIP_MASTER" EntitySet="SHIP_MASTER" />
+      <End Role="SHIP_MOVEMENT_REGISTER" EntitySet="SHIP_MOVEMENT_REGISTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHIP_MOVEMENT_SHIP_MASTER" Association="Self.FK_SHIP_MOVEMENT_SHIP_MASTER">
+      <End Role="SHIP_MASTER" EntitySet="SHIP_MASTER" />
+      <End Role="SHIP_MOVEMENT" EntitySet="SHIP_MOVEMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShipAgreement_CLIENT_MASTER" Association="Self.FK_ShipAgreement_CLIENT_MASTER">
+      <End Role="CLIENT_MASTER" EntitySet="CLIENT_MASTER" />
+      <End Role="ShipAgreement" EntitySet="ShipAgreement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShipAgreement_SHIP_MASTER" Association="Self.FK_ShipAgreement_SHIP_MASTER">
+      <End Role="SHIP_MASTER" EntitySet="SHIP_MASTER" />
+      <End Role="ShipAgreement" EntitySet="ShipAgreement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TAX_CODE_SECTION_LIMIT" Association="Self.FK_TAX_CODE_SECTION_LIMIT">
+      <End Role="SECTION_LIMIT" EntitySet="SECTION_LIMIT" />
+      <End Role="TAX_CODE" EntitySet="TAX_CODE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WITHHELD_REFUND_EMP_FIXED" Association="Self.FK_WITHHELD_REFUND_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="WITHHELD_REFUND" EntitySet="WITHHELD_REFUND" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WITHHELD_TRANSFER_AGREEMENT_DETAILS" Association="Self.FK_WITHHELD_TRANSFER_AGREEMENT_DETAILS">
+      <End Role="AGREEMENT_DETAILS" EntitySet="AGREEMENT_DETAILS" />
+      <End Role="WITHHELD_TRANSFER" EntitySet="WITHHELD_TRANSFER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WITHHELD_TRANSFER_EMP_FIXED" Association="Self.FK_WITHHELD_TRANSFER_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="WITHHELD_TRANSFER" EntitySet="WITHHELD_TRANSFER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

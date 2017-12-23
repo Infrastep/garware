@@ -1,0 +1,57 @@
+D:\project\Garware\BuisnessController\bin\Debug\BuisnessController.dll
+D:\project\Garware\BuisnessController\bin\Debug\BuisnessController.pdb
+D:\project\Garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
+D:\project\Garware\BuisnessController\obj\Debug\BuisnessController.dll
+D:\project\Garware\BuisnessController\obj\Debug\BuisnessController.pdb
+D:\project\Garware\BuisnessController\bin\Debug\BaseClass.dll
+D:\project\Garware\BuisnessController\bin\Debug\DataAccess.dll
+D:\project\Garware\BuisnessController\bin\Debug\EntityFramework.dll
+D:\project\Garware\BuisnessController\bin\Debug\BaseClass.pdb
+D:\project\Garware\BuisnessController\bin\Debug\DataAccess.pdb
+D:\project\Garware\BuisnessController\bin\Debug\EntityFramework.xml
+D:\Garware Prjt\Garware\BuisnessController\bin\Debug\BuisnessController.dll
+D:\Garware Prjt\Garware\BuisnessController\bin\Debug\BuisnessController.pdb
+D:\Garware Prjt\Garware\BuisnessController\bin\Debug\BaseClass.dll
+D:\Garware Prjt\Garware\BuisnessController\bin\Debug\DataAccess.dll
+D:\Garware Prjt\Garware\BuisnessController\bin\Debug\EntityFramework.dll
+D:\Garware Prjt\Garware\BuisnessController\bin\Debug\BaseClass.pdb
+D:\Garware Prjt\Garware\BuisnessController\bin\Debug\DataAccess.pdb
+D:\Garware Prjt\Garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
+D:\Garware Prjt\Garware\BuisnessController\obj\Debug\BuisnessController.dll
+D:\Garware Prjt\Garware\BuisnessController\obj\Debug\BuisnessController.pdb
+F:\Garware\Garware\BuisnessController\bin\Debug\BuisnessController.dll
+F:\Garware\Garware\BuisnessController\bin\Debug\BuisnessController.pdb
+F:\Garware\Garware\BuisnessController\bin\Debug\BaseClass.dll
+F:\Garware\Garware\BuisnessController\bin\Debug\DataAccess.dll
+F:\Garware\Garware\BuisnessController\bin\Debug\EntityFramework.dll
+F:\Garware\Garware\BuisnessController\bin\Debug\AutoMapper.dll
+F:\Garware\Garware\BuisnessController\bin\Debug\BaseClass.pdb
+F:\Garware\Garware\BuisnessController\bin\Debug\DataAccess.pdb
+F:\Garware\Garware\BuisnessController\bin\Debug\AutoMapper.xml
+F:\Garware\Garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
+F:\Garware\Garware\BuisnessController\obj\Debug\BuisnessController.dll
+F:\Garware\Garware\BuisnessController\obj\Debug\BuisnessController.pdb
+D:\Garware\BuisnessController\bin\Debug\BuisnessController.dll
+D:\Garware\BuisnessController\bin\Debug\BuisnessController.pdb
+D:\Garware\BuisnessController\bin\Debug\BaseClass.dll
+D:\Garware\BuisnessController\bin\Debug\DataAccess.dll
+D:\Garware\BuisnessController\bin\Debug\EntityFramework.dll
+D:\Garware\BuisnessController\bin\Debug\AutoMapper.dll
+D:\Garware\BuisnessController\bin\Debug\BaseClass.pdb
+D:\Garware\BuisnessController\bin\Debug\DataAccess.pdb
+D:\Garware\BuisnessController\bin\Debug\AutoMapper.xml
+D:\Garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
+D:\Garware\BuisnessController\obj\Debug\BuisnessController.dll
+D:\Garware\BuisnessController\obj\Debug\BuisnessController.pdb
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\BuisnessController.dll
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\BuisnessController.pdb
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\BaseClass.dll
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\DataAccess.dll
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\EntityFramework.dll
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\AutoMapper.dll
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\BaseClass.pdb
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\DataAccess.pdb
+C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\AutoMapper.xml
+C:\Users\sony\Documents\project\garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
+C:\Users\sony\Documents\project\garware\BuisnessController\obj\Debug\BuisnessController.dll
+C:\Users\sony\Documents\project\garware\BuisnessController\obj\Debug\BuisnessController.pdb

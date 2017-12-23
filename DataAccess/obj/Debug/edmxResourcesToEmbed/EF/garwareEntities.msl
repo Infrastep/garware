@@ -1,0 +1,1174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="thesynaxis123_garwareModelStoreContainer" CdmEntityContainer="thesynaxis123_garwareEntities">
+    <EntitySetMapping Name="ADDRESSEE_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.ADDRESSEE_MASTER">
+        <MappingFragment StoreEntitySet="ADDRESSEE_MASTER">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="COMPANYID" ColumnName="COMPANYID" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="ADDR1" ColumnName="ADDR1" />
+          <ScalarProperty Name="ADDR0" ColumnName="ADDR0" />
+          <ScalarProperty Name="ADDRESSID" ColumnName="ADDRESSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AREA_OPERATION_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.AREA_OPERATION_MASTER">
+        <MappingFragment StoreEntitySet="AREA_OPERATION_MASTER">
+          <ScalarProperty Name="ISINDIA" ColumnName="ISINDIA" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="AREACODE" ColumnName="AREACODE" />
+          <ScalarProperty Name="AREAID" ColumnName="AREAID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_UsersInRoles">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.aspnet_UsersInRoles">
+        <MappingFragment StoreEntitySet="aspnet_UsersInRoles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BANK_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.BANK_MASTER">
+        <MappingFragment StoreEntitySet="BANK_MASTER">
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="BANK_CODE" ColumnName="BANK_CODE" />
+          <ScalarProperty Name="ACTIVE_BANK" ColumnName="ACTIVE_BANK" />
+          <ScalarProperty Name="BANK_NAME" ColumnName="BANK_NAME" />
+          <ScalarProperty Name="BANKID" ColumnName="BANKID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BRANCH_DETAILS">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.BRANCH_DETAILS">
+        <MappingFragment StoreEntitySet="BRANCH_DETAILS">
+          <ScalarProperty Name="BANKID" ColumnName="BANKID" />
+          <ScalarProperty Name="COUNTRYID" ColumnName="COUNTRYID" />
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="MICRCODE" ColumnName="MICRCODE" />
+          <ScalarProperty Name="SWIFTCODE" ColumnName="SWIFTCODE" />
+          <ScalarProperty Name="IFSCCODE" ColumnName="IFSCCODE" />
+          <ScalarProperty Name="BRANCHID" ColumnName="BRANCHID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORies">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CATEGORY">
+        <MappingFragment StoreEntitySet="CATEGORY">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CATEGORY_CODE" ColumnName="CATEGORY_CODE" />
+          <ScalarProperty Name="CATEGORY_NAME" ColumnName="CATEGORY_NAME" />
+          <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CERTIFICATE_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CERTIFICATE_MASTER">
+        <MappingFragment StoreEntitySet="CERTIFICATE_MASTER">
+          <ScalarProperty Name="CTID" ColumnName="CTID" />
+          <ScalarProperty Name="ISSUE_PLACE" ColumnName="ISSUE_PLACE" />
+          <ScalarProperty Name="VALIDITY" ColumnName="VALIDITY" />
+          <ScalarProperty Name="LAST_MODIFY" ColumnName="LAST_MODIFY" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="PATH" ColumnName="PATH" />
+          <ScalarProperty Name="CERT_DESC" ColumnName="CERT_DESC" />
+          <ScalarProperty Name="CERTID" ColumnName="CERTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CERTIFICATE_TYPE_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CERTIFICATE_TYPE_MASTER">
+        <MappingFragment StoreEntitySet="CERTIFICATE_TYPE_MASTER">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CT_DESC" ColumnName="CT_DESC" />
+          <ScalarProperty Name="CTID" ColumnName="CTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASSes">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CLASS">
+        <MappingFragment StoreEntitySet="CLASS">
+          <ScalarProperty Name="COST_TO_COMP" ColumnName="COST_TO_COMP" />
+          <ScalarProperty Name="CLASS_TYPE" ColumnName="CLASS_TYPE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="CLASS_NAME" ColumnName="CLASS_NAME" />
+          <ScalarProperty Name="CLASSID" ColumnName="CLASSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT_COMMENT">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CLIENT_COMMENT">
+        <MappingFragment StoreEntitySet="CLIENT_COMMENT">
+          <ScalarProperty Name="PUBLIC" ColumnName="PUBLIC" />
+          <ScalarProperty Name="PRIVATE" ColumnName="PRIVATE" />
+          <ScalarProperty Name="COMMENTDATE" ColumnName="COMMENTDATE" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="SENDERUSERID" ColumnName="SENDERUSERID" />
+          <ScalarProperty Name="RECEIVERUSERID" ColumnName="RECEIVERUSERID" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="COMMENTID" ColumnName="COMMENTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT_USER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CLIENT_USER">
+        <MappingFragment StoreEntitySet="CLIENT_USER">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CLIENTID" ColumnName="CLIENTID" />
+          <ScalarProperty Name="CLIENTUSERID" ColumnName="CLIENTUSERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMMENTs">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.COMMENT">
+        <MappingFragment StoreEntitySet="COMMENT">
+          <ScalarProperty Name="PUBLIC" ColumnName="PUBLIC" />
+          <ScalarProperty Name="PRIVATE" ColumnName="PRIVATE" />
+          <ScalarProperty Name="COMMENTDATE" ColumnName="COMMENTDATE" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="SENDERUSERID" ColumnName="SENDERUSERID" />
+          <ScalarProperty Name="RECEIVERUSERID" ColumnName="RECEIVERUSERID" />
+          <ScalarProperty Name="COMMENT1" ColumnName="COMMENT" />
+          <ScalarProperty Name="COMMENTID" ColumnName="COMMENTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPANY_BRANCH">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.COMPANY_BRANCH">
+        <MappingFragment StoreEntitySet="COMPANY_BRANCH">
+          <ScalarProperty Name="CHEQUE_NAME" ColumnName="CHEQUE_NAME" />
+          <ScalarProperty Name="COMPANYID" ColumnName="COMPANYID" />
+          <ScalarProperty Name="BRANCHID" ColumnName="BRANCHID" />
+          <ScalarProperty Name="CBID" ColumnName="CBID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPANY_PARAMETER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.COMPANY_PARAMETER">
+        <MappingFragment StoreEntitySet="COMPANY_PARAMETER">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="COMPANY_LOGO" ColumnName="COMPANY_LOGO" />
+          <ScalarProperty Name="PAN_NO" ColumnName="PAN_NO" />
+          <ScalarProperty Name="SERVICE_TAX_NO" ColumnName="SERVICE_TAX_NO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FAX_NO" ColumnName="FAX_NO" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="COMPANYID" ColumnName="COMPANYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CURRENCY_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CURRENCY_MASTER">
+        <MappingFragment StoreEntitySet="CURRENCY_MASTER">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="decimal_place" ColumnName="decimal_place" />
+          <ScalarProperty Name="symbol_right" ColumnName="symbol_right" />
+          <ScalarProperty Name="symbol_left" ColumnName="symbol_left" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="Currency_id" ColumnName="Currency_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DG_CERTIFIED_DOCTORS">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.DG_CERTIFIED_DOCTORS">
+        <MappingFragment StoreEntitySet="DG_CERTIFIED_DOCTORS">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="COUNTRYID" ColumnName="COUNTRYID" />
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="CLINIC" ColumnName="CLINIC" />
+          <ScalarProperty Name="DOCTOR_NAME" ColumnName="DOCTOR_NAME" />
+          <ScalarProperty Name="DGCDID" ColumnName="DGCDID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENTS_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.DOCUMENTS_MASTER">
+        <MappingFragment StoreEntitySet="DOCUMENTS_MASTER">
+          <ScalarProperty Name="MED_TYPE" ColumnName="MED_TYPE" />
+          <ScalarProperty Name="ISSUE_PLACE" ColumnName="ISSUE_PLACE" />
+          <ScalarProperty Name="ISSUE_DATE" ColumnName="ISSUE_DATE" />
+          <ScalarProperty Name="DT_ID" ColumnName="DT_ID" />
+          <ScalarProperty Name="VALIDITY" ColumnName="VALIDITY" />
+          <ScalarProperty Name="LAST_MODIFY" ColumnName="LAST_MODIFY" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="PATH" ColumnName="PATH" />
+          <ScalarProperty Name="DMDESCRIPTION" ColumnName="DMDESCRIPTION" />
+          <ScalarProperty Name="DMCODE" ColumnName="DMCODE" />
+          <ScalarProperty Name="DMID" ColumnName="DMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENTS_TYPE">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.DOCUMENTS_TYPE">
+        <MappingFragment StoreEntitySet="DOCUMENTS_TYPE">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DTNAME" ColumnName="DTNAME" />
+          <ScalarProperty Name="DTID" ColumnName="DTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DUTY_TYPE_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.DUTY_TYPE_MASTER">
+        <MappingFragment StoreEntitySet="DUTY_TYPE_MASTER">
+          <ScalarProperty Name="EMP_TYPE" ColumnName="EMP_TYPE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMP_BRANCH">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.EMP_BRANCH">
+        <MappingFragment StoreEntitySet="EMP_BRANCH">
+          <ScalarProperty Name="NOT_PF" ColumnName="NOT_PF" />
+          <ScalarProperty Name="IFSC_CODE_NRE" ColumnName="IFSC_CODE_NRE" />
+          <ScalarProperty Name="CHEQUE_NAME" ColumnName="CHEQUE_NAME" />
+          <ScalarProperty Name="BANK_ADDRESS_NRE" ColumnName="BANK_ADDRESS_NRE" />
+          <ScalarProperty Name="BANK_NAME_NRE" ColumnName="BANK_NAME_NRE" />
+          <ScalarProperty Name="BANK_AC_NO_NRE" ColumnName="BANK_AC_NO_NRE" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="BRANCHID" ColumnName="BRANCHID" />
+          <ScalarProperty Name="EBID" ColumnName="EBID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMP_EXPERIENCE">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.EMP_EXPERIENCE">
+        <MappingFragment StoreEntitySet="EMP_EXPERIENCE">
+          <ScalarProperty Name="Area_Operation" ColumnName="Area_Operation" />
+          <ScalarProperty Name="Area_Sp_Job" ColumnName="Area_Sp_Job" />
+          <ScalarProperty Name="DIRECT" ColumnName="DIRECT" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="Months" ColumnName="Months" />
+          <ScalarProperty Name="Service_To" ColumnName="Service_To" />
+          <ScalarProperty Name="Service_From" ColumnName="Service_From" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="BHP" ColumnName="BHP" />
+          <ScalarProperty Name="Engine" ColumnName="Engine" />
+          <ScalarProperty Name="DWT" ColumnName="DWT" />
+          <ScalarProperty Name="Ship_Type" ColumnName="Ship_Type" />
+          <ScalarProperty Name="Ship_name" ColumnName="Ship_name" />
+          <ScalarProperty Name="Company_Served" ColumnName="Company_Served" />
+          <ScalarProperty Name="EMP_id" ColumnName="EMP_id" />
+          <ScalarProperty Name="EEID" ColumnName="EEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMP_FIXED">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.EMP_FIXED">
+        <MappingFragment StoreEntitySet="EMP_FIXED">
+          <ScalarProperty Name="DESIGNATION" ColumnName="DESIGNATION" />
+          <ScalarProperty Name="SIGNINGAUTH" ColumnName="SIGNINGAUTH" />
+          <ScalarProperty Name="CLEVELVERIFY" ColumnName="CLEVELVERIFY" />
+          <ScalarProperty Name="BLEVELVERIFY" ColumnName="BLEVELVERIFY" />
+          <ScalarProperty Name="ALEVELVERIFY" ColumnName="ALEVELVERIFY" />
+          <ScalarProperty Name="ASP_USER_DETAILS" ColumnName="ASP_USER_DETAILS" />
+          <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+          <ScalarProperty Name="RELIGIONID" ColumnName="RELIGIONID" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="BIRTH_PLACE" ColumnName="BIRTH_PLACE" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
+          <ScalarProperty Name="TELEPHONE_PRESENT" ColumnName="TELEPHONE_PRESENT" />
+          <ScalarProperty Name="ADDR_PRESENT3" ColumnName="ADDR_PRESENT3" />
+          <ScalarProperty Name="ADDR_PRESENT2" ColumnName="ADDR_PRESENT2" />
+          <ScalarProperty Name="ADDR_PRESENT1" ColumnName="ADDR_PRESENT1" />
+          <ScalarProperty Name="TELEPHONE_PRMNT" ColumnName="TELEPHONE_PRMNT" />
+          <ScalarProperty Name="ADDR_PRMNT3" ColumnName="ADDR_PRMNT3" />
+          <ScalarProperty Name="ADDR_PRMNT2" ColumnName="ADDR_PRMNT2" />
+          <ScalarProperty Name="ADDR_PRMNT1" ColumnName="ADDR_PRMNT1" />
+          <ScalarProperty Name="NAME_PREFIX" ColumnName="NAME_PREFIX" />
+          <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="SR_CITIZEN" ColumnName="SR_CITIZEN" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEE_CLIENT">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.EMPLOYEE_CLIENT">
+        <MappingFragment StoreEntitySet="EMPLOYEE_CLIENT">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+          <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+          <ScalarProperty Name="RANK_CLASS_ID" ColumnName="RANK_CLASS_ID" />
+          <ScalarProperty Name="SHIP_ID" ColumnName="SHIP_ID" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="EMPCLINTID" ColumnName="EMPCLINTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEE_STATUS">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.EMPLOYEE_STATUS">
+        <MappingFragment StoreEntitySet="EMPLOYEE_STATUS">
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="ENTRY_DATE" ColumnName="ENTRY_DATE" />
+          <ScalarProperty Name="UPDATE_PERSONEL" ColumnName="UPDATE_PERSONEL" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="STATUS_ID" ColumnName="STATUS_ID" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="EMPSTATID" ColumnName="EMPSTATID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KIN_DETAILS">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.KIN_DETAILS">
+        <MappingFragment StoreEntitySet="KIN_DETAILS">
+          <ScalarProperty Name="RELATIONSHIPID" ColumnName="RELATIONSHIPID" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
+          <ScalarProperty Name="COUNTRYID" ColumnName="COUNTRYID" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="KINID" ColumnName="KINID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARITIME_HOLIDAY">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.MARITIME_HOLIDAY">
+        <MappingFragment StoreEntitySet="MARITIME_HOLIDAY">
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="DAY" ColumnName="DAY" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OTHER_INCOME">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.OTHER_INCOME">
+        <MappingFragment StoreEntitySet="OTHER_INCOME">
+          <ScalarProperty Name="NON_TAXABLE_LIMIT" ColumnName="NON_TAXABLE_LIMIT" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONNEL_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.PERSONNEL_MASTER">
+        <MappingFragment StoreEntitySet="PERSONNEL_MASTER">
+          <ScalarProperty Name="ASP_USER_DETAILS" ColumnName="ASP_USER_DETAILS" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PERSONNELID" ColumnName="PERSONNELID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PORT_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.PORT_MASTER">
+        <MappingFragment StoreEntitySet="PORT_MASTER">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="editime" ColumnName="editime" />
+          <ScalarProperty Name="addtime" ColumnName="addtime" />
+          <ScalarProperty Name="editby" ColumnName="editby" />
+          <ScalarProperty Name="addby" ColumnName="addby" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="CCODE" ColumnName="CCODE" />
+          <ScalarProperty Name="PortName" ColumnName="PortName" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RANK_CLASS">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RANK_CLASS">
+        <MappingFragment StoreEntitySet="RANK_CLASS">
+          <ScalarProperty Name="Class_Type" ColumnName="Class_Type" />
+          <ScalarProperty Name="CLASSID" ColumnName="CLASSID" />
+          <ScalarProperty Name="RANKID" ColumnName="RANKID" />
+          <ScalarProperty Name="RCID" ColumnName="RCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RANK_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RANK_MASTER">
+        <MappingFragment StoreEntitySet="RANK_MASTER">
+          <ScalarProperty Name="Pf_Applicable" ColumnName="Pf_Applicable" />
+          <ScalarProperty Name="Print_order" ColumnName="Print_order" />
+          <ScalarProperty Name="Withheld_Perc_NRI" ColumnName="Withheld_Perc_NRI" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+          <ScalarProperty Name="RANK_DESC" ColumnName="RANK_DESC" />
+          <ScalarProperty Name="RANKID" ColumnName="RANKID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RELATIONSHIP_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RELATIONSHIP_MASTER">
+        <MappingFragment StoreEntitySet="RELATIONSHIP_MASTER">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="RELATION" ColumnName="RELATION" />
+          <ScalarProperty Name="RELATIONSHIPID" ColumnName="RELATIONSHIPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RELIGIONs">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RELIGION">
+        <MappingFragment StoreEntitySet="RELIGION">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="RELIGION_NAME" ColumnName="RELIGION_NAME" />
+          <ScalarProperty Name="RELIGIONID" ColumnName="RELIGIONID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALUTATIONs">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SALUTATION">
+        <MappingFragment StoreEntitySet="SALUTATION">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="SalutationName" ColumnName="SalutationName" />
+          <ScalarProperty Name="SalutationID" ColumnName="SalutationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SECTION_LIMIT">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SECTION_LIMIT">
+        <MappingFragment StoreEntitySet="SECTION_LIMIT">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="MAX_LIMIT" ColumnName="MAX_LIMIT" />
+          <ScalarProperty Name="SECTION" ColumnName="SECTION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SELECTION_STATUS_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SELECTION_STATUS_MASTER">
+        <MappingFragment StoreEntitySet="SELECTION_STATUS_MASTER">
+          <ScalarProperty Name="SPDESCRIPTION" ColumnName="SPDESCRIPTION" />
+          <ScalarProperty Name="SPNAME" ColumnName="SPNAME" />
+          <ScalarProperty Name="SPID" ColumnName="SPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHIP_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SHIP_MASTER">
+        <MappingFragment StoreEntitySet="SHIP_MASTER">
+          <ScalarProperty Name="VSAT_NO" ColumnName="VSAT_NO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+          <ScalarProperty Name="SAT_C_ID" ColumnName="SAT_C_ID" />
+          <ScalarProperty Name="MMSI_NO" ColumnName="MMSI_NO" />
+          <ScalarProperty Name="ABS_NO" ColumnName="ABS_NO" />
+          <ScalarProperty Name="DWT" ColumnName="DWT" />
+          <ScalarProperty Name="CALL_SIGN" ColumnName="CALL_SIGN" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+          <ScalarProperty Name="CLIENT_ID" ColumnName="CLIENT_ID" />
+          <ScalarProperty Name="COUNTRY_FLAG" ColumnName="COUNTRY_FLAG" />
+          <ScalarProperty Name="POWER_KW_BHP" ColumnName="POWER_KW_BHP" />
+          <ScalarProperty Name="OFFICIAL_NO" ColumnName="OFFICIAL_NO" />
+          <ScalarProperty Name="AREA_OF_OPERATION" ColumnName="AREA_OF_OPERATION" />
+          <ScalarProperty Name="NRT" ColumnName="NRT" />
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="TYPEID" ColumnName="TYPEID" />
+          <ScalarProperty Name="NO_OF_CREW" ColumnName="NO_OF_CREW" />
+          <ScalarProperty Name="GT_POWER" ColumnName="GT_POWER" />
+          <ScalarProperty Name="OFF_IMO_NO" ColumnName="OFF_IMO_NO" />
+          <ScalarProperty Name="PORT_REG_TRADE" ColumnName="PORT_REG_TRADE" />
+          <ScalarProperty Name="VNAME" ColumnName="VNAME" />
+          <ScalarProperty Name="SMID" ColumnName="SMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHIP_MOVEMENT">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SHIP_MOVEMENT">
+        <MappingFragment StoreEntitySet="SHIP_MOVEMENT">
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="COUNTRY_ID" ColumnName="COUNTRY_ID" />
+          <ScalarProperty Name="SHIP_ID" ColumnName="SHIP_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHIP_TYPE_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SHIP_TYPE_MASTER">
+        <MappingFragment StoreEntitySet="SHIP_TYPE_MASTER">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShipAgreements">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.ShipAgreement">
+        <MappingFragment StoreEntitySet="ShipAgreement">
+          <ScalarProperty Name="ShipId" ColumnName="ShipId" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="AgreementType" ColumnName="AgreementType" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHORE_PASS_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SHORE_PASS_MASTER">
+        <MappingFragment StoreEntitySet="SHORE_PASS_MASTER">
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="SPID" ColumnName="SPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAX_CODE">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.TAX_CODE">
+        <MappingFragment StoreEntitySet="TAX_CODE">
+          <ScalarProperty Name="INCOME_TYPE" ColumnName="INCOME_TYPE" />
+          <ScalarProperty Name="UNDER_SECTION" ColumnName="UNDER_SECTION" />
+          <ScalarProperty Name="SAVINGS_TYPE" ColumnName="SAVINGS_TYPE" />
+          <ScalarProperty Name="DESCRIPTIONS" ColumnName="DESCRIPTIONS" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAX_SLAB">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.TAX_SLAB">
+        <MappingFragment StoreEntitySet="TAX_SLAB">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TAX_AMT" ColumnName="TAX_AMT" />
+          <ScalarProperty Name="TAX_PER" ColumnName="TAX_PER" />
+          <ScalarProperty Name="TO_AMT" ColumnName="TO_AMT" />
+          <ScalarProperty Name="FROM_AMT" ColumnName="FROM_AMT" />
+          <ScalarProperty Name="FINANCIAL_YEAR" ColumnName="FINANCIAL_YEAR" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_EmployeeDetails">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.vw_EmployeeDetails">
+        <MappingFragment StoreEntitySet="vw_EmployeeDetails">
+          <ScalarProperty Name="CLEVELVERIFY" ColumnName="CLEVELVERIFY" />
+          <ScalarProperty Name="BLEVELVERIFY" ColumnName="BLEVELVERIFY" />
+          <ScalarProperty Name="ALEVELVERIFY" ColumnName="ALEVELVERIFY" />
+          <ScalarProperty Name="BIRTH_PLACE" ColumnName="BIRTH_PLACE" />
+          <ScalarProperty Name="FATHER_NAME" ColumnName="FATHER_NAME" />
+          <ScalarProperty Name="SR_CITIZEN" ColumnName="SR_CITIZEN" />
+          <ScalarProperty Name="SPID" ColumnName="SPID" />
+          <ScalarProperty Name="RELIGION_NAME" ColumnName="RELIGION_NAME" />
+          <ScalarProperty Name="SPNAME" ColumnName="SPNAME" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ASP_USER_DETAILS" ColumnName="ASP_USER_DETAILS" />
+          <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+          <ScalarProperty Name="RELIGIONID" ColumnName="RELIGIONID" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="TELEPHONE_PRESENT" ColumnName="TELEPHONE_PRESENT" />
+          <ScalarProperty Name="ADDR_PRESENT3" ColumnName="ADDR_PRESENT3" />
+          <ScalarProperty Name="ADDR_PRESENT2" ColumnName="ADDR_PRESENT2" />
+          <ScalarProperty Name="ADDR_PRESENT1" ColumnName="ADDR_PRESENT1" />
+          <ScalarProperty Name="TELEPHONE_PRMNT" ColumnName="TELEPHONE_PRMNT" />
+          <ScalarProperty Name="ADDR_PRMNT3" ColumnName="ADDR_PRMNT3" />
+          <ScalarProperty Name="ADDR_PRMNT2" ColumnName="ADDR_PRMNT2" />
+          <ScalarProperty Name="ADDR_PRMNT1" ColumnName="ADDR_PRMNT1" />
+          <ScalarProperty Name="NAME_PREFIX" ColumnName="NAME_PREFIX" />
+          <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_UserDetails">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.vw_UserDetails">
+        <MappingFragment StoreEntitySet="vw_UserDetails">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="NAME_PREFIX" ColumnName="NAME_PREFIX" />
+          <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="SR_CITIZEN" ColumnName="SR_CITIZEN" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_UserRoleDetails">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.vw_UserRoleDetails">
+        <MappingFragment StoreEntitySet="vw_UserRoleDetails">
+          <ScalarProperty Name="DESIGNATION" ColumnName="DESIGNATION" />
+          <ScalarProperty Name="SIGNINGAUTH" ColumnName="SIGNINGAUTH" />
+          <ScalarProperty Name="ClientEmail" ColumnName="ClientEmail" />
+          <ScalarProperty Name="CLIENT_NAME" ColumnName="CLIENT_NAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CLIENTID" ColumnName="CLIENTID" />
+          <ScalarProperty Name="CLIENTUSERID" ColumnName="CLIENTUSERID" />
+          <ScalarProperty Name="SPID" ColumnName="SPID" />
+          <ScalarProperty Name="RELIGION_NAME" ColumnName="RELIGION_NAME" />
+          <ScalarProperty Name="SPNAME" ColumnName="SPNAME" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ASP_USER_DETAILS" ColumnName="ASP_USER_DETAILS" />
+          <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+          <ScalarProperty Name="RELIGIONID" ColumnName="RELIGIONID" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="TELEPHONE_PRESENT" ColumnName="TELEPHONE_PRESENT" />
+          <ScalarProperty Name="ADDR_PRESENT3" ColumnName="ADDR_PRESENT3" />
+          <ScalarProperty Name="ADDR_PRESENT2" ColumnName="ADDR_PRESENT2" />
+          <ScalarProperty Name="ADDR_PRESENT1" ColumnName="ADDR_PRESENT1" />
+          <ScalarProperty Name="TELEPHONE_PRMNT" ColumnName="TELEPHONE_PRMNT" />
+          <ScalarProperty Name="ADDR_PRMNT3" ColumnName="ADDR_PRMNT3" />
+          <ScalarProperty Name="ADDR_PRMNT2" ColumnName="ADDR_PRMNT2" />
+          <ScalarProperty Name="ADDR_PRMNT1" ColumnName="ADDR_PRMNT1" />
+          <ScalarProperty Name="NAME_PREFIX" ColumnName="NAME_PREFIX" />
+          <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetUserIdForMailsend" FunctionName="thesynaxis123_garwareModel.Store.sp_GetUserIdForMailsend">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="thesynaxis123_garwareModel.sp_GetUserIdForMailsend_Result">
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CLIENT_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CLIENT_MASTER">
+        <MappingFragment StoreEntitySet="CLIENT_MASTER">
+          <ScalarProperty Name="WEBSITE" ColumnName="WEBSITE" />
+          <ScalarProperty Name="TAN" ColumnName="TAN" />
+          <ScalarProperty Name="PAN" ColumnName="PAN" />
+          <ScalarProperty Name="CIN_NO" ColumnName="CIN_NO" />
+          <ScalarProperty Name="COUNTRY_ID" ColumnName="COUNTRY_ID" />
+          <ScalarProperty Name="CLIENT_LOGO" ColumnName="CLIENT_LOGO" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+          <ScalarProperty Name="SERVICE_TAX_NO" ColumnName="SERVICE_TAX_NO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FAX_NO" ColumnName="FAX_NO" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="PIN" ColumnName="PIN" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="DATABASE_PASS" ColumnName="DATABASE_PASS" />
+          <ScalarProperty Name="DATABASE_UID" ColumnName="DATABASE_UID" />
+          <ScalarProperty Name="DATABASE_HOST" ColumnName="DATABASE_HOST" />
+          <ScalarProperty Name="DATABASE_NAME" ColumnName="DATABASE_NAME" />
+          <ScalarProperty Name="CLIENT_NAME" ColumnName="CLIENT_NAME" />
+          <ScalarProperty Name="CLIENTID" ColumnName="CLIENTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COUNTRY_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.COUNTRY_MASTER">
+        <MappingFragment StoreEntitySet="COUNTRY_MASTER">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Edit_time" ColumnName="Edit_time" />
+          <ScalarProperty Name="Edit_by" ColumnName="Edit_by" />
+          <ScalarProperty Name="add_time" ColumnName="add_time" />
+          <ScalarProperty Name="add_by" ColumnName="add_by" />
+          <ScalarProperty Name="CCODE" ColumnName="CCODE" />
+          <ScalarProperty Name="C_Name" ColumnName="C_Name" />
+          <ScalarProperty Name="CID" ColumnName="CID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACCOUNT_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.ACCOUNT_MASTER">
+        <MappingFragment StoreEntitySet="ACCOUNT_MASTER">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EARNING_DEDUCTION_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.EARNING_DEDUCTION_MASTER">
+        <MappingFragment StoreEntitySet="EARNING_DEDUCTION_MASTER">
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="EARNDEDNID" ColumnName="EARNDEDNID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE1">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE1">
+        <MappingFragment StoreEntitySet="RULE1">
+          <ScalarProperty Name="xx" ColumnName="xx" />
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_DEDN_RATE" ColumnName="EARN_DEDN_RATE" />
+          <ScalarProperty Name="AMOUNT_DPM_MPY_FLAG" ColumnName="AMOUNT_DPM_MPY_FLAG" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE1ID" ColumnName="RULE1ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE0">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE0">
+        <MappingFragment StoreEntitySet="RULE0">
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_DEDN_RATE" ColumnName="EARN_DEDN_RATE" />
+          <ScalarProperty Name="TO_MONTH" ColumnName="TO_MONTH" />
+          <ScalarProperty Name="FROM_MONTH" ColumnName="FROM_MONTH" />
+          <ScalarProperty Name="SHIP_CODE" ColumnName="SHIP_CODE" />
+          <ScalarProperty Name="RANK_CODE" ColumnName="RANK_CODE" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE0ID" ColumnName="RULE0ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE2">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE2">
+        <MappingFragment StoreEntitySet="RULE2">
+          <ScalarProperty Name="XX" ColumnName="XX" />
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_DEDN_RATE" ColumnName="EARN_DEDN_RATE" />
+          <ScalarProperty Name="SECONDARY_EARN_DEDN_CODE" ColumnName="SECONDARY_EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE2ID" ColumnName="RULE2ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE3">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE3">
+        <MappingFragment StoreEntitySet="RULE3">
+          <ScalarProperty Name="s" ColumnName="s" />
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_DEDN_RATE" ColumnName="EARN_DEDN_RATE" />
+          <ScalarProperty Name="SECONDARY_EARN_DEDN_CODE" ColumnName="SECONDARY_EARN_DEDN_CODE" />
+          <ScalarProperty Name="FIXED_PRCNT_DPM_FLAG" ColumnName="FIXED_PRCNT_DPM_FLAG" />
+          <ScalarProperty Name="RANK_CODE" ColumnName="RANK_CODE" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE3ID" ColumnName="RULE3ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE4">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE4">
+        <MappingFragment StoreEntitySet="RULE4">
+          <ScalarProperty Name="XX" ColumnName="XX" />
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_DEDN_RATE" ColumnName="EARN_DEDN_RATE" />
+          <ScalarProperty Name="SECONDARY_EARN_DEDN_CODE" ColumnName="SECONDARY_EARN_DEDN_CODE" />
+          <ScalarProperty Name="FIXED_PRCNT_OTRATE_FLAG" ColumnName="FIXED_PRCNT_OTRATE_FLAG" />
+          <ScalarProperty Name="MAX_SECONDARY_EARN_AMT" ColumnName="MAX_SECONDARY_EARN_AMT" />
+          <ScalarProperty Name="MIN_SECONDARY_EARN_AMT" ColumnName="MIN_SECONDARY_EARN_AMT" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE4ID" ColumnName="RULE4ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE5">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE5">
+        <MappingFragment StoreEntitySet="RULE5">
+          <ScalarProperty Name="s" ColumnName="s" />
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_DEDN_RATE" ColumnName="EARN_DEDN_RATE" />
+          <ScalarProperty Name="SECONDARY_EARN_DEDN_CODE" ColumnName="SECONDARY_EARN_DEDN_CODE" />
+          <ScalarProperty Name="FIXED_PRCNT_DPM_FLAG" ColumnName="FIXED_PRCNT_DPM_FLAG" />
+          <ScalarProperty Name="RANK_CODE" ColumnName="RANK_CODE" />
+          <ScalarProperty Name="SHIP_CODE" ColumnName="SHIP_CODE" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE5ID" ColumnName="RULE5ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE6">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE6">
+        <MappingFragment StoreEntitySet="RULE6">
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_DEDN_RATE" ColumnName="EARN_DEDN_RATE" />
+          <ScalarProperty Name="SECONDARY_EARN_DEDN_CODE" ColumnName="SECONDARY_EARN_DEDN_CODE" />
+          <ScalarProperty Name="FIXED_PRCNT_FLAG" ColumnName="FIXED_PRCNT_FLAG" />
+          <ScalarProperty Name="CERT_CODE" ColumnName="CERT_CODE" />
+          <ScalarProperty Name="RANK_CODE" ColumnName="RANK_CODE" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE6ID" ColumnName="RULE6ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE7">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE7">
+        <MappingFragment StoreEntitySet="RULE7">
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_DEDN_RATE" ColumnName="EARN_DEDN_RATE" />
+          <ScalarProperty Name="MAX_NO_OF_YRS" ColumnName="MAX_NO_OF_YRS" />
+          <ScalarProperty Name="MIN_NO_OF_YRS" ColumnName="MIN_NO_OF_YRS" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE7ID" ColumnName="RULE7ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE8">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE8">
+        <MappingFragment StoreEntitySet="RULE8">
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="SECONDARY_EARN_DEDN_CODE" ColumnName="SECONDARY_EARN_DEDN_CODE" />
+          <ScalarProperty Name="PRCNT_IN_THIRD_PERIOD" ColumnName="PRCNT_IN_THIRD_PERIOD" />
+          <ScalarProperty Name="PRCNT_IN_SECOND_PERIOD" ColumnName="PRCNT_IN_SECOND_PERIOD" />
+          <ScalarProperty Name="PRCNT_IN_FIRST_PERIOD" ColumnName="PRCNT_IN_FIRST_PERIOD" />
+          <ScalarProperty Name="PROLONG_TO_MONTH" ColumnName="PROLONG_TO_MONTH" />
+          <ScalarProperty Name="PROLONG_FROM_MONTH" ColumnName="PROLONG_FROM_MONTH" />
+          <ScalarProperty Name="SHIP_CODE" ColumnName="SHIP_CODE" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE8ID" ColumnName="RULE8ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE9">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RULE9">
+        <MappingFragment StoreEntitySet="RULE9">
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="EARN_PRCNT" ColumnName="EARN_PRCNT" />
+          <ScalarProperty Name="SECONDARY_EARN_DEDN_CODE" ColumnName="SECONDARY_EARN_DEDN_CODE" />
+          <ScalarProperty Name="MAX_NO_OF_DAYS" ColumnName="MAX_NO_OF_DAYS" />
+          <ScalarProperty Name="MIN_NO_OF_DAYS" ColumnName="MIN_NO_OF_DAYS" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="RULE9ID" ColumnName="RULE9ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAIN_TABLE">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.MAIN_TABLE">
+        <MappingFragment StoreEntitySet="MAIN_TABLE">
+          <ScalarProperty Name="REC_ID_NO" ColumnName="REC_ID_NO" />
+          <ScalarProperty Name="ACTIVITY_CODE_BB_CO_CR" ColumnName="ACTIVITY_CODE_BB_CO_CR" />
+          <ScalarProperty Name="ACNT_CODE_BB_CO_CR" ColumnName="ACNT_CODE_BB_CO_CR" />
+          <ScalarProperty Name="ACTIVITY_CODE_BB_CO_DR" ColumnName="ACTIVITY_CODE_BB_CO_DR" />
+          <ScalarProperty Name="ACNT_CODE_BB_CO_DR" ColumnName="ACNT_CODE_BB_CO_DR" />
+          <ScalarProperty Name="ACTIVITY_CODE_BB" ColumnName="ACTIVITY_CODE_BB" />
+          <ScalarProperty Name="ACNT_CODE_BB" ColumnName="ACNT_CODE_BB" />
+          <ScalarProperty Name="ACTIVITY_CODE_CO_CR" ColumnName="ACTIVITY_CODE_CO_CR" />
+          <ScalarProperty Name="ACNT_CODE_CO_CR" ColumnName="ACNT_CODE_CO_CR" />
+          <ScalarProperty Name="ACTIVITY_CODE_CO_DR" ColumnName="ACTIVITY_CODE_CO_DR" />
+          <ScalarProperty Name="ACNT_CODE_CO_DR" ColumnName="ACNT_CODE_CO_DR" />
+          <ScalarProperty Name="EDIT_TIME" ColumnName="EDIT_TIME" />
+          <ScalarProperty Name="EDIT_BY" ColumnName="EDIT_BY" />
+          <ScalarProperty Name="ADD_TIME" ColumnName="ADD_TIME" />
+          <ScalarProperty Name="ADD_BY" ColumnName="ADD_BY" />
+          <ScalarProperty Name="BIFURCATE" ColumnName="BIFURCATE" />
+          <ScalarProperty Name="SECONDARY_EARN_DEDN_CODE" ColumnName="SECONDARY_EARN_DEDN_CODE" />
+          <ScalarProperty Name="RATE_TYPE" ColumnName="RATE_TYPE" />
+          <ScalarProperty Name="CRW_CONTNS_SERVICE_FLAG" ColumnName="CRW_CONTNS_SERVICE_FLAG" />
+          <ScalarProperty Name="CRW_MDCLF_PRD_FLAG" ColumnName="CRW_MDCLF_PRD_FLAG" />
+          <ScalarProperty Name="CRW_ADV_FLAG" ColumnName="CRW_ADV_FLAG" />
+          <ScalarProperty Name="CRW_UNFIT_PRD_FLAG" ColumnName="CRW_UNFIT_PRD_FLAG" />
+          <ScalarProperty Name="CRW_MDCLI_PRD_FLAG" ColumnName="CRW_MDCLI_PRD_FLAG" />
+          <ScalarProperty Name="CRW_HOSPTLSD_ABROAD_FLAG" ColumnName="CRW_HOSPTLSD_ABROAD_FLAG" />
+          <ScalarProperty Name="CRW_HOSPTLSD_IND_FLAG" ColumnName="CRW_HOSPTLSD_IND_FLAG" />
+          <ScalarProperty Name="CRW_LEAVE_EARND_FLAG" ColumnName="CRW_LEAVE_EARND_FLAG" />
+          <ScalarProperty Name="CRW_RETN2_PRD_FLAG" ColumnName="CRW_RETN2_PRD_FLAG" />
+          <ScalarProperty Name="CRW_RETN1_PRD_FLAG" ColumnName="CRW_RETN1_PRD_FLAG" />
+          <ScalarProperty Name="CRW_ON_BRD_PRD_FLAG" ColumnName="CRW_ON_BRD_PRD_FLAG" />
+          <ScalarProperty Name="CRW_STF_PRD_FLAG" ColumnName="CRW_STF_PRD_FLAG" />
+          <ScalarProperty Name="OFF_MDCLF_PRD_FLAG" ColumnName="OFF_MDCLF_PRD_FLAG" />
+          <ScalarProperty Name="OFF_MDCLI_PRD_FLAG" ColumnName="OFF_MDCLI_PRD_FLAG" />
+          <ScalarProperty Name="OFF_LEAVE_EARND_FLAG" ColumnName="OFF_LEAVE_EARND_FLAG" />
+          <ScalarProperty Name="OFF_STF_PRD_FLAG" ColumnName="OFF_STF_PRD_FLAG" />
+          <ScalarProperty Name="OFF_HRB_PRD_FLAG" ColumnName="OFF_HRB_PRD_FLAG" />
+          <ScalarProperty Name="OFF_ON_BRD_PRD_FLAG" ColumnName="OFF_ON_BRD_PRD_FLAG" />
+          <ScalarProperty Name="ACC_SUB_CODE" ColumnName="ACC_SUB_CODE" />
+          <ScalarProperty Name="ACTIVITY_CODE" ColumnName="ACTIVITY_CODE" />
+          <ScalarProperty Name="ACNT_CODE" ColumnName="ACNT_CODE" />
+          <ScalarProperty Name="IT_FORECAST_INDIC" ColumnName="IT_FORECAST_INDIC" />
+          <ScalarProperty Name="TAXABLE_FLAG" ColumnName="TAXABLE_FLAG" />
+          <ScalarProperty Name="INPUT_TYPE" ColumnName="INPUT_TYPE" />
+          <ScalarProperty Name="RULE_TYPE" ColumnName="RULE_TYPE" />
+          <ScalarProperty Name="RULE_TILL_DATE" ColumnName="RULE_TILL_DATE" />
+          <ScalarProperty Name="RULE_WEF_DATE" ColumnName="RULE_WEF_DATE" />
+          <ScalarProperty Name="EMPL_CLASS" ColumnName="EMPL_CLASS" />
+          <ScalarProperty Name="EARN_DEDN_CODE" ColumnName="EARN_DEDN_CODE" />
+          <ScalarProperty Name="MAINTABLEID" ColumnName="MAINTABLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAGE_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.PAGE_MASTER">
+        <MappingFragment StoreEntitySet="PAGE_MASTER">
+          <ScalarProperty Name="PAGENAME" ColumnName="PAGENAME" />
+          <ScalarProperty Name="PAGEID" ColumnName="PAGEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAGE_PERMISSION">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.PAGE_PERMISSION">
+        <MappingFragment StoreEntitySet="PAGE_PERMISSION">
+          <ScalarProperty Name="PERMISSIONID" ColumnName="PERMISSIONID" />
+          <ScalarProperty Name="ROLENAME" ColumnName="ROLENAME" />
+          <ScalarProperty Name="PAGEID" ColumnName="PAGEID" />
+          <ScalarProperty Name="PAGEPERMISSIONID" ColumnName="PAGEPERMISSIONID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NON_RECOVERY">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.NON_RECOVERY">
+        <MappingFragment StoreEntitySet="NON_RECOVERY">
+          <ScalarProperty Name="INACTIVE_COMPUTER" ColumnName="INACTIVE_COMPUTER" />
+          <ScalarProperty Name="INACTIVE_TIME" ColumnName="INACTIVE_TIME" />
+          <ScalarProperty Name="INACTIVE_BY" ColumnName="INACTIVE_BY" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHIP_MOVEMENT_REGISTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SHIP_MOVEMENT_REGISTER">
+        <MappingFragment StoreEntitySet="SHIP_MOVEMENT_REGISTER">
+          <ScalarProperty Name="WATER" ColumnName="WATER" />
+          <ScalarProperty Name="TO_DATE" ColumnName="TO_DATE" />
+          <ScalarProperty Name="FROM_DATE" ColumnName="FROM_DATE" />
+          <ScalarProperty Name="SHIPCODE" ColumnName="SHIPCODE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WITHHELD_REFUND">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.WITHHELD_REFUND">
+        <MappingFragment StoreEntitySet="WITHHELD_REFUND">
+          <ScalarProperty Name="REF_DATE" ColumnName="REF_DATE" />
+          <ScalarProperty Name="REF_NO" ColumnName="REF_NO" />
+          <ScalarProperty Name="REF_PREFIX" ColumnName="REF_PREFIX" />
+          <ScalarProperty Name="FINANCIAL_YEAR" ColumnName="FINANCIAL_YEAR" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACTUAL_SAVINGS">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.ACTUAL_SAVINGS">
+        <MappingFragment StoreEntitySet="ACTUAL_SAVINGS">
+          <ScalarProperty Name="AGREEMENT_CODE" ColumnName="AGREEMENT_CODE" />
+          <ScalarProperty Name="AUTH_COMPUTER" ColumnName="AUTH_COMPUTER" />
+          <ScalarProperty Name="AUTH_TIME" ColumnName="AUTH_TIME" />
+          <ScalarProperty Name="AUTH_BY" ColumnName="AUTH_BY" />
+          <ScalarProperty Name="AUTH_DATE" ColumnName="AUTH_DATE" />
+          <ScalarProperty Name="NO_MONTHS" ColumnName="NO_MONTHS" />
+          <ScalarProperty Name="CERTIFICATE_NO" ColumnName="CERTIFICATE_NO" />
+          <ScalarProperty Name="SAVINGS_DATE" ColumnName="SAVINGS_DATE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="FINANCIAL_YEAR" ColumnName="FINANCIAL_YEAR" />
+          <ScalarProperty Name="ACTUAL_SAVINGS_ID" ColumnName="ACTUAL_SAVINGS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRATUITY_REMIT">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.GRATUITY_REMIT">
+        <MappingFragment StoreEntitySet="GRATUITY_REMIT">
+          <ScalarProperty Name="AUTH_DESIG" ColumnName="AUTH_DESIG" />
+          <ScalarProperty Name="AUTH_SIGN" ColumnName="AUTH_SIGN" />
+          <ScalarProperty Name="REMIT_AMT" ColumnName="REMIT_AMT" />
+          <ScalarProperty Name="REMIT_BANK" ColumnName="REMIT_BANK" />
+          <ScalarProperty Name="REMIT_CHQ_DT" ColumnName="REMIT_CHQ_DT" />
+          <ScalarProperty Name="REMIT_CHQ_NO" ColumnName="REMIT_CHQ_NO" />
+          <ScalarProperty Name="ADDR4" ColumnName="ADDR4" />
+          <ScalarProperty Name="ADDR3" ColumnName="ADDR3" />
+          <ScalarProperty Name="ADDR2" ColumnName="ADDR2" />
+          <ScalarProperty Name="ADDR1" ColumnName="ADDR1" />
+          <ScalarProperty Name="ADDR0" ColumnName="ADDR0" />
+          <ScalarProperty Name="REF_DT" ColumnName="REF_DT" />
+          <ScalarProperty Name="REF_NO" ColumnName="REF_NO" />
+          <ScalarProperty Name="GRATUITY_REMITID" ColumnName="GRATUITY_REMITID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MISC_TAXABLE_INCOME">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.MISC_TAXABLE_INCOME">
+        <MappingFragment StoreEntitySet="MISC_TAXABLE_INCOME">
+          <ScalarProperty Name="HCESS_DED" ColumnName="HCESS_DED" />
+          <ScalarProperty Name="CESS_DED" ColumnName="CESS_DED" />
+          <ScalarProperty Name="SCHG_DED" ColumnName="SCHG_DED" />
+          <ScalarProperty Name="TAX_AMT_DED" ColumnName="TAX_AMT_DED" />
+          <ScalarProperty Name="TAX_DED" ColumnName="TAX_DED" />
+          <ScalarProperty Name="UTILISED" ColumnName="UTILISED" />
+          <ScalarProperty Name="ENTRY_DATE" ColumnName="ENTRY_DATE" />
+          <ScalarProperty Name="INCOME_CODE" ColumnName="INCOME_CODE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="NARRATION" ColumnName="NARRATION" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="FINANCIAL_YEAR" ColumnName="FINANCIAL_YEAR" />
+          <ScalarProperty Name="MISC_TAXABLE_INCOME_ID" ColumnName="MISC_TAXABLE_INCOME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PF_REMIT">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.PF_REMIT">
+        <MappingFragment StoreEntitySet="PF_REMIT">
+          <ScalarProperty Name="AUTH_DESIG" ColumnName="AUTH_DESIG" />
+          <ScalarProperty Name="AUTH_SIGN" ColumnName="AUTH_SIGN" />
+          <ScalarProperty Name="ADMN_AMT" ColumnName="ADMN_AMT" />
+          <ScalarProperty Name="ADMN_BANK" ColumnName="ADMN_BANK" />
+          <ScalarProperty Name="ADMN_CHQ_DT" ColumnName="ADMN_CHQ_DT" />
+          <ScalarProperty Name="ADMN_CHQ_NO" ColumnName="ADMN_CHQ_NO" />
+          <ScalarProperty Name="REMIT_AMT" ColumnName="REMIT_AMT" />
+          <ScalarProperty Name="REMIT_BANK" ColumnName="REMIT_BANK" />
+          <ScalarProperty Name="REMIT_CHQ_DT" ColumnName="REMIT_CHQ_DT" />
+          <ScalarProperty Name="REMIT_CHQ_NO" ColumnName="REMIT_CHQ_NO" />
+          <ScalarProperty Name="ADDR4" ColumnName="ADDR4" />
+          <ScalarProperty Name="ADDR3" ColumnName="ADDR3" />
+          <ScalarProperty Name="ADDR2" ColumnName="ADDR2" />
+          <ScalarProperty Name="ADDR1" ColumnName="ADDR1" />
+          <ScalarProperty Name="ADDR0" ColumnName="ADDR0" />
+          <ScalarProperty Name="REF_DT" ColumnName="REF_DT" />
+          <ScalarProperty Name="REF_NO" ColumnName="REF_NO" />
+          <ScalarProperty Name="PF_REMIT_ID" ColumnName="PF_REMIT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WITHHELD_TRANSFER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.WITHHELD_TRANSFER">
+        <MappingFragment StoreEntitySet="WITHHELD_TRANSFER">
+          <ScalarProperty Name="AGREEMENT_CODE" ColumnName="AGREEMENT_CODE" />
+          <ScalarProperty Name="TRANS_AMT" ColumnName="TRANS_AMT" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="MON" ColumnName="MON" />
+          <ScalarProperty Name="YR" ColumnName="YR" />
+          <ScalarProperty Name="WITHHELD_TRANSFER_ID" ColumnName="WITHHELD_TRANSFER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AGREEMENT_DETAILS">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.AGREEMENT_DETAILS">
+        <MappingFragment StoreEntitySet="AGREEMENT_DETAILS">
+          <ScalarProperty Name="PF_APPLICABLE" ColumnName="PF_APPLICABLE" />
+          <ScalarProperty Name="TRAINEE_CREW" ColumnName="TRAINEE_CREW" />
+          <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+          <ScalarProperty Name="PLACE_AGREEMENT" ColumnName="PLACE_AGREEMENT" />
+          <ScalarProperty Name="MED_CERT_EXP_DATE" ColumnName="MED_CERT_EXP_DATE" />
+          <ScalarProperty Name="MED_CERT_ISS_DATE" ColumnName="MED_CERT_ISS_DATE" />
+          <ScalarProperty Name="MED_CERT_APPR_NO" ColumnName="MED_CERT_APPR_NO" />
+          <ScalarProperty Name="MED_CERT_ISS_AUTH" ColumnName="MED_CERT_ISS_AUTH" />
+          <ScalarProperty Name="GRAT_RATE" ColumnName="GRAT_RATE" />
+          <ScalarProperty Name="MUI_NMB" ColumnName="MUI_NMB" />
+          <ScalarProperty Name="months" ColumnName="months" />
+          <ScalarProperty Name="basic_insa" ColumnName="basic_insa" />
+          <ScalarProperty Name="appl_date" ColumnName="appl_date" />
+          <ScalarProperty Name="ref_no" ColumnName="ref_no" />
+          <ScalarProperty Name="ref_date" ColumnName="ref_date" />
+          <ScalarProperty Name="ALLOTMENT_AMOUNT" ColumnName="ALLOTMENT_AMOUNT" />
+          <ScalarProperty Name="PF_RATE" ColumnName="PF_RATE" />
+          <ScalarProperty Name="END_CODE" ColumnName="END_CODE" />
+          <ScalarProperty Name="LIMITATION" ColumnName="LIMITATION" />
+          <ScalarProperty Name="SIGN_DESG" ColumnName="SIGN_DESG" />
+          <ScalarProperty Name="SIGNING_AUTH_NAME" ColumnName="SIGNING_AUTH_NAME" />
+          <ScalarProperty Name="AGENT_NAME" ColumnName="AGENT_NAME" />
+          <ScalarProperty Name="GROSS" ColumnName="GROSS" />
+          <ScalarProperty Name="bonus" ColumnName="bonus" />
+          <ScalarProperty Name="BASIC" ColumnName="BASIC" />
+          <ScalarProperty Name="RANK_DESC" ColumnName="RANK_DESC" />
+          <ScalarProperty Name="RANK_CODE" ColumnName="RANK_CODE" />
+          <ScalarProperty Name="CATEGORY_CODE" ColumnName="CATEGORY_CODE" />
+          <ScalarProperty Name="EMP_NAME" ColumnName="EMP_NAME" />
+          <ScalarProperty Name="EMP_CODE" ColumnName="EMP_CODE" />
+          <ScalarProperty Name="VNAME" ColumnName="VNAME" />
+          <ScalarProperty Name="VCODE" ColumnName="VCODE" />
+          <ScalarProperty Name="AGREEMENT_CODE" ColumnName="AGREEMENT_CODE" />
+          <ScalarProperty Name="AGREEMENT_DETAILS_ID" ColumnName="AGREEMENT_DETAILS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

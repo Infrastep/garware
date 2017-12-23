@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8c94c01632b941a7b1dc2b1cf3aa4fb9" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.ADDRESSEE_MASTER" Width="1.5" PointX="6" PointY="29.5" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.AREA_OPERATION_MASTER" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.aspnet_UsersInRoles" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.BANK_MASTER" Width="1.5" PointX="5.75" PointY="17.625" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.BRANCH_DETAILS" Width="1.5" PointX="8" PointY="34" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.CATEGORY" Width="1.5" PointX="6.5" PointY="46" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.CERTIFICATE_MASTER" Width="1.5" PointX="5.25" PointY="33.375" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.CERTIFICATE_TYPE_MASTER" Width="1.5" PointX="3" PointY="26.5" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.CLASS" Width="1.5" PointX="8.75" PointY="43.375" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.CLIENT_COMMENT" Width="1.5" PointX="5.25" PointY="55.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.CLIENT_USER" Width="1.5" PointX="5.25" PointY="26" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.COMMENT" Width="1.5" PointX="5.25" PointY="51.875" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.COMPANY_BRANCH" Width="1.5" PointX="16.25" PointY="34.875" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.COMPANY_PARAMETER" Width="1.5" PointX="3.75" PointY="21.375" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.CURRENCY_MASTER" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.DG_CERTIFIED_DOCTORS" Width="1.5" PointX="3" PointY="67" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.DOCUMENTS_MASTER" Width="1.5" PointX="5.25" PointY="38.125" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.DOCUMENTS_TYPE" Width="1.5" PointX="3" PointY="41.125" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.DUTY_TYPE_MASTER" Width="1.5" PointX="8.75" PointY="49.875" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.EMP_BRANCH" Width="1.5" PointX="14.25" PointY="29.375" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.EMP_EXPERIENCE" Width="1.5" PointX="10.25" PointY="37.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.EMP_FIXED" Width="1.5" PointX="3" PointY="29.875" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.EMPLOYEE_CLIENT" Width="1.5" PointX="13.25" PointY="33.25" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.EMPLOYEE_STATUS" Width="1.5" PointX="10.25" PointY="33.5" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.KIN_DETAILS" Width="1.5" PointX="13.25" PointY="37.875" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.MARITIME_HOLIDAY" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.OTHER_INCOME" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.PERSONNEL_MASTER" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.PORT_MASTER" Width="1.5" PointX="3" PointY="70.875" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RANK_CLASS" Width="1.5" PointX="11" PointY="44.625" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RANK_MASTER" Width="1.5" PointX="8.75" PointY="46" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RELATIONSHIP_MASTER" Width="1.5" PointX="11" PointY="48.125" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RELIGION" Width="1.5" PointX="0.75" PointY="29.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.SALUTATION" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.SECTION_LIMIT" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.SELECTION_STATUS_MASTER" Width="1.5" PointX="0.75" PointY="38.25" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.SHIP_MASTER" Width="1.5" PointX="9" PointY="25.375" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.SHIP_MOVEMENT" Width="1.5" PointX="11.25" PointY="30.125" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.SHIP_TYPE_MASTER" Width="1.5" PointX="6.75" PointY="23" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.ShipAgreement" Width="1.5" PointX="11.25" PointY="26.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.SHORE_PASS_MASTER" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.TAX_CODE" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.TAX_SLAB" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.vw_EmployeeDetails" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.vw_UserDetails" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.vw_UserRoleDetails" Width="1.5" PointX="10.75" PointY="0.75" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_ADDRESSEE_MASTER_COMPANY_PARAMETER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_BRANCH_DETAILS_BANK_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_COMPANY_BRANCH_BRANCH_DETAILS" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMP_BRANCH_BRANCH_DETAILS" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_DUTY_TYPE_MASTER_CATEGORY" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_RANK_MASTER_CATEGORY" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CERTIFICATE_MASTER_CERTIFICATE_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CERTIFICATE_MASTER_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_RANK_CLASS_CLASS" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CLIENT_COMMENT_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CLIENT_COMMENT_EMP_FIXED1" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CLIENT_COMMENT_EMP_FIXED2" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CLIENT_USER_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_COMMENT_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_COMMENT_EMP_FIXED1" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_COMMENT_EMP_FIXED2" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_COMPANY_BRANCH_COMPANY_PARAMETER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_DOCUMENTS_MASTER_DOCUMENTS_TYPE" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_DOCUMENTS_MASTER_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMP_BRANCH_EMP_FIXED1" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMP_EXPERIENCE_EMP_EXPERIENCE" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMP_EXPERIENCE_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMP_FIXED_RELIGION" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMP_FIXED_SELECTION_STATUS_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMPLOYEE_CLIENT_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMPLOYEE_STATUS_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMPLOYEE_STATUS_PERSONNEL_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_KIN_DETAILS_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMPLOYEE_CLIENT_RANK_CLASS" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMPLOYEE_CLIENT_SHIP_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMPLOYEE_STATUS_SELECTION_STATUS_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_KIN_DETAILS_RELATIONSHIP_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_RANK_CLASS_RANK_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_TAX_CODE_SECTION_LIMIT" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_SHIP_MASTER_Ship_Type_Master" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_SHIP_MOVEMENT_SHIP_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_ShipAgreement_SHIP_MASTER" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.CLIENT_MASTER" Width="1.5" PointX="11.375" PointY="10.125" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.COUNTRY_MASTER" Width="1.5" PointX="0.75" PointY="47.5" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_ADDRESSEE_MASTER_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_BRANCH_DETAILS_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CERTIFICATE_MASTER_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CLIENT_USER_CLIENT_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_ShipAgreement_CLIENT_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_DG_CERTIFIED_DOCTORS_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_DOCUMENTS_MASTER_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMP_FIXED_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_KIN_DETAILS_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_PORT_MASTER_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_SHIP_MASTER_Country_Master" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_SHIP_MOVEMENT_COUNTRY_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CLIENT_MASTER_COUNTRY_MASTER" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.ACCOUNT_MASTER" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.EARNING_DEDUCTION_MASTER" Width="1.5" PointX="7.375" PointY="12.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE1" Width="1.5" PointX="11.375" PointY="17.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE0" Width="1.5" PointX="13.75" PointY="11.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE2" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE3" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE4" Width="1.5" PointX="2.75" PointY="15.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE5" Width="1.5" PointX="15.75" PointY="4.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE6" Width="1.5" PointX="8.75" PointY="15.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE7" Width="1.5" PointX="15.75" PointY="9.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE8" Width="1.5" PointX="15.75" PointY="13.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RULE9" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.MAIN_TABLE" Width="1.5" PointX="18.375" PointY="5.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.PAGE_MASTER" Width="1.5" PointX="13.375" PointY="19" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.PAGE_PERMISSION" Width="1.5" PointX="15.625" PointY="18.75" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_PAGE_PERMISSION_PAGE_MASTER" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.NON_RECOVERY" Width="1.5" PointX="5.25" PointY="60.125" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.SHIP_MOVEMENT_REGISTER" Width="1.5" PointX="11.25" PointY="23" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.WITHHELD_REFUND" Width="1.5" PointX="5.25" PointY="63.5" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_NON_RECOVERY_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_WITHHELD_REFUND_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_SHIP_MOVEMENT_REGISTER_SHIP_MASTER" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.ACTUAL_SAVINGS" Width="1.5" PointX="14.25" PointY="22" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.GRATUITY_REMIT" Width="1.5" PointX="18.375" PointY="16.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.MISC_TAXABLE_INCOME" Width="1.5" PointX="9" PointY="20.5" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.PF_REMIT" Width="1.5" PointX="20.375" PointY="0.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.WITHHELD_TRANSFER" Width="1.5" PointX="5.25" PointY="42.625" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_ACTUAL_SAVINGS_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_ACTUAL_SAVINGS_TAX_CODE" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_MISC_TAXABLE_INCOME_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_WITHHELD_TRANSFER_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_MISC_TAXABLE_INCOME_OTHER_INCOME" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.AGREEMENT_DETAILS" Width="1.5" PointX="17.25" PointY="25.125" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_ACTUAL_SAVINGS_AGREEMENT_DETAILS" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_AGREEMENT_DETAILS_EMP_FIXED" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_AGREEMENT_DETAILS_SHIP_MASTER" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_WITHHELD_TRANSFER_AGREEMENT_DETAILS" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

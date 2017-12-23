@@ -1,0 +1,14 @@
+F:\Garware\Garware\BaseClass\bin\Release\BaseClass.dll
+F:\Garware\Garware\BaseClass\bin\Release\BaseClass.pdb
+F:\Garware\Garware\BaseClass\obj\Release\BaseClass.dll
+F:\Garware\Garware\BaseClass\obj\Release\BaseClass.pdb
+D:\Garware\BaseClass\bin\Release\BaseClass.dll
+D:\Garware\BaseClass\bin\Release\BaseClass.pdb
+D:\Garware\BaseClass\obj\Release\BaseClass.dll
+D:\Garware\BaseClass\obj\Release\BaseClass.pdb
+D:\Garware\BaseClass\obj\Release\BaseClass.csprojResolveAssemblyReference.cache
+C:\Users\sony\Documents\project\garware\BaseClass\bin\Release\BaseClass.dll
+C:\Users\sony\Documents\project\garware\BaseClass\bin\Release\BaseClass.pdb
+C:\Users\sony\Documents\project\garware\BaseClass\obj\Release\BaseClass.csprojResolveAssemblyReference.cache
+C:\Users\sony\Documents\project\garware\BaseClass\obj\Release\BaseClass.dll
+C:\Users\sony\Documents\project\garware\BaseClass\obj\Release\BaseClass.pdb

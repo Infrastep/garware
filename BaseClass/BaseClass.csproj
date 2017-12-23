@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C2B0B08-6AC9-4948-9F3A-5DD5B5D9BC7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseClass</RootNamespace>
+    <AssemblyName>BaseClass</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACTUAL_SAVINGS_Base.cs" />
+    <Compile Include="ADDRESSEE_MASTER_Base.cs" />
+    <Compile Include="ACCOUNT_MASTER_Base.cs" />
+    <Compile Include="AGREEMENT_DETAILS_Base.cs" />
+    <Compile Include="EARNING_DEDUCTION_MASTER_Base.cs" />
+    <Compile Include="ExceptionMsg.cs" />
+    <Compile Include="GRATUITY_REMIT_Base.cs" />
+    <Compile Include="MAIN_TABLE_Base.cs" />
+    <Compile Include="MISC_TAXABLE_INCOME_Base.cs" />
+    <Compile Include="NON_RECOVERY_Base.cs" />
+    <Compile Include="PAGE_MASTER_Base.cs" />
+    <Compile Include="PAGE_PERMISSION_Base.cs" />
+    <Compile Include="PF_REMIT_Base.cs" />
+    <Compile Include="RULE0_Base.cs" />
+    <Compile Include="RULE1_Base.cs" />
+    <Compile Include="RULE2_Base.cs" />
+    <Compile Include="RULE3_Base.cs" />
+    <Compile Include="RULE4_Base.cs" />
+    <Compile Include="RULE5_Base.cs" />
+    <Compile Include="RULE6_Base.cs" />
+    <Compile Include="RULE7_Base.cs" />
+    <Compile Include="RULE8_Base.cs" />
+    <Compile Include="RULE9_Base.cs" />
+    <Compile Include="SELECTION_STATUS_MASTER_Base.cs" />
+    <Compile Include="VM\ActualSavings\ACTUAL_SAVINGS_Base.cs" />
+    <Compile Include="VM\ActualSavings\AGREEMENT_DETAILS_Base.cs" />
+    <Compile Include="VM\ActualSavings\EMP_FIXED_Base.cs" />
+    <Compile Include="VM\ActualSavings\TAX_CODE_Base.cs" />
+    <Compile Include="VM\AgreementDetails\AGREEMENT_DETAILS_Base.cs" />
+    <Compile Include="VM\AgreementDetails\SHIP_MASTER_Base.cs" />
+    <Compile Include="VM\RankMaster\CATEGORY_Base.cs" />
+    <Compile Include="VM\RankMaster\RANK_CLASS_Base.cs" />
+    <Compile Include="VM\RankMaster\RANK_MASTER_Base.cs" />
+    <Compile Include="VM\ShipAgreement\CLIENT_MASTER_Base.cs" />
+    <Compile Include="VM\ShipAgreement\SHIP_AGREEMENT_Base.cs" />
+    <Compile Include="SHORE_PASS_MASTER_Base.cs" />
+    <Compile Include="MARITIME_HOLIDAY_Base.cs" />
+    <Compile Include="ASPNET_ROLES_Base.cs" />
+    <Compile Include="ASPNET_USER_Base.cs" />
+    <Compile Include="BANK_MASTER_Base.cs" />
+    <Compile Include="BRANCH_DETAILS_Base.cs" />
+    <Compile Include="CATEGORY_Base.cs" />
+    <Compile Include="CERTIFICATE_MASTER_Base.cs" />
+    <Compile Include="CERTIFICATE_TYPE_MASTER_Base.cs" />
+    <Compile Include="CLASS_Base.cs" />
+    <Compile Include="CLIENT_COMMENT_Base.cs" />
+    <Compile Include="CLIENT_MASTER_Base.cs" />
+    <Compile Include="CLIENT_USER_Base.cs" />
+    <Compile Include="COMMENT_Base.cs" />
+    <Compile Include="COMPANY_BRANCH_Base.cs" />
+    <Compile Include="COMPANY_PARAMETER_Base.cs" />
+    <Compile Include="COUNTRY_MASTER_Base.cs" />
+    <Compile Include="CURRENCY_MASTER_Base.cs" />
+    <Compile Include="DG_CERTIFIED_DOCTORS_Base.cs" />
+    <Compile Include="DOCUMENTS_MASTER_Base.cs" />
+    <Compile Include="DOCUMENTS_TYPE_Base.cs" />
+    <Compile Include="DUTY_TYPE_MASTER_Base.cs" />
+    <Compile Include="EMPLOYEE_CLIENT_Base.cs" />
+    <Compile Include="EMPLOYEE_STATUS_Base.cs" />
+    <Compile Include="EMP_BRANCH_Base.cs" />
+    <Compile Include="EMP_EXPERIENCE_Base.cs" />
+    <Compile Include="EMP_FIXED_Base.cs" />
+    <Compile Include="helper.cs" />
+    <Compile Include="KIN_DETAILS_Base.cs" />
+    <Compile Include="OTHER_INCOME_Base.cs" />
+    <Compile Include="PERSONNEL_MASTER_Base.cs" />
+    <Compile Include="PORT_MASTER_Base.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RANK_CLASS_Base.cs" />
+    <Compile Include="RANK_MASTER_Base.cs" />
+    <Compile Include="RELATIONSHIP_MASTER_Base.cs" />
+    <Compile Include="RELIGION_Base.cs" />
+    <Compile Include="SALUTATION_Base.cs" />
+    <Compile Include="SECTION_LIMIT_Base.cs" />
+    <Compile Include="AREA_OPERATION_MASTER_Base.cs" />
+    <Compile Include="SHIP_MASTER_Base.cs" />
+    <Compile Include="SHIP_TYPE_MASTER_Base.cs" />
+    <Compile Include="TAX_CODE_Base.cs" />
+    <Compile Include="TAX_SLAB_Base.cs" />
+    <Compile Include="USER_ROLE_Base.cs" />
+    <Compile Include="VM\ShipAgreement\SHIP_MASTER_Base.cs" />
+    <Compile Include="VM\ShipMovementRegister\SHIP_MASTER_Base.cs" />
+    <Compile Include="VM\ShipMovementRegister\SHIP_MOVEMENT_REGISTER_Base.cs" />
+    <Compile Include="VM\ShipMovemnet\COUNTRY_MASTER_Base.cs" />
+    <Compile Include="VM\ShipMovemnet\SHIP_MOVEMENT_Base.cs" />
+    <Compile Include="VM\ShipMovemnet\SHIP_MASTER_Base.cs" />
+    <Compile Include="vw_EmployeeDetails_Base.cs" />
+    <Compile Include="WITHHELD_REFUND_Base.cs" />
+    <Compile Include="WITHHELD_TRANSFER_Base.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

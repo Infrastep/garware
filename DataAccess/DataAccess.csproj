@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32F16393-7E9D-483C-9892-F443E121B057}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EntityFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COreEI.cs" />
+    <Compile Include="EF\ACCOUNT_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\ACTUAL_SAVINGS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\ADDRESSEE_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\AGREEMENT_DETAILS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\AREA_OPERATION_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\aspnet_UsersInRoles.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BANK_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BRANCH_DETAILS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CATEGORY.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CERTIFICATE_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CERTIFICATE_TYPE_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CLASS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CLIENT_COMMENT.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CLIENT_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CLIENT_USER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\COMMENT.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\COMPANY_BRANCH.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\COMPANY_PARAMETER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\COUNTRY_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CURRENCY_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\DG_CERTIFIED_DOCTORS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\DOCUMENTS_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\DOCUMENTS_TYPE.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\DUTY_TYPE_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EARNING_DEDUCTION_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EMPLOYEE_CLIENT.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EMPLOYEE_STATUS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EMP_BRANCH.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EMP_EXPERIENCE.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EMP_FIXED.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\garwareEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>garwareEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\garwareEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\garwareEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>garwareEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EF\GRATUITY_REMIT.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\KIN_DETAILS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\MAIN_TABLE.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\MARITIME_HOLIDAY.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\MISC_TAXABLE_INCOME.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\NON_RECOVERY.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\OTHER_INCOME.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PAGE_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PAGE_PERMISSION.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PERSONNEL_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PF_REMIT.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PORT_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RANK_CLASS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RANK_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RELATIONSHIP_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RELIGION.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE0.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE1.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE2.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE3.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE4.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE5.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE6.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE7.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE8.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\RULE9.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SALUTATION.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SECTION_LIMIT.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SELECTION_STATUS_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\ShipAgreement.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SHIP_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SHIP_MOVEMENT.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SHIP_MOVEMENT_REGISTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SHIP_TYPE_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\SHORE_PASS_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\sp_GetUserIdForMailsend_Result.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\TAX_CODE.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\TAX_SLAB.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\vw_EmployeeDetails.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\vw_UserDetails.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\vw_UserRoleDetails.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\WITHHELD_REFUND.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\WITHHELD_TRANSFER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ACTUAL_SAVINGSDL.cs" />
+    <Compile Include="Infrastructure\ADDRESSEE_MASTERDL.cs" />
+    <Compile Include="Infrastructure\ACCOUNT_MASTERDL.cs" />
+    <Compile Include="Infrastructure\AGREEMENT_DETAILSDL.cs" />
+    <Compile Include="Infrastructure\EARNING_DEDUCTION_MASTERDL.cs" />
+    <Compile Include="Infrastructure\GRATUITY_REMITDL.cs" />
+    <Compile Include="Infrastructure\MAIN_TABLEDL.cs" />
+    <Compile Include="Infrastructure\MARITIME_HOLIDAYDL.cs" />
+    <Compile Include="Infrastructure\MISC_TAXABLE_INCOMEDL.cs" />
+    <Compile Include="Infrastructure\NON_RECOVERYDL.cs" />
+    <Compile Include="Infrastructure\PAGE_MASTERDL.cs" />
+    <Compile Include="Infrastructure\PAGE_PERMISSIONDL.cs" />
+    <Compile Include="Infrastructure\PF_REMITDL.cs" />
+    <Compile Include="Infrastructure\RULE0DL.cs" />
+    <Compile Include="Infrastructure\RULE1DL.cs" />
+    <Compile Include="Infrastructure\RULE2DL.cs" />
+    <Compile Include="Infrastructure\RULE3DL.cs" />
+    <Compile Include="Infrastructure\RULE4DL.cs" />
+    <Compile Include="Infrastructure\RULE5DL.cs" />
+    <Compile Include="Infrastructure\RULE6DL.cs" />
+    <Compile Include="Infrastructure\RULE7DL.cs" />
+    <Compile Include="Infrastructure\RULE8DL.cs" />
+    <Compile Include="Infrastructure\RULE9DL.cs" />
+    <Compile Include="Infrastructure\SHIP_MOVEMENTDL.cs" />
+    <Compile Include="Infrastructure\SHIP_AGREEMENTDL.cs" />
+    <Compile Include="Infrastructure\SHIP_MOVEMENT_REGISTERDL.cs" />
+    <Compile Include="Infrastructure\SHORE_PASS_MASTERDL.cs" />
+    <Compile Include="Infrastructure\BANK_MASTERDL.cs" />
+    <Compile Include="Infrastructure\BRANCH_DETAILSDL.cs" />
+    <Compile Include="Infrastructure\CATEGORYDL.cs" />
+    <Compile Include="Infrastructure\CERTIFICATE_MASTERDL.cs" />
+    <Compile Include="Infrastructure\CERTIFICATE_TYPE_MASTERDL.cs" />
+    <Compile Include="Infrastructure\CLASSDL.cs" />
+    <Compile Include="Infrastructure\CLIENT_COMMENTDL.cs" />
+    <Compile Include="Infrastructure\CLIENT_MASTERDL.cs" />
+    <Compile Include="Infrastructure\CLIENT_USERDL.cs" />
+    <Compile Include="Infrastructure\COMMENTDL.cs" />
+    <Compile Include="Infrastructure\COMPANY_BRANCHDL.cs" />
+    <Compile Include="Infrastructure\COMPANY_PARAMETERDL.cs" />
+    <Compile Include="Infrastructure\COUNTRY_MASTERDL.cs" />
+    <Compile Include="Infrastructure\CURRENCY_MASTERDL.cs" />
+    <Compile Include="Infrastructure\DG_CERTIFIED_DOCTORSDL.cs" />
+    <Compile Include="Infrastructure\DOCUMENTS_MASTERDL.cs" />
+    <Compile Include="Infrastructure\DOCUMENTS_TYPEDL.cs" />
+    <Compile Include="Infrastructure\DUTY_TYPE_MASTERDL.cs" />
+    <Compile Include="Infrastructure\EMPLOYEE_CLIENTDL.cs" />
+    <Compile Include="Infrastructure\EMPLOYEE_STATUSDL.cs" />
+    <Compile Include="Infrastructure\EMP_BRANCHDL.cs" />
+    <Compile Include="Infrastructure\EMP_EXPERIENCEDL.cs" />
+    <Compile Include="Infrastructure\EMP_FIXEDDL.cs" />
+    <Compile Include="Infrastructure\KIN_DETAILSDL.cs" />
+    <Compile Include="Infrastructure\OTHER_INCOMEDL.cs" />
+    <Compile Include="Infrastructure\PERSONNEL_MASTERDL.cs" />
+    <Compile Include="Infrastructure\PORT_MASTERDL.cs" />
+    <Compile Include="Infrastructure\RANK_CLASSDL.cs" />
+    <Compile Include="Infrastructure\RANK_MASTERDL.cs" />
+    <Compile Include="Infrastructure\RELATIONSHIP_MASTERDL.cs" />
+    <Compile Include="Infrastructure\RELIGIONDL.cs" />
+    <Compile Include="Infrastructure\AREA_OPERATION_MASTERDL.cs" />
+    <Compile Include="Infrastructure\SALUTATIONDL.cs" />
+    <Compile Include="Infrastructure\SECTION_LIMITDL.cs" />
+    <Compile Include="Infrastructure\SELECTION_STATUS_MASTERDL.cs" />
+    <Compile Include="Infrastructure\SHIP_MASTERDL.cs" />
+    <Compile Include="Infrastructure\SHIP_TYPE_MASTERDL.cs" />
+    <Compile Include="Infrastructure\TAX_CODEDL.cs" />
+    <Compile Include="Infrastructure\TAX_SLABDL.cs" />
+    <Compile Include="Infrastructure\USER_ROLEDL.cs" />
+    <Compile Include="Infrastructure\UTILITYDL.cs" />
+    <Compile Include="Infrastructure\WITHHELD_REFUNDDL.cs" />
+    <Compile Include="Infrastructure\WITHHELD_TRANSFERDL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EF\garwareEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>garwareEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EF\garwareEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>garwareEntities.edmx</DependentUpon>
+      <LastGenOutput>garwareEntities.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EF\garwareEntities.edmx.diagram">
+      <DependentUpon>garwareEntities.edmx</DependentUpon>
+    </None>
+    <None Include="EF\garwareEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>garwareEntities.edmx</DependentUpon>
+      <LastGenOutput>garwareEntities.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseClass\BaseClass.csproj">
+      <Project>{3c2b0b08-6ac9-4948-9f3a-5dd5b5d9bc7f}</Project>
+      <Name>BaseClass</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

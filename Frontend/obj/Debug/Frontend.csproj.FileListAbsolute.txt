@@ -1,0 +1,81 @@
+C:\Users\com\Desktop\projects\garwarenew\Garware\Frontend\bin\Frontend.dll.config
+C:\Users\com\Desktop\projects\garwarenew\Garware\Frontend\bin\Frontend.dll
+C:\Users\com\Desktop\projects\garwarenew\Garware\Frontend\bin\Frontend.pdb
+C:\Users\com\Desktop\projects\garwarenew\Garware\Frontend\obj\Debug\Frontend.dll
+C:\Users\com\Desktop\projects\garwarenew\Garware\Frontend\obj\Debug\Frontend.pdb
+C:\Users\com\Desktop\projects\garwarenew\Garware\Frontend\obj\Debug\Frontend.csprojResolveAssemblyReference.cache
+D:\New folder\Garware\Frontend\bin\Frontend.dll.config
+D:\New folder\Garware\Frontend\bin\Frontend.dll
+D:\New folder\Garware\Frontend\bin\Frontend.pdb
+D:\New folder\Garware\Frontend\bin\BaseClass.dll
+D:\New folder\Garware\Frontend\bin\BuisnessController.dll
+D:\New folder\Garware\Frontend\bin\EntityFramework.dll
+D:\New folder\Garware\Frontend\bin\EntityFramework.SqlServer.dll
+D:\New folder\Garware\Frontend\bin\Newtonsoft.Json.dll
+D:\New folder\Garware\Frontend\bin\DataAccess.dll
+D:\New folder\Garware\Frontend\bin\BaseClass.pdb
+D:\New folder\Garware\Frontend\bin\BuisnessController.pdb
+D:\New folder\Garware\Frontend\bin\EntityFramework.xml
+D:\New folder\Garware\Frontend\bin\EntityFramework.SqlServer.xml
+D:\New folder\Garware\Frontend\bin\Newtonsoft.Json.xml
+D:\New folder\Garware\Frontend\bin\DataAccess.pdb
+D:\New folder\Garware\Frontend\obj\Debug\Frontend.csprojResolveAssemblyReference.cache
+D:\New folder\Garware\Frontend\obj\Debug\Frontend.dll
+D:\New folder\Garware\Frontend\obj\Debug\Frontend.pdb
+D:\Garware\Frontend\bin\Frontend.dll.config
+D:\Garware\Frontend\bin\Frontend.dll
+D:\Garware\Frontend\bin\Frontend.pdb
+D:\Garware\Frontend\bin\BaseClass.dll
+D:\Garware\Frontend\bin\BuisnessController.dll
+D:\Garware\Frontend\bin\EntityFramework.dll
+D:\Garware\Frontend\bin\EntityFramework.SqlServer.dll
+D:\Garware\Frontend\bin\Newtonsoft.Json.dll
+D:\Garware\Frontend\bin\DataAccess.dll
+D:\Garware\Frontend\bin\BaseClass.pdb
+D:\Garware\Frontend\bin\BuisnessController.pdb
+D:\Garware\Frontend\bin\EntityFramework.xml
+D:\Garware\Frontend\bin\EntityFramework.SqlServer.xml
+D:\Garware\Frontend\bin\DataAccess.pdb
+D:\Garware\Frontend\obj\Debug\Frontend.csprojResolveAssemblyReference.cache
+D:\Garware\Frontend\obj\Debug\Frontend.dll
+D:\Garware\Frontend\obj\Debug\Frontend.pdb
+F:\Garware\Garware\Frontend\bin\Frontend.dll.config
+F:\Garware\Garware\Frontend\bin\Frontend.dll
+F:\Garware\Garware\Frontend\bin\Frontend.pdb
+F:\Garware\Garware\Frontend\bin\BaseClass.dll
+F:\Garware\Garware\Frontend\bin\BuisnessController.dll
+F:\Garware\Garware\Frontend\bin\EntityFramework.dll
+F:\Garware\Garware\Frontend\bin\EntityFramework.SqlServer.dll
+F:\Garware\Garware\Frontend\bin\Newtonsoft.Json.dll
+F:\Garware\Garware\Frontend\bin\DataAccess.dll
+F:\Garware\Garware\Frontend\bin\AutoMapper.dll
+F:\Garware\Garware\Frontend\bin\BaseClass.pdb
+F:\Garware\Garware\Frontend\bin\BuisnessController.pdb
+F:\Garware\Garware\Frontend\bin\EntityFramework.xml
+F:\Garware\Garware\Frontend\bin\EntityFramework.SqlServer.xml
+F:\Garware\Garware\Frontend\bin\DataAccess.pdb
+F:\Garware\Garware\Frontend\bin\AutoMapper.xml
+F:\Garware\Garware\Frontend\obj\Debug\Frontend.csprojResolveAssemblyReference.cache
+F:\Garware\Garware\Frontend\obj\Debug\Frontend.dll
+F:\Garware\Garware\Frontend\obj\Debug\Frontend.pdb
+D:\Garware\Frontend\bin\AutoMapper.dll
+D:\Garware\Frontend\bin\AutoMapper.xml
+C:\Users\sony\Documents\project\garware\Frontend\bin\Frontend.dll.config
+C:\Users\sony\Documents\project\garware\Frontend\bin\Frontend.dll
+C:\Users\sony\Documents\project\garware\Frontend\bin\Frontend.pdb
+C:\Users\sony\Documents\project\garware\Frontend\bin\BaseClass.dll
+C:\Users\sony\Documents\project\garware\Frontend\bin\BuisnessController.dll
+C:\Users\sony\Documents\project\garware\Frontend\bin\EntityFramework.dll
+C:\Users\sony\Documents\project\garware\Frontend\bin\EntityFramework.SqlServer.dll
+C:\Users\sony\Documents\project\garware\Frontend\bin\Newtonsoft.Json.dll
+C:\Users\sony\Documents\project\garware\Frontend\bin\DataAccess.dll
+C:\Users\sony\Documents\project\garware\Frontend\bin\AutoMapper.dll
+C:\Users\sony\Documents\project\garware\Frontend\bin\BaseClass.pdb
+C:\Users\sony\Documents\project\garware\Frontend\bin\BuisnessController.pdb
+C:\Users\sony\Documents\project\garware\Frontend\bin\EntityFramework.xml
+C:\Users\sony\Documents\project\garware\Frontend\bin\EntityFramework.SqlServer.xml
+C:\Users\sony\Documents\project\garware\Frontend\bin\DataAccess.pdb
+C:\Users\sony\Documents\project\garware\Frontend\bin\AutoMapper.xml
+C:\Users\sony\Documents\project\garware\Frontend\obj\Debug\Frontend.csprojResolveAssemblyReference.cache
+C:\Users\sony\Documents\project\garware\Frontend\obj\Debug\Frontend.dll
+C:\Users\sony\Documents\project\garware\Frontend\obj\Debug\Frontend.pdb

@@ -1,0 +1,11 @@
+1.user with same email id exists in our system... please login with this mail id or try to check out using other mail id. --- DONE
+2.email exist notification in payment page.
+3.confirmation page button.
+4.admin mail shoot.--- DONE
+5.mail template a cancellation policy description showing..--- DONE
+6."*** You can use your confirmation number for any kind of further ammenment.."--- DONE
+7.Remove fax from mail template.--- DONE
+
+new reservation has been placed in aauris.infronthrs.com.
+
+
