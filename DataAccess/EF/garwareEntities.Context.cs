@@ -99,6 +99,7 @@ namespace DataAccess.EF
         public virtual DbSet<PF_REMIT> PF_REMIT { get; set; }
         public virtual DbSet<WITHHELD_TRANSFER> WITHHELD_TRANSFER { get; set; }
         public virtual DbSet<AGREEMENT_DETAILS> AGREEMENT_DETAILS { get; set; }
+        public virtual DbSet<AEDCODE> AEDCODEs { get; set; }
     
         public virtual ObjectResult<sp_GetUserIdForMailsend_Result> sp_GetUserIdForMailsend(Nullable<int> empID)
         {

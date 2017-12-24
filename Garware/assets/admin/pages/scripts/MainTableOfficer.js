@@ -104,7 +104,7 @@
                 $("#Taxable").prop('checked', "false");
             }
             
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+            //BindEarnDednById(aData.EARN_DEDN_CODE);
             $(".tools a").removeClass("expand");
             $(".tools a").addClass("collapse");
             $(".portlet-body").show();
@@ -294,7 +294,7 @@ $("#EarnDedn").change(function () {
     $('#EarnDednDesc').html("");
     var status = this.value;
 
-    BindEarnDednById(status);
+   // BindEarnDednById(status);
 });
 
 function BindEarnDednById(earnid) {

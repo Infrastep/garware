@@ -47,7 +47,7 @@
             $("#minlimit").val(aData.MIN_SECONDARY_EARN_AMT);
             $("#maxlimit").val(aData.MAX_SECONDARY_EARN_AMT);
             $("#Amount").val(aData.EARN_DEDN_RATE);
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+           // BindEarnDednById(aData.EARN_DEDN_CODE);
             BindSecEarnDednById(aData.SECONDARY_EARN_DEDN_CODE);
             //BindShipById(aData.SHIP_CODE);
             $(".tools a").removeClass("expand");
@@ -241,7 +241,7 @@ $("#EarnDedn").change(function () {
     $('#EarnDednDesc').html("");
     var status = this.value;
 
-    BindEarnDednById(status);
+   / BindEarnDednById(status);
 });
 $("#SecEarnDedn").change(function () {
     $('#SecEarnDednDesc').html("");

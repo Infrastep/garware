@@ -40,7 +40,7 @@
             $("#Type").val(aData.AMOUNT_DPM_MPY_FLAG);
            
             $("#Amount").val(aData.EARN_DEDN_RATE);
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+            //BindEarnDednById(aData.EARN_DEDN_CODE);
             //BindShipById(aData.SHIP_CODE);
             $(".tools a").removeClass("expand");
             $(".tools a").addClass("collapse");

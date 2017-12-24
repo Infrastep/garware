@@ -23,9 +23,9 @@
            
             var aData = oTable.fnGetData(nRow);
 
-            $("#EarndedID").val(aData.EARNDEDNID);
+            $("#EarndedID").val(aData.Id);
             $("#EarnDedn").val(aData.CODE);
-            $("#EarnDednDesc").val(aData.DESCRIPTION);
+            $("#EarnDednDesc").val(aData.DESCR);
             $(".tools a").removeClass("expand");
             $(".tools a").addClass("collapse");
             $(".portlet-body").show();
@@ -103,7 +103,7 @@
                         { "data": "CODE" },
 
                          
-                          { "data": "DESCRIPTION" },
+                          { "data": "DESCR" },
                            
                           {
                               "data": null,

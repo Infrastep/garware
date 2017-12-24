@@ -140,6 +140,7 @@
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_AGREEMENT_DETAILS_EMP_FIXED" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_AGREEMENT_DETAILS_SHIP_MASTER" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_WITHHELD_TRANSFER_AGREEMENT_DETAILS" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.AEDCODE" Width="1.5" PointX="0.75" PointY="20.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

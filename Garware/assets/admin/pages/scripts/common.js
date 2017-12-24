@@ -973,7 +973,7 @@ function BindEarnDedn() {
             $.each(msg, function (key, value) {
 
 
-                $('#EarnDedn').append($("<option />").val(value.EARNDEDNID).text(value.CODE));
+                $('#EarnDedn').append($("<option />").val(value.CODE).text(value.CODE + "-" + value.DESCR));
 
 
 
@@ -1146,7 +1146,7 @@ function BindSecEarnDedn() {
             $.each(msg, function (key, value) {
 
 
-                $('#SecEarnDedn').append($("<option />").val(value.EARNDEDNID).text(value.CODE));
+                $('#SecEarnDedn').append($("<option />").val(value.CODE).text(value.CODE +"-"+ value.DESCR));
 
 
 
