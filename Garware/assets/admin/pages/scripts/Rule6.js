@@ -48,7 +48,7 @@
             $("#Certificate").val(aData.CERT_CODE);
 
             $("#amount").val(aData.EARN_DEDN_RATE);
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+           // BindEarnDednById(aData.EARN_DEDN_CODE);
             BindSecEarnDednById(aData.SECONDARY_EARN_DEDN_CODE);
             BindRankById(aData.RANK_CODE);
             //BindCertificateById(aData.CERT_CODE);
@@ -243,7 +243,7 @@ $("#EarnDedn").change(function () {
     $('#EarnDednDesc').html("");
     var status = this.value;
 
-    BindEarnDednById(status);
+    //BindEarnDednById(status);
 });
 $("#SecEarnDedn").change(function () {
     $('#SecEarnDednDesc').html("");

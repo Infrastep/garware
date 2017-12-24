@@ -44,6 +44,29 @@
           <Property Name="COMPANYID" Type="int" />
           <Property Name="STATUS" Type="bit" />
         </EntityType>
+        <EntityType Name="AEDCODE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CODE" Type="smallint" Nullable="false" />
+          <Property Name="DESCR" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="AED" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="EARNING_TYPE" Type="char" MaxLength="1" />
+          <Property Name="EMP_BRK" Type="char" MaxLength="1" />
+          <Property Name="TAXABLE_YN" Type="char" MaxLength="1" />
+          <Property Name="PRIORITY" Type="smallint" />
+          <Property Name="ACCODE" Type="char" MaxLength="6" />
+          <Property Name="SUBCD" Type="char" MaxLength="4" />
+          <Property Name="ACDESC" Type="varchar" MaxLength="50" />
+          <Property Name="EDDESC" Type="varchar" MaxLength="50" />
+          <Property Name="DC" Type="char" MaxLength="1" />
+          <Property Name="INT_YN" Type="char" MaxLength="1" />
+          <Property Name="INT_RATE" Type="decimal" Precision="5" Scale="0" />
+          <Property Name="PTAX_YN" Type="char" MaxLength="1" />
+          <Property Name="ESI_YN" Type="char" MaxLength="1" />
+          <Property Name="DETAIL_YN" Type="char" MaxLength="1" />
+        </EntityType>
         <EntityType Name="AGREEMENT_DETAILS">
           <Key>
             <PropertyRef Name="AGREEMENT_DETAILS_ID" />
@@ -189,7 +212,7 @@
           </Key>
           <Property Name="CLIENTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CLIENT_NAME" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="DATABASE_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DATABASE_NAME" Type="nvarchar" MaxLength="100" />
           <Property Name="DATABASE_HOST" Type="nvarchar" MaxLength="100" />
           <Property Name="DATABASE_UID" Type="nvarchar" MaxLength="50" />
           <Property Name="DATABASE_PASS" Type="nvarchar" MaxLength="50" />
@@ -1886,6 +1909,7 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
           <EntitySet Name="ACCOUNT_MASTER" EntityType="Self.ACCOUNT_MASTER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ACTUAL_SAVINGS" EntityType="Self.ACTUAL_SAVINGS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ADDRESSEE_MASTER" EntityType="Self.ADDRESSEE_MASTER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AEDCODE" EntityType="Self.AEDCODE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AGREEMENT_DETAILS" EntityType="Self.AGREEMENT_DETAILS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AREA_OPERATION_MASTER" EntityType="Self.AREA_OPERATION_MASTER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" Schema="dbo" store:Type="Tables" />
@@ -2627,6 +2651,7 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
             <End Role="AGREEMENT_DETAILS" EntitySet="AGREEMENT_DETAILS" />
             <End Role="WITHHELD_TRANSFER" EntitySet="WITHHELD_TRANSFER" />
           </AssociationSet>
+          <EntitySet Name="AEDCODEs" EntityType="thesynaxis123_garwareModel.AEDCODE" />
         </EntityContainer>
         <EntityType Name="ADDRESSEE_MASTER">
           <Key>
@@ -3823,7 +3848,7 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
           </Key>
           <Property Name="CLIENTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CLIENT_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DATABASE_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DATABASE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DATABASE_HOST" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DATABASE_UID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DATABASE_PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -4627,6 +4652,29 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="AEDCODE">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CODE" Type="Int16" Nullable="false" />
+          <Property Name="DESCR" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AED" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EARNING_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EMP_BRK" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TAXABLE_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PRIORITY" Type="Int16" />
+          <Property Name="ACCODE" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="SUBCD" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ACDESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EDDESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DC" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="INT_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="INT_RATE" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="PTAX_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ESI_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DETAIL_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5799,6 +5847,30 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
                 <ScalarProperty Name="VCODE" ColumnName="VCODE" />
                 <ScalarProperty Name="AGREEMENT_CODE" ColumnName="AGREEMENT_CODE" />
                 <ScalarProperty Name="AGREEMENT_DETAILS_ID" ColumnName="AGREEMENT_DETAILS_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AEDCODEs">
+            <EntityTypeMapping TypeName="thesynaxis123_garwareModel.AEDCODE">
+              <MappingFragment StoreEntitySet="AEDCODE">
+                <ScalarProperty Name="DETAIL_YN" ColumnName="DETAIL_YN" />
+                <ScalarProperty Name="ESI_YN" ColumnName="ESI_YN" />
+                <ScalarProperty Name="PTAX_YN" ColumnName="PTAX_YN" />
+                <ScalarProperty Name="INT_RATE" ColumnName="INT_RATE" />
+                <ScalarProperty Name="INT_YN" ColumnName="INT_YN" />
+                <ScalarProperty Name="DC" ColumnName="DC" />
+                <ScalarProperty Name="EDDESC" ColumnName="EDDESC" />
+                <ScalarProperty Name="ACDESC" ColumnName="ACDESC" />
+                <ScalarProperty Name="SUBCD" ColumnName="SUBCD" />
+                <ScalarProperty Name="ACCODE" ColumnName="ACCODE" />
+                <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+                <ScalarProperty Name="TAXABLE_YN" ColumnName="TAXABLE_YN" />
+                <ScalarProperty Name="EMP_BRK" ColumnName="EMP_BRK" />
+                <ScalarProperty Name="EARNING_TYPE" ColumnName="EARNING_TYPE" />
+                <ScalarProperty Name="AED" ColumnName="AED" />
+                <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

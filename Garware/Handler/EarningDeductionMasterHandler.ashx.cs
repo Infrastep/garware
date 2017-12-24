@@ -27,11 +27,11 @@ namespace Garware.Handler
             {
                 case "InsertUpdate":
 
-                    EARNING_DEDUCTION_MASTER_Base obj = new EARNING_DEDUCTION_MASTER_Base();
-                    obj.EARNDEDNID = Convert.ToInt16(postdata.id.ToString());
-                    obj.CODE = Convert.ToString(postdata.CODE.ToString());
+                    AEDCODE_Base obj = new AEDCODE_Base();
+                    obj.Id  = Convert.ToInt16(postdata.id.ToString());
+                    obj.CODE = Convert.ToInt16(postdata.CODE.ToString());
                     
-                    obj.DESCRIPTION = Convert.ToString(postdata.DESCRIPTION.ToString());
+                    obj.DESCR  = Convert.ToString(postdata.DESCRIPTION.ToString());
                     
                     EARNING_DEDUCTION_MASTERBC.insertupdateData(obj);
 

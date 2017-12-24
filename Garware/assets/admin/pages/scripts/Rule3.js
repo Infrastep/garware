@@ -44,7 +44,7 @@
             var rank = aData.RANK_CODE.trim();
             $("#RankId").val(rank);
             $("#Amount").val(aData.EARN_DEDN_RATE);
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+           // BindEarnDednById(aData.EARN_DEDN_CODE);
             BindSecEarnDednById(aData.SECONDARY_EARN_DEDN_CODE);
             BindRankById(aData.RANK_CODE);
             $(".tools a").removeClass("expand");
@@ -238,7 +238,7 @@ $("#EarnDedn").change(function () {
     $('#EarnDednDesc').html("");
     var status = this.value;
 
-    BindEarnDednById(status);
+   // BindEarnDednById(status);
 });
 $("#SecEarnDedn").change(function () {
     $('#SecEarnDednDesc').html("");

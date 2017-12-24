@@ -46,7 +46,7 @@
             $("#Monthnum").val(aData.FROM_MONTH);
             $("#Monthnum1").val(aData.TO_MONTH);
             $("#Amount").val(aData.EARN_DEDN_RATE);
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+           // BindEarnDednById(aData.EARN_DEDN_CODE);
             BindShipById(aData.SHIP_CODE);
             BindRankById(aData.RANK_CODE);
             $(".tools a").removeClass("expand");
@@ -252,7 +252,7 @@ $("#ShipId").change(function () {
 $("#EarnDedn").change(function () {
     
     var status = this.value;
-    BindEarnDednById(status);
+   // BindEarnDednById(status);
 });
 
 function BindShipById(shipid)

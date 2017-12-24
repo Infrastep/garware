@@ -42,7 +42,7 @@
             $("#maxlimit").val(aData.MAX_NO_OF_DAYS);
             
             $("#percentage").val(aData.EARN_PRCNT);
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+           // BindEarnDednById(aData.EARN_DEDN_CODE);
             BindSecEarnDednById(aData.SECONDARY_EARN_DEDN_CODE);
             
             $(".tools a").removeClass("expand");
@@ -236,7 +236,7 @@ $("#EarnDedn").change(function () {
     $('#EarnDednDesc').html("");
     var status = this.value;
 
-    BindEarnDednById(status);
+  //  BindEarnDednById(status);
 });
 $("#SecEarnDedn").change(function () {
     $('#SecEarnDednDesc').html("");

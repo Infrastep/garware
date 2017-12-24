@@ -10,36 +10,36 @@ namespace DataAccess.Infrastructure
 {
     public class EARNING_DEDUCTION_MASTERDL : COreEI
     {
-        public List<EARNING_DEDUCTION_MASTER_Base> getdata()
+        public List<AEDCODE_Base> getdata()
         {
 
-            List<EARNING_DEDUCTION_MASTER> dr = db1.EARNING_DEDUCTION_MASTER.ToList();
-            List<EARNING_DEDUCTION_MASTER_Base> drb = generate_Base(dr);
+            List<AEDCODE> dr = db1.AEDCODEs.ToList();
+            List<AEDCODE_Base> drb = generate_Base(dr);
             return drb;
 
         }
 
-        public EARNING_DEDUCTION_MASTER_Base getdata(int id)
+        public AEDCODE_Base getdata(int id)
         {
 
-            EARNING_DEDUCTION_MASTER dr = db1.EARNING_DEDUCTION_MASTER.Where(q => q.EARNDEDNID == id).Single();
-            EARNING_DEDUCTION_MASTER_Base STM = generate_Base(dr);
+            AEDCODE dr = db1.AEDCODEs.Where(q => q.Id == id).Single();
+            AEDCODE_Base STM = generate_Base(dr);
             return STM;
 
 
         }
 
-        public EARNING_DEDUCTION_MASTER_Base insertdata(EARNING_DEDUCTION_MASTER_Base dr)
+        public AEDCODE_Base insertdata(AEDCODE_Base dr)
         {
-            int id = dr.EARNDEDNID;
+            int id = dr.Id;
             if (id != 0)
             {
-                EARNING_DEDUCTION_MASTER result = db1.EARNING_DEDUCTION_MASTER.Where(q => q.EARNDEDNID == id).Single();
+                AEDCODE result = db1.AEDCODEs.Where(q => q.Id  == id).Single();
                 if (result != null)
                 {
-                    result.EARNDEDNID = dr.EARNDEDNID;
+                    result.Id  = dr.Id ;
                     result.CODE = dr.CODE;
-                    result.DESCRIPTION = dr.DESCRIPTION;
+                    result.DESCR = dr.DESCR;
                     
 
                     CommitChanges();
@@ -48,28 +48,28 @@ namespace DataAccess.Infrastructure
             }
             else
             {
-                EARNING_DEDUCTION_MASTER result = new EARNING_DEDUCTION_MASTER();
+                AEDCODE result = new AEDCODE();
 
                 result.CODE = dr.CODE;
-                result.DESCRIPTION = dr.DESCRIPTION;
+                result.DESCR = dr.DESCR;
 
-                db1.EARNING_DEDUCTION_MASTER.Add(result);
+                db1.AEDCODEs.Add(result);
                 CommitChanges();
                 return generate_Base(result);
             }
         }
 
-        public static EARNING_DEDUCTION_MASTER_Base generate_Base(EARNING_DEDUCTION_MASTER dr)
+        public static AEDCODE_Base generate_Base(AEDCODE dr)
         {
 
-            EARNING_DEDUCTION_MASTER_Base drb = Mapper.DynamicMap<EARNING_DEDUCTION_MASTER, EARNING_DEDUCTION_MASTER_Base>(dr);
+            AEDCODE_Base drb = Mapper.DynamicMap<AEDCODE, AEDCODE_Base>(dr);
 
             return drb;
         }
 
-        public static List<EARNING_DEDUCTION_MASTER_Base> generate_Base(ICollection<EARNING_DEDUCTION_MASTER> i)
+        public static List<AEDCODE_Base> generate_Base(ICollection<AEDCODE> i)
         {
-            List<EARNING_DEDUCTION_MASTER_Base> drbl = Mapper.DynamicMap<ICollection<EARNING_DEDUCTION_MASTER>, List<EARNING_DEDUCTION_MASTER_Base>>(i);
+            List<AEDCODE_Base> drbl = Mapper.DynamicMap<ICollection<AEDCODE>, List<AEDCODE_Base>>(i);
 
             return drbl;
         }

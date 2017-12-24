@@ -50,7 +50,7 @@
             $("#fperiod").val(aData.PRCNT_IN_FIRST_PERIOD);
             $("#speriod").val(aData.PRCNT_IN_SECOND_PERIOD);
             $("#nperiod").val(aData.PRCNT_IN_THIRD_PERIOD);
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+           // BindEarnDednById(aData.EARN_DEDN_CODE);
             BindSecEarnDednById(aData.SECONDARY_EARN_DEDN_CODE);
             BindShipById(aData.SHIP_CODE);
             $(".tools a").removeClass("expand");
@@ -249,7 +249,7 @@ $("#EarnDedn").change(function () {
     $('#EarnDednDesc').html("");
     var status = this.value;
 
-    BindEarnDednById(status);
+   // BindEarnDednById(status);
 });
 $("#SecEarnDedn").change(function () {
     $('#SecEarnDednDesc').html("");

@@ -40,7 +40,7 @@
             $("#minyr").val(aData.MIN_NO_OF_YRS);
             $("#maxyr").val(aData.MAX_NO_OF_YRS);
             $("#rate").val(aData.EARN_DEDN_RATE);
-            BindEarnDednById(aData.EARN_DEDN_CODE);
+           // BindEarnDednById(aData.EARN_DEDN_CODE);
             $(".tools a").removeClass("expand");
             $(".tools a").addClass("collapse");
             $(".portlet-body").show();
@@ -231,7 +231,7 @@ $("#EarnDedn").change(function () {
     $('#EarnDednDesc').html("");
     var status = this.value;
 
-    BindEarnDednById(status);
+    //BindEarnDednById(status);
 });
 
 function BindEarnDednById(earnid) {
