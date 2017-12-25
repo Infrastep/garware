@@ -23,6 +23,7 @@ namespace DataAccess.EF
         public int TypeID { get; set; }
         public string Description { get; set; }
         public Nullable<bool> Status { get; set; }
+        public string Type { get; set; }
     
         public virtual ICollection<EMP_EXPERIENCE> EMP_EXPERIENCE { get; set; }
         public virtual ICollection<SHIP_MASTER> SHIP_MASTER { get; set; }

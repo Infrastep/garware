@@ -57,7 +57,6 @@ namespace DataAccess.EF
         public virtual DbSet<PERSONNEL_MASTER> PERSONNEL_MASTER { get; set; }
         public virtual DbSet<PORT_MASTER> PORT_MASTER { get; set; }
         public virtual DbSet<RANK_CLASS> RANK_CLASS { get; set; }
-        public virtual DbSet<RANK_MASTER> RANK_MASTER { get; set; }
         public virtual DbSet<RELATIONSHIP_MASTER> RELATIONSHIP_MASTER { get; set; }
         public virtual DbSet<RELIGION> RELIGIONs { get; set; }
         public virtual DbSet<SALUTATION> SALUTATIONs { get; set; }
@@ -100,6 +99,7 @@ namespace DataAccess.EF
         public virtual DbSet<WITHHELD_TRANSFER> WITHHELD_TRANSFER { get; set; }
         public virtual DbSet<AGREEMENT_DETAILS> AGREEMENT_DETAILS { get; set; }
         public virtual DbSet<AEDCODE> AEDCODEs { get; set; }
+        public virtual DbSet<RANK_MASTER> RANK_MASTER { get; set; }
     
         public virtual ObjectResult<sp_GetUserIdForMailsend_Result> sp_GetUserIdForMailsend(Nullable<int> empID)
         {

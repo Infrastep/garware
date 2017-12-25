@@ -42,6 +42,7 @@
     <Compile Include="ACTUAL_SAVINGS_Base.cs" />
     <Compile Include="ADDRESSEE_MASTER_Base.cs" />
     <Compile Include="ACCOUNT_MASTER_Base.cs" />
+    <Compile Include="AEDCODE_Base.cs" />
     <Compile Include="AGREEMENT_DETAILS_Base.cs" />
     <Compile Include="EARNING_DEDUCTION_MASTER_Base.cs" />
     <Compile Include="ExceptionMsg.cs" />

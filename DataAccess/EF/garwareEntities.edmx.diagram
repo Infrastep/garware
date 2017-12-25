@@ -35,7 +35,6 @@
         <EntityTypeShape EntityType="thesynaxis123_garwareModel.PERSONNEL_MASTER" Width="1.5" PointX="6.75" PointY="6.75" />
         <EntityTypeShape EntityType="thesynaxis123_garwareModel.PORT_MASTER" Width="1.5" PointX="3" PointY="70.875" />
         <EntityTypeShape EntityType="thesynaxis123_garwareModel.RANK_CLASS" Width="1.5" PointX="11" PointY="44.625" />
-        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RANK_MASTER" Width="1.5" PointX="8.75" PointY="46" />
         <EntityTypeShape EntityType="thesynaxis123_garwareModel.RELATIONSHIP_MASTER" Width="1.5" PointX="11" PointY="48.125" />
         <EntityTypeShape EntityType="thesynaxis123_garwareModel.RELIGION" Width="1.5" PointX="0.75" PointY="29.75" />
         <EntityTypeShape EntityType="thesynaxis123_garwareModel.SALUTATION" Width="1.5" PointX="7.75" PointY="0.75" />
@@ -56,7 +55,6 @@
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_COMPANY_BRANCH_BRANCH_DETAILS" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMP_BRANCH_BRANCH_DETAILS" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_DUTY_TYPE_MASTER_CATEGORY" />
-        <AssociationConnector Association="thesynaxis123_garwareModel.FK_RANK_MASTER_CATEGORY" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_CERTIFICATE_MASTER_CERTIFICATE_MASTER" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_CERTIFICATE_MASTER_EMP_FIXED" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_RANK_CLASS_CLASS" />
@@ -83,7 +81,6 @@
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMPLOYEE_CLIENT_SHIP_MASTER" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_EMPLOYEE_STATUS_SELECTION_STATUS_MASTER" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_KIN_DETAILS_RELATIONSHIP_MASTER" />
-        <AssociationConnector Association="thesynaxis123_garwareModel.FK_RANK_CLASS_RANK_MASTER" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_TAX_CODE_SECTION_LIMIT" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_SHIP_MASTER_Ship_Type_Master" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_SHIP_MOVEMENT_SHIP_MASTER" />
@@ -141,6 +138,10 @@
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_AGREEMENT_DETAILS_SHIP_MASTER" />
         <AssociationConnector Association="thesynaxis123_garwareModel.FK_WITHHELD_TRANSFER_AGREEMENT_DETAILS" />
         <EntityTypeShape EntityType="thesynaxis123_garwareModel.AEDCODE" Width="1.5" PointX="0.75" PointY="20.75" />
+        <EntityTypeShape EntityType="thesynaxis123_garwareModel.RANK_MASTER" Width="1.5" PointX="8.75" PointY="53.625" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_RANK_MASTER_CATEGORY" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_CLASS_CLASS" />
+        <AssociationConnector Association="thesynaxis123_garwareModel.FK_RANK_CLASS_RANK_MASTER" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

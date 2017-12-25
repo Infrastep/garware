@@ -31,7 +31,6 @@
     <EntitySet Name="PERSONNEL_MASTER" EntityType="thesynaxis123_garwareModel.PERSONNEL_MASTER" />
     <EntitySet Name="PORT_MASTER" EntityType="thesynaxis123_garwareModel.PORT_MASTER" />
     <EntitySet Name="RANK_CLASS" EntityType="thesynaxis123_garwareModel.RANK_CLASS" />
-    <EntitySet Name="RANK_MASTER" EntityType="thesynaxis123_garwareModel.RANK_MASTER" />
     <EntitySet Name="RELATIONSHIP_MASTER" EntityType="thesynaxis123_garwareModel.RELATIONSHIP_MASTER" />
     <EntitySet Name="RELIGIONs" EntityType="thesynaxis123_garwareModel.RELIGION" />
     <EntitySet Name="SALUTATIONs" EntityType="thesynaxis123_garwareModel.SALUTATION" />
@@ -66,10 +65,6 @@
     <AssociationSet Name="FK_DUTY_TYPE_MASTER_CATEGORY" Association="thesynaxis123_garwareModel.FK_DUTY_TYPE_MASTER_CATEGORY">
       <End Role="CATEGORY" EntitySet="CATEGORies" />
       <End Role="DUTY_TYPE_MASTER" EntitySet="DUTY_TYPE_MASTER" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RANK_MASTER_CATEGORY" Association="thesynaxis123_garwareModel.FK_RANK_MASTER_CATEGORY">
-      <End Role="CATEGORY" EntitySet="CATEGORies" />
-      <End Role="RANK_MASTER" EntitySet="RANK_MASTER" />
     </AssociationSet>
     <AssociationSet Name="FK_CERTIFICATE_MASTER_CERTIFICATE_MASTER" Association="thesynaxis123_garwareModel.FK_CERTIFICATE_MASTER_CERTIFICATE_MASTER">
       <End Role="CERTIFICATE_TYPE_MASTER" EntitySet="CERTIFICATE_TYPE_MASTER" />
@@ -174,10 +169,6 @@
     <AssociationSet Name="FK_KIN_DETAILS_RELATIONSHIP_MASTER" Association="thesynaxis123_garwareModel.FK_KIN_DETAILS_RELATIONSHIP_MASTER">
       <End Role="RELATIONSHIP_MASTER" EntitySet="RELATIONSHIP_MASTER" />
       <End Role="KIN_DETAILS" EntitySet="KIN_DETAILS" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RANK_CLASS_RANK_MASTER" Association="thesynaxis123_garwareModel.FK_RANK_CLASS_RANK_MASTER">
-      <End Role="RANK_MASTER" EntitySet="RANK_MASTER" />
-      <End Role="RANK_CLASS" EntitySet="RANK_CLASS" />
     </AssociationSet>
     <AssociationSet Name="FK_TAX_CODE_SECTION_LIMIT" Association="thesynaxis123_garwareModel.FK_TAX_CODE_SECTION_LIMIT">
       <End Role="SECTION_LIMIT" EntitySet="SECTION_LIMIT" />
@@ -328,6 +319,20 @@
       <End Role="AGREEMENT_DETAILS" EntitySet="AGREEMENT_DETAILS" />
       <End Role="WITHHELD_TRANSFER" EntitySet="WITHHELD_TRANSFER" />
     </AssociationSet>
+    <EntitySet Name="AEDCODEs" EntityType="thesynaxis123_garwareModel.AEDCODE" />
+    <EntitySet Name="RANK_MASTER" EntityType="thesynaxis123_garwareModel.RANK_MASTER" />
+    <AssociationSet Name="FK_RANK_MASTER_CATEGORY" Association="thesynaxis123_garwareModel.FK_RANK_MASTER_CATEGORY">
+      <End Role="CATEGORY" EntitySet="CATEGORies" />
+      <End Role="RANK_MASTER" EntitySet="RANK_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASS_CLASS" Association="thesynaxis123_garwareModel.FK_CLASS_CLASS">
+      <End Role="CLASS" EntitySet="CLASSes" />
+      <End Role="CLASS1" EntitySet="CLASSes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RANK_CLASS_RANK_MASTER" Association="thesynaxis123_garwareModel.FK_RANK_CLASS_RANK_MASTER">
+      <End Role="RANK_MASTER" EntitySet="RANK_MASTER" />
+      <End Role="RANK_CLASS" EntitySet="RANK_CLASS" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="ADDRESSEE_MASTER">
     <Key>
@@ -442,6 +447,9 @@
     <NavigationProperty Name="RANK_CLASS" Relationship="thesynaxis123_garwareModel.FK_RANK_CLASS_CLASS" FromRole="CLASS" ToRole="RANK_CLASS" />
     <Property Name="CLASS_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="COST_TO_COMP" Type="Boolean" />
+    <Property Name="CATEGORYID" Type="Int16" />
+    <NavigationProperty Name="CLASS1" Relationship="thesynaxis123_garwareModel.FK_CLASS_CLASS" FromRole="CLASS" ToRole="CLASS1" />
+    <NavigationProperty Name="CLASS2" Relationship="thesynaxis123_garwareModel.FK_CLASS_CLASS" FromRole="CLASS1" ToRole="CLASS" />
   </EntityType>
   <EntityType Name="CLIENT_COMMENT">
     <Key>
@@ -788,20 +796,6 @@
     <NavigationProperty Name="EMPLOYEE_CLIENT" Relationship="thesynaxis123_garwareModel.FK_EMPLOYEE_CLIENT_RANK_CLASS" FromRole="RANK_CLASS" ToRole="EMPLOYEE_CLIENT" />
     <NavigationProperty Name="RANK_MASTER" Relationship="thesynaxis123_garwareModel.FK_RANK_CLASS_RANK_MASTER" FromRole="RANK_CLASS" ToRole="RANK_MASTER" />
   </EntityType>
-  <EntityType Name="RANK_MASTER">
-    <Key>
-      <PropertyRef Name="RANKID" />
-    </Key>
-    <Property Name="RANKID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="RANK_DESC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="CATEGORYID" Type="Int32" />
-    <Property Name="Active" Type="Boolean" />
-    <NavigationProperty Name="CATEGORY" Relationship="thesynaxis123_garwareModel.FK_RANK_MASTER_CATEGORY" FromRole="RANK_MASTER" ToRole="CATEGORY" />
-    <NavigationProperty Name="RANK_CLASS" Relationship="thesynaxis123_garwareModel.FK_RANK_CLASS_RANK_MASTER" FromRole="RANK_MASTER" ToRole="RANK_CLASS" />
-    <Property Name="Withheld_Perc_NRI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Print_order" Type="Int32" />
-    <Property Name="Pf_Applicable" Type="Boolean" />
-  </EntityType>
   <EntityType Name="RELATIONSHIP_MASTER">
     <Key>
       <PropertyRef Name="RELATIONSHIPID" />
@@ -886,6 +880,7 @@
     <NavigationProperty Name="COUNTRY_MASTER" Relationship="thesynaxis123_garwareModel.FK_SHIP_MASTER_Country_Master" FromRole="SHIP_MASTER" ToRole="COUNTRY_MASTER" />
     <NavigationProperty Name="SHIP_MOVEMENT_REGISTER" Relationship="thesynaxis123_garwareModel.FK_SHIP_MOVEMENT_REGISTER_SHIP_MASTER" FromRole="SHIP_MASTER" ToRole="SHIP_MOVEMENT_REGISTER" />
     <NavigationProperty Name="AGREEMENT_DETAILS" Relationship="thesynaxis123_garwareModel.FK_AGREEMENT_DETAILS_SHIP_MASTER" FromRole="SHIP_MASTER" ToRole="AGREEMENT_DETAILS" />
+    <Property Name="VCODE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="SHIP_MOVEMENT">
     <Key>
@@ -908,6 +903,7 @@
     <Property Name="Status" Type="Boolean" />
     <NavigationProperty Name="EMP_EXPERIENCE" Relationship="thesynaxis123_garwareModel.FK_EMP_EXPERIENCE_EMP_EXPERIENCE" FromRole="SHIP_TYPE_MASTER" ToRole="EMP_EXPERIENCE" />
     <NavigationProperty Name="SHIP_MASTER" Relationship="thesynaxis123_garwareModel.FK_SHIP_MASTER_Ship_Type_Master" FromRole="SHIP_TYPE_MASTER" ToRole="SHIP_MASTER" />
+    <Property Name="Type" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="ShipAgreement">
     <Key>
@@ -1122,18 +1118,6 @@
       </Principal>
       <Dependent Role="DUTY_TYPE_MASTER">
         <PropertyRef Name="CATEGORY" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_RANK_MASTER_CATEGORY">
-    <End Type="thesynaxis123_garwareModel.CATEGORY" Role="CATEGORY" Multiplicity="0..1" />
-    <End Type="thesynaxis123_garwareModel.RANK_MASTER" Role="RANK_MASTER" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CATEGORY">
-        <PropertyRef Name="CATEGORY_ID" />
-      </Principal>
-      <Dependent Role="RANK_MASTER">
-        <PropertyRef Name="CATEGORYID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1453,18 +1437,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_RANK_CLASS_RANK_MASTER">
-    <End Type="thesynaxis123_garwareModel.RANK_MASTER" Role="RANK_MASTER" Multiplicity="0..1" />
-    <End Type="thesynaxis123_garwareModel.RANK_CLASS" Role="RANK_CLASS" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="RANK_MASTER">
-        <PropertyRef Name="RANKID" />
-      </Principal>
-      <Dependent Role="RANK_CLASS">
-        <PropertyRef Name="RANKID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_TAX_CODE_SECTION_LIMIT">
     <End Type="thesynaxis123_garwareModel.SECTION_LIMIT" Role="SECTION_LIMIT" Multiplicity="0..1" />
     <End Type="thesynaxis123_garwareModel.TAX_CODE" Role="TAX_CODE" Multiplicity="*" />
@@ -1524,7 +1496,7 @@
     </Key>
     <Property Name="CLIENTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CLIENT_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="DATABASE_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DATABASE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DATABASE_HOST" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DATABASE_UID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DATABASE_PASS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -2325,6 +2297,80 @@
       </Principal>
       <Dependent Role="WITHHELD_TRANSFER">
         <PropertyRef Name="AGREEMENT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AEDCODE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="Int16" Nullable="false" />
+    <Property Name="DESCR" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="AED" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="EARNING_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="EMP_BRK" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TAXABLE_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PRIORITY" Type="Int16" />
+    <Property Name="ACCODE" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="SUBCD" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="ACDESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EDDESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DC" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="INT_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="INT_RATE" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="PTAX_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ESI_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="DETAIL_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RANK_MASTER">
+    <Key>
+      <PropertyRef Name="RANKID" />
+    </Key>
+    <Property Name="RANKID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RANK_DESC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CATEGORYID" Type="Int32" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="Withheld_Perc_NRI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Print_order" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pf_Applicable" Type="Boolean" />
+    <Property Name="RANK_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CATEGORY" Relationship="thesynaxis123_garwareModel.FK_RANK_MASTER_CATEGORY" FromRole="RANK_MASTER" ToRole="CATEGORY" />
+    <NavigationProperty Name="RANK_CLASS" Relationship="thesynaxis123_garwareModel.FK_RANK_CLASS_RANK_MASTER" FromRole="RANK_MASTER" ToRole="RANK_CLASS" />
+  </EntityType>
+  <Association Name="FK_RANK_MASTER_CATEGORY">
+    <End Type="thesynaxis123_garwareModel.CATEGORY" Role="CATEGORY" Multiplicity="0..1" />
+    <End Type="thesynaxis123_garwareModel.RANK_MASTER" Role="RANK_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORY">
+        <PropertyRef Name="CATEGORY_ID" />
+      </Principal>
+      <Dependent Role="RANK_MASTER">
+        <PropertyRef Name="CATEGORYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASS_CLASS">
+    <End Type="thesynaxis123_garwareModel.CLASS" Role="CLASS" Multiplicity="1" />
+    <End Type="thesynaxis123_garwareModel.CLASS" Role="CLASS1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="CLASSID" />
+      </Principal>
+      <Dependent Role="CLASS1">
+        <PropertyRef Name="CLASSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RANK_CLASS_RANK_MASTER">
+    <End Type="thesynaxis123_garwareModel.RANK_MASTER" Role="RANK_MASTER" Multiplicity="0..1" />
+    <End Type="thesynaxis123_garwareModel.RANK_CLASS" Role="RANK_CLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RANK_MASTER">
+        <PropertyRef Name="RANKID" />
+      </Principal>
+      <Dependent Role="RANK_CLASS">
+        <PropertyRef Name="RANKID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

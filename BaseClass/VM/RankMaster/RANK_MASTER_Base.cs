@@ -18,8 +18,9 @@ namespace BaseClass.VM.RankMaster
         public Nullable<int> CATEGORYID { get; set; }
         public Nullable<bool> Active { get; set; }
         public string Withheld_Perc_NRI { get; set; }
-        public Nullable<int> Print_order { get; set; }
+        public string Print_order { get; set; }
         public Nullable<bool> Pf_Applicable { get; set; }
+        public string RANK_CODE { get; set; }
 
         public virtual CATEGORY_Base_RM CATEGORY { get; set; }
         public virtual ICollection<RANK_CLASS_Base_RM> RANK_CLASS { get; set; }
