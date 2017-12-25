@@ -101,6 +101,7 @@
     <EntitySetMapping Name="CLASSes">
       <EntityTypeMapping TypeName="thesynaxis123_garwareModel.CLASS">
         <MappingFragment StoreEntitySet="CLASS">
+          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
           <ScalarProperty Name="COST_TO_COMP" ColumnName="COST_TO_COMP" />
           <ScalarProperty Name="CLASS_TYPE" ColumnName="CLASS_TYPE" />
           <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
@@ -415,19 +416,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="RANK_MASTER">
-      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RANK_MASTER">
-        <MappingFragment StoreEntitySet="RANK_MASTER">
-          <ScalarProperty Name="Pf_Applicable" ColumnName="Pf_Applicable" />
-          <ScalarProperty Name="Print_order" ColumnName="Print_order" />
-          <ScalarProperty Name="Withheld_Perc_NRI" ColumnName="Withheld_Perc_NRI" />
-          <ScalarProperty Name="Active" ColumnName="Active" />
-          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
-          <ScalarProperty Name="RANK_DESC" ColumnName="RANK_DESC" />
-          <ScalarProperty Name="RANKID" ColumnName="RANKID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="RELATIONSHIP_MASTER">
       <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RELATIONSHIP_MASTER">
         <MappingFragment StoreEntitySet="RELATIONSHIP_MASTER">
@@ -477,6 +465,7 @@
     <EntitySetMapping Name="SHIP_MASTER">
       <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SHIP_MASTER">
         <MappingFragment StoreEntitySet="SHIP_MASTER">
+          <ScalarProperty Name="VCODE" ColumnName="VCODE" />
           <ScalarProperty Name="VSAT_NO" ColumnName="VSAT_NO" />
           <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
           <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
@@ -521,6 +510,7 @@
     <EntitySetMapping Name="SHIP_TYPE_MASTER">
       <EntityTypeMapping TypeName="thesynaxis123_garwareModel.SHIP_TYPE_MASTER">
         <MappingFragment StoreEntitySet="SHIP_TYPE_MASTER">
+          <ScalarProperty Name="Type" ColumnName="Type" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="TypeID" ColumnName="TypeID" />
@@ -1167,6 +1157,44 @@
           <ScalarProperty Name="VCODE" ColumnName="VCODE" />
           <ScalarProperty Name="AGREEMENT_CODE" ColumnName="AGREEMENT_CODE" />
           <ScalarProperty Name="AGREEMENT_DETAILS_ID" ColumnName="AGREEMENT_DETAILS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AEDCODEs">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.AEDCODE">
+        <MappingFragment StoreEntitySet="AEDCODE">
+          <ScalarProperty Name="DETAIL_YN" ColumnName="DETAIL_YN" />
+          <ScalarProperty Name="ESI_YN" ColumnName="ESI_YN" />
+          <ScalarProperty Name="PTAX_YN" ColumnName="PTAX_YN" />
+          <ScalarProperty Name="INT_RATE" ColumnName="INT_RATE" />
+          <ScalarProperty Name="INT_YN" ColumnName="INT_YN" />
+          <ScalarProperty Name="DC" ColumnName="DC" />
+          <ScalarProperty Name="EDDESC" ColumnName="EDDESC" />
+          <ScalarProperty Name="ACDESC" ColumnName="ACDESC" />
+          <ScalarProperty Name="SUBCD" ColumnName="SUBCD" />
+          <ScalarProperty Name="ACCODE" ColumnName="ACCODE" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="TAXABLE_YN" ColumnName="TAXABLE_YN" />
+          <ScalarProperty Name="EMP_BRK" ColumnName="EMP_BRK" />
+          <ScalarProperty Name="EARNING_TYPE" ColumnName="EARNING_TYPE" />
+          <ScalarProperty Name="AED" ColumnName="AED" />
+          <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RANK_MASTER">
+      <EntityTypeMapping TypeName="thesynaxis123_garwareModel.RANK_MASTER">
+        <MappingFragment StoreEntitySet="RANK_MASTER">
+          <ScalarProperty Name="RANK_CODE" ColumnName="RANK_CODE" />
+          <ScalarProperty Name="Pf_Applicable" ColumnName="Pf_Applicable" />
+          <ScalarProperty Name="Print_order" ColumnName="Print_order" />
+          <ScalarProperty Name="Withheld_Perc_NRI" ColumnName="Withheld_Perc_NRI" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+          <ScalarProperty Name="RANK_DESC" ColumnName="RANK_DESC" />
+          <ScalarProperty Name="RANKID" ColumnName="RANKID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

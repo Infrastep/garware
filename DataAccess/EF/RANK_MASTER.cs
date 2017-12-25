@@ -24,8 +24,9 @@ namespace DataAccess.EF
         public Nullable<int> CATEGORYID { get; set; }
         public Nullable<bool> Active { get; set; }
         public string Withheld_Perc_NRI { get; set; }
-        public Nullable<int> Print_order { get; set; }
+        public string Print_order { get; set; }
         public Nullable<bool> Pf_Applicable { get; set; }
+        public string RANK_CODE { get; set; }
     
         public virtual CATEGORY CATEGORY { get; set; }
         public virtual ICollection<RANK_CLASS> RANK_CLASS { get; set; }

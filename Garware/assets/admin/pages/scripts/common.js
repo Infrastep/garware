@@ -1087,7 +1087,7 @@ function BindRankId() {
             $.each(msg, function (key, value) {
 
 
-                $('#RankId').append($("<option />").val(value.RANKID).text(value.RANKID));
+                $('#RankId').append($("<option />").val(value.RANK_CODE).text(value.RANK_DESC));
 
 
 

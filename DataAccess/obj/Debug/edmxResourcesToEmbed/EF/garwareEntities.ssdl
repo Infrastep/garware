@@ -39,6 +39,29 @@
     <Property Name="COMPANYID" Type="int" />
     <Property Name="STATUS" Type="bit" />
   </EntityType>
+  <EntityType Name="AEDCODE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="smallint" Nullable="false" />
+    <Property Name="DESCR" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="AED" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="EARNING_TYPE" Type="char" MaxLength="1" />
+    <Property Name="EMP_BRK" Type="char" MaxLength="1" />
+    <Property Name="TAXABLE_YN" Type="char" MaxLength="1" />
+    <Property Name="PRIORITY" Type="smallint" />
+    <Property Name="ACCODE" Type="char" MaxLength="6" />
+    <Property Name="SUBCD" Type="char" MaxLength="4" />
+    <Property Name="ACDESC" Type="varchar" MaxLength="50" />
+    <Property Name="EDDESC" Type="varchar" MaxLength="50" />
+    <Property Name="DC" Type="char" MaxLength="1" />
+    <Property Name="INT_YN" Type="char" MaxLength="1" />
+    <Property Name="INT_RATE" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="PTAX_YN" Type="char" MaxLength="1" />
+    <Property Name="ESI_YN" Type="char" MaxLength="1" />
+    <Property Name="DETAIL_YN" Type="char" MaxLength="1" />
+  </EntityType>
   <EntityType Name="AGREEMENT_DETAILS">
     <Key>
       <PropertyRef Name="AGREEMENT_DETAILS_ID" />
@@ -164,6 +187,7 @@
     <Property Name="ACTIVE" Type="bit" />
     <Property Name="CLASS_TYPE" Type="nvarchar" MaxLength="50" />
     <Property Name="COST_TO_COMP" Type="bit" />
+    <Property Name="CATEGORYID" Type="smallint" />
   </EntityType>
   <EntityType Name="CLIENT_COMMENT">
     <Key>
@@ -184,7 +208,7 @@
     </Key>
     <Property Name="CLIENTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CLIENT_NAME" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="DATABASE_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DATABASE_NAME" Type="nvarchar" MaxLength="100" />
     <Property Name="DATABASE_HOST" Type="nvarchar" MaxLength="100" />
     <Property Name="DATABASE_UID" Type="nvarchar" MaxLength="50" />
     <Property Name="DATABASE_PASS" Type="nvarchar" MaxLength="50" />
@@ -649,8 +673,9 @@
     <Property Name="CATEGORYID" Type="int" />
     <Property Name="Active" Type="bit" />
     <Property Name="Withheld_Perc_NRI" Type="nvarchar" MaxLength="50" />
-    <Property Name="Print_order" Type="int" />
+    <Property Name="Print_order" Type="nvarchar" MaxLength="50" />
     <Property Name="Pf_Applicable" Type="bit" />
+    <Property Name="RANK_CODE" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="RELATIONSHIP_MASTER">
     <Key>
@@ -901,6 +926,7 @@
     <Property Name="MOBILE_NO" Type="nvarchar" MaxLength="50" />
     <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
     <Property Name="VSAT_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="VCODE" Type="varchar" MaxLength="5" />
   </EntityType>
   <EntityType Name="SHIP_MOVEMENT">
     <Key>
@@ -929,6 +955,7 @@
     <Property Name="TypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Description" Type="varchar" MaxLength="50" />
     <Property Name="Status" Type="bit" />
+    <Property Name="Type" Type="nchar" MaxLength="2" />
   </EntityType>
   <EntityType Name="ShipAgreement">
     <Key>
@@ -1253,6 +1280,18 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       </Principal>
       <Dependent Role="CERTIFICATE_MASTER">
         <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLASS_CLASS">
+    <End Role="CLASS" Type="Self.CLASS" Multiplicity="1" />
+    <End Role="CLASS1" Type="Self.CLASS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="CLASSID" />
+      </Principal>
+      <Dependent Role="CLASS1">
+        <PropertyRef Name="CLASSID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1881,6 +1920,7 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <EntitySet Name="ACCOUNT_MASTER" EntityType="Self.ACCOUNT_MASTER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ACTUAL_SAVINGS" EntityType="Self.ACTUAL_SAVINGS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ADDRESSEE_MASTER" EntityType="Self.ADDRESSEE_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AEDCODE" EntityType="Self.AEDCODE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AGREEMENT_DETAILS" EntityType="Self.AGREEMENT_DETAILS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AREA_OPERATION_MASTER" EntityType="Self.AREA_OPERATION_MASTER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" Schema="dbo" store:Type="Tables" />
@@ -2084,6 +2124,10 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <AssociationSet Name="FK_CERTIFICATE_MASTER_EMP_FIXED" Association="Self.FK_CERTIFICATE_MASTER_EMP_FIXED">
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
       <End Role="CERTIFICATE_MASTER" EntitySet="CERTIFICATE_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLASS_CLASS" Association="Self.FK_CLASS_CLASS">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="CLASS1" EntitySet="CLASS" />
     </AssociationSet>
     <AssociationSet Name="FK_CLIENT_COMMENT_EMP_FIXED" Association="Self.FK_CLIENT_COMMENT_EMP_FIXED">
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />

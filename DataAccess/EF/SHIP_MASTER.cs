@@ -50,6 +50,7 @@ namespace DataAccess.EF
         public string MOBILE_NO { get; set; }
         public string EMAIL { get; set; }
         public string VSAT_NO { get; set; }
+        public string VCODE { get; set; }
     
         public virtual ICollection<EMPLOYEE_CLIENT> EMPLOYEE_CLIENT { get; set; }
         public virtual SHIP_TYPE_MASTER SHIP_TYPE_MASTER { get; set; }

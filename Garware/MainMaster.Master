@@ -561,7 +561,9 @@
                                             <a href="OtherIncome.aspx">Other Income</a>
                                         </li>
 
-
+                                        <li>
+                                            <a href="MiscTaxableIncome.aspx">Outside Income</a>
+                                        </li>
 
                                     </ul>
                                 </li>

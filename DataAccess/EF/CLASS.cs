@@ -24,7 +24,10 @@ namespace DataAccess.EF
         public Nullable<bool> ACTIVE { get; set; }
         public string CLASS_TYPE { get; set; }
         public Nullable<bool> COST_TO_COMP { get; set; }
+        public Nullable<short> CATEGORYID { get; set; }
     
         public virtual ICollection<RANK_CLASS> RANK_CLASS { get; set; }
+        public virtual CLASS CLASS1 { get; set; }
+        public virtual CLASS CLASS2 { get; set; }
     }
 }
