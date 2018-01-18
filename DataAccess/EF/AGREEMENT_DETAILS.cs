@@ -27,6 +27,9 @@ namespace DataAccess.EF
         public int EMP_CODE { get; set; }
         public string EMP_NAME { get; set; }
         public string CATEGORY_CODE { get; set; }
+        public Nullable<byte> CATEGORY_Id { get; set; }
+        public Nullable<byte> CLASS_Id { get; set; }
+        public Nullable<short> RANK_Id { get; set; }
         public string RANK_CODE { get; set; }
         public string RANK_DESC { get; set; }
         public Nullable<decimal> BASIC { get; set; }

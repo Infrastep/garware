@@ -29,8 +29,8 @@ namespace DataAccess.EF
         public string GENDER { get; set; }
         public Nullable<int> RELATIONSHIPID { get; set; }
     
+        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
         public virtual EMP_FIXED EMP_FIXED { get; set; }
         public virtual RELATIONSHIP_MASTER RELATIONSHIP_MASTER { get; set; }
-        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
     }
 }

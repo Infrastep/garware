@@ -27,7 +27,5 @@ namespace DataAccess.EF
         public Nullable<short> CATEGORYID { get; set; }
     
         public virtual ICollection<RANK_CLASS> RANK_CLASS { get; set; }
-        public virtual CLASS CLASS1 { get; set; }
-        public virtual CLASS CLASS2 { get; set; }
     }
 }

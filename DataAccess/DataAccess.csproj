@@ -75,7 +75,13 @@
     <Compile Include="EF\AGREEMENT_DETAILS.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\ALLOTMENT.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\AREA_OPERATION_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\aspnet_Users.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\aspnet_UsersInRoles.cs">
@@ -153,6 +159,15 @@
     <Compile Include="EF\EMP_FIXED.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\EMP_SIGN.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\ENDORSEMENT_MASTER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\FIXED_SALARY_DETAILS.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\garwareEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +183,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>garwareEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="EF\GRATUITY_CALCULATION_CREW.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\GRATUITY_REMIT.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
@@ -175,6 +193,9 @@
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\MAIN_TABLE.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\MAIN_TABLE_DUTY_TYPE_FLAG.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\MARITIME_HOLIDAY.cs">
@@ -186,6 +207,9 @@
     <Compile Include="EF\NON_RECOVERY.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\OTHER_EARNING_DEDUCTION.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\OTHER_INCOME.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
@@ -193,6 +217,12 @@
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\PAGE_PERMISSION.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PAYCALCULATION_LOG.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\PAY_MONTH_YEAR.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\PERSONNEL_MASTER.cs">
@@ -276,10 +306,16 @@
     <Compile Include="EF\sp_GetUserIdForMailsend_Result.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\STATEMENT_WAGES.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\TAX_CODE.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\TAX_SLAB.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\TEMP.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\vw_EmployeeDetails.cs">
@@ -295,6 +331,9 @@
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\WITHHELD_TRANSFER.cs">
+      <DependentUpon>garwareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\YEAR_DETAIL.cs">
       <DependentUpon>garwareEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ACTUAL_SAVINGSDL.cs" />

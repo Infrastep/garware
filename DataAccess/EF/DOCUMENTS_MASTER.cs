@@ -26,8 +26,8 @@ namespace DataAccess.EF
         public Nullable<int> ISSUE_PLACE { get; set; }
         public Nullable<int> MED_TYPE { get; set; }
     
+        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
         public virtual DOCUMENTS_TYPE DOCUMENTS_TYPE { get; set; }
         public virtual EMP_FIXED EMP_FIXED { get; set; }
-        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace DataAccess.EF
         public Nullable<int> CTID { get; set; }
     
         public virtual CERTIFICATE_TYPE_MASTER CERTIFICATE_TYPE_MASTER { get; set; }
-        public virtual EMP_FIXED EMP_FIXED { get; set; }
         public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
+        public virtual EMP_FIXED EMP_FIXED { get; set; }
     }
 }

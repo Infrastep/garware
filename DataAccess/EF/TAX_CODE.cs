@@ -20,12 +20,13 @@ namespace DataAccess.EF
         }
     
         public int ID { get; set; }
+        public string TAX_CODE1 { get; set; }
         public string DESCRIPTIONS { get; set; }
         public string SAVINGS_TYPE { get; set; }
-        public Nullable<int> UNDER_SECTION { get; set; }
+        public string UNDER_SECTION { get; set; }
         public string INCOME_TYPE { get; set; }
+        public Nullable<byte> SECTION_ID { get; set; }
     
-        public virtual SECTION_LIMIT SECTION_LIMIT { get; set; }
         public virtual ICollection<ACTUAL_SAVINGS> ACTUAL_SAVINGS { get; set; }
     }
 }

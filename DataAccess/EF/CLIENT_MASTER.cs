@@ -44,8 +44,8 @@ namespace DataAccess.EF
         public string TAN { get; set; }
         public string WEBSITE { get; set; }
     
+        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
         public virtual ICollection<CLIENT_USER> CLIENT_USER { get; set; }
         public virtual ICollection<ShipAgreement> ShipAgreements { get; set; }
-        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
     }
 }

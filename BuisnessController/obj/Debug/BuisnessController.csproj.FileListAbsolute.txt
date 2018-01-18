@@ -55,3 +55,15 @@ C:\Users\sony\Documents\project\garware\BuisnessController\bin\Debug\AutoMapper.
 C:\Users\sony\Documents\project\garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
 C:\Users\sony\Documents\project\garware\BuisnessController\obj\Debug\BuisnessController.dll
 C:\Users\sony\Documents\project\garware\BuisnessController\obj\Debug\BuisnessController.pdb
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\BuisnessController.dll
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\BuisnessController.pdb
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\BaseClass.dll
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\DataAccess.dll
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\EntityFramework.dll
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\AutoMapper.dll
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\BaseClass.pdb
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\DataAccess.pdb
+D:\Garware\GIT\garware\BuisnessController\bin\Debug\AutoMapper.xml
+D:\Garware\GIT\garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
+D:\Garware\GIT\garware\BuisnessController\obj\Debug\BuisnessController.dll
+D:\Garware\GIT\garware\BuisnessController\obj\Debug\BuisnessController.pdb

@@ -33,8 +33,8 @@ namespace DataAccess.EF
         public Nullable<int> BANKID { get; set; }
     
         public virtual BANK_MASTER BANK_MASTER { get; set; }
+        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
         public virtual ICollection<COMPANY_BRANCH> COMPANY_BRANCH { get; set; }
         public virtual ICollection<EMP_BRANCH> EMP_BRANCH { get; set; }
-        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
     }
 }

@@ -16,11 +16,11 @@ namespace DataAccess.EF
     {
         public SHIP_MASTER()
         {
+            this.AGREEMENT_DETAILS = new HashSet<AGREEMENT_DETAILS>();
             this.EMPLOYEE_CLIENT = new HashSet<EMPLOYEE_CLIENT>();
+            this.SHIP_MOVEMENT_REGISTER = new HashSet<SHIP_MOVEMENT_REGISTER>();
             this.SHIP_MOVEMENT = new HashSet<SHIP_MOVEMENT>();
             this.ShipAgreements = new HashSet<ShipAgreement>();
-            this.SHIP_MOVEMENT_REGISTER = new HashSet<SHIP_MOVEMENT_REGISTER>();
-            this.AGREEMENT_DETAILS = new HashSet<AGREEMENT_DETAILS>();
         }
     
         public int SMID { get; set; }
@@ -52,12 +52,12 @@ namespace DataAccess.EF
         public string VSAT_NO { get; set; }
         public string VCODE { get; set; }
     
+        public virtual ICollection<AGREEMENT_DETAILS> AGREEMENT_DETAILS { get; set; }
+        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
         public virtual ICollection<EMPLOYEE_CLIENT> EMPLOYEE_CLIENT { get; set; }
         public virtual SHIP_TYPE_MASTER SHIP_TYPE_MASTER { get; set; }
+        public virtual ICollection<SHIP_MOVEMENT_REGISTER> SHIP_MOVEMENT_REGISTER { get; set; }
         public virtual ICollection<SHIP_MOVEMENT> SHIP_MOVEMENT { get; set; }
         public virtual ICollection<ShipAgreement> ShipAgreements { get; set; }
-        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
-        public virtual ICollection<SHIP_MOVEMENT_REGISTER> SHIP_MOVEMENT_REGISTER { get; set; }
-        public virtual ICollection<AGREEMENT_DETAILS> AGREEMENT_DETAILS { get; set; }
     }
 }

@@ -39,9 +39,9 @@ namespace DataAccess.Infrastructure
 
                     result.RCID = dr.RCID;
 
-                    result.Class_Type = dr.Class_Type;
+                   // result.CLASS   = dr.CLASS;
                     result.RANKID = dr.RANKID;
-                    result.CLASSID = dr.CLASSID;
+                    result.CLASSID = dr.CLASSID ;
                     
                     CommitChanges();
                 }
@@ -51,7 +51,7 @@ namespace DataAccess.Infrastructure
             {
                 RANK_CLASS result = new RANK_CLASS();
                 
-                result.Class_Type = dr.Class_Type;
+             //   result.Class_Type = dr.Class_Type;
                 result.RANKID = dr.RANKID;
                 result.CLASSID = dr.CLASSID;
                 db1.RANK_CLASS.Add(result);
@@ -68,7 +68,7 @@ namespace DataAccess.Infrastructure
             {
                 drb.RCID = dr.RCID;
 
-                drb.Class_Type = dr.Class_Type;
+               // drb.Class_Type = dr.Class_Type;
                 drb.RANKID = dr.RANKID;
                 drb.CLASSID = dr.CLASSID;
                 drb.RANK_MASTER = RANK_MASTERDL.generate_Base(dr.RANK_MASTER);
@@ -89,7 +89,7 @@ namespace DataAccess.Infrastructure
 
                 drb.RCID = dr.RCID;
 
-                drb.Class_Type = dr.Class_Type;
+              //  drb.Class_Type = dr.Class_Type;
                 drb.RANKID = dr.RANKID;
                 drb.CLASSID = dr.CLASSID;
                 drb.RANK_MASTER = RANK_MASTERDL.generate_Base(dr.RANK_MASTER);

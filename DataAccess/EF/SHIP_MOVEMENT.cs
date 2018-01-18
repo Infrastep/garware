@@ -20,7 +20,7 @@ namespace DataAccess.EF
         public Nullable<System.DateTime> START_DATE { get; set; }
         public Nullable<System.DateTime> END_DATE { get; set; }
     
-        public virtual SHIP_MASTER SHIP_MASTER { get; set; }
         public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
+        public virtual SHIP_MASTER SHIP_MASTER { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess.EF;
 using BaseClass;
+using AutoMapper;
 namespace DataAccess.Infrastructure
 {
    public class CATEGORYDL : COreEI
@@ -40,7 +41,7 @@ namespace DataAccess.Infrastructure
                 CATEGORY result = db1.CATEGORies.Where(q => q.CATEGORY_ID == id).Single();
                 if (result != null)
                 {
-                    result.CATEGORY_ID = dr.CATEGORY_ID;
+                    result.CATEGORY_ID =dr.CATEGORY_ID;
                     result.CATEGORY_CODE = dr.CATEGORY_CODE;
                     result.CATEGORY_NAME = dr.CATEGORY_NAME;
                     result.STATUS = dr.STATUS;
@@ -64,34 +65,33 @@ namespace DataAccess.Infrastructure
 
         public static CATEGORY_Base generate_Base(CATEGORY dr)
         {
+            CATEGORY_Base drb = Mapper.DynamicMap<CATEGORY, CATEGORY_Base>(dr);
 
-            CATEGORY_Base drb = new CATEGORY_Base();
-            if (dr != null)
-            {
-                drb.CATEGORY_ID = dr.CATEGORY_ID;
-                drb.CATEGORY_CODE = dr.CATEGORY_CODE;
-                drb.CATEGORY_NAME = dr.CATEGORY_NAME;
-                drb.STATUS = dr.STATUS;
-            }
             return drb;
+
+            
         }
 
         public static List<CATEGORY_Base> generate_Base(ICollection<CATEGORY> i)
         {
-            List<CATEGORY_Base> drbl = new List<CATEGORY_Base>();
-            int x = 0;
-            foreach (CATEGORY dr in i)
-            {
-                CATEGORY_Base drb = new CATEGORY_Base();
-                drb.CATEGORY_ID = dr.CATEGORY_ID;
-                drb.CATEGORY_CODE = dr.CATEGORY_CODE;
-                drb.CATEGORY_NAME = dr.CATEGORY_NAME;
-                drb.STATUS = dr.STATUS;
-                drbl.Add(drb);
+            List<CATEGORY_Base> drbl = Mapper.DynamicMap<ICollection<CATEGORY>, List<CATEGORY_Base>>(i);
 
-                x++;
-            }
             return drbl;
+
+            //List<CATEGORY_Base> drbl = new List<CATEGORY_Base>();
+            //int x = 0;
+            //foreach (CATEGORY dr in i)
+            //{
+            //    CATEGORY_Base drb = new CATEGORY_Base();
+            //    drb.CATEGORY_ID = dr.CATEGORY_ID;
+            //    drb.CATEGORY_CODE = dr.CATEGORY_CODE;
+            //    drb.CATEGORY_NAME = dr.CATEGORY_NAME;
+            //    drb.STATUS = dr.STATUS;
+            //    drbl.Add(drb);
+
+            //    x++;
+            //}
+            //return drbl;
         }
     }
 }

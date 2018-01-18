@@ -18,7 +18,7 @@ namespace DataAccess.EF
         public Nullable<int> CLIENTID { get; set; }
         public Nullable<int> USERID { get; set; }
     
-        public virtual EMP_FIXED EMP_FIXED { get; set; }
         public virtual CLIENT_MASTER CLIENT_MASTER { get; set; }
+        public virtual EMP_FIXED EMP_FIXED { get; set; }
     }
 }

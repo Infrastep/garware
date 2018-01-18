@@ -39,6 +39,19 @@ function BindRank() {
     });
 }
 
+function BindRPTMonth() {
+    var year = new Array(2015, 2016, 2017, 2018)
+   
+    var month = moment.localeData().monthsShort();
+    $.each(year, function (valyr, textyr) {
+        $.each(month, function (valmo, textmo) {
+            $('#RPTMonth').append(
+                $('<option></option>').val(textyr + "," + textmo).html(textmo + "   " + textyr)
+            );
+        });
+    });
+
+}
 
 function BindClass() {
     var urlToHandler2 = "/Handler/ClassMasterHandler.ashx";
@@ -340,6 +353,8 @@ function BindBankBranch() {
     });
 }
 
+
+
 function BindCategory() {
     var urlToHandlercat = "/Handler/CategoryHandler.ashx";
     var jsonDatacat = '{ "Method": "GetCT"}';
@@ -408,34 +423,7 @@ function BindBank() {
 
 }
 
-function BindClient() {
-    var urlToHandler1 = "/Handler/ClientMasterHandler.ashx";
-    jsonData1 = '{ "Method": "GetCLM"}';
 
-    var datax;
-    $.ajax({
-        url: urlToHandler1,
-        data: jsonData1,
-        dataType: 'json',
-        type: 'POST',
-        async: false,
-        contentType: 'application/json',
-        success: function (msg) {
-
-            $('#client').append($("<option />").val(0).text("Select"));
-            $.each(msg, function (key, value) {
-
-
-                $('#client').append($("<option />").val(value.CLIENTID).text(value.CLIENT_NAME));
-
-
-
-            });
-
-
-        }
-    });
-}
 
 function CheckUserLogin() {
     var urlToHandler1 = "/Handler/LoginHandler.ashx";
@@ -615,7 +603,34 @@ function BindCompany() {
 
 }
 
+function BindClientsml() {
+    var urlToHandler1 = "/Handler/ClientMasterHandler.ashx";
+    jsonData1 = '{ "Method": "GetCLM"}';
 
+    var datax;
+    $.ajax({
+        url: urlToHandler1,
+        data: jsonData1,
+        dataType: 'json',
+        type: 'POST',
+        async: false,
+        contentType: 'application/json',
+        success: function (msg) {
+
+            $('#client').append($("<option />").val(0).text("Select"));
+            $.each(msg, function (key, value) {
+
+
+                $('#client').append($("<option />").val(value.CLIENTID).text(value.CLIENT_NAME));
+
+
+
+            });
+
+
+        }
+    });
+}
 
 function BindClient() {
 

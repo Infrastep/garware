@@ -16,6 +16,8 @@ namespace DataAccess.EF
     {
         public EMP_FIXED()
         {
+            this.ACTUAL_SAVINGS = new HashSet<ACTUAL_SAVINGS>();
+            this.AGREEMENT_DETAILS = new HashSet<AGREEMENT_DETAILS>();
             this.CERTIFICATE_MASTER = new HashSet<CERTIFICATE_MASTER>();
             this.CLIENT_COMMENT = new HashSet<CLIENT_COMMENT>();
             this.CLIENT_COMMENT1 = new HashSet<CLIENT_COMMENT>();
@@ -27,16 +29,15 @@ namespace DataAccess.EF
             this.DOCUMENTS_MASTER = new HashSet<DOCUMENTS_MASTER>();
             this.EMP_BRANCH = new HashSet<EMP_BRANCH>();
             this.EMP_EXPERIENCE = new HashSet<EMP_EXPERIENCE>();
+            this.EMP_SIGN = new HashSet<EMP_SIGN>();
             this.EMPLOYEE_CLIENT = new HashSet<EMPLOYEE_CLIENT>();
             this.EMPLOYEE_STATUS = new HashSet<EMPLOYEE_STATUS>();
             this.EMPLOYEE_STATUS1 = new HashSet<EMPLOYEE_STATUS>();
             this.KIN_DETAILS = new HashSet<KIN_DETAILS>();
+            this.MISC_TAXABLE_INCOME = new HashSet<MISC_TAXABLE_INCOME>();
             this.NON_RECOVERY = new HashSet<NON_RECOVERY>();
             this.WITHHELD_REFUND = new HashSet<WITHHELD_REFUND>();
-            this.ACTUAL_SAVINGS = new HashSet<ACTUAL_SAVINGS>();
-            this.MISC_TAXABLE_INCOME = new HashSet<MISC_TAXABLE_INCOME>();
             this.WITHHELD_TRANSFER = new HashSet<WITHHELD_TRANSFER>();
-            this.AGREEMENT_DETAILS = new HashSet<AGREEMENT_DETAILS>();
         }
     
         public int EMPID { get; set; }
@@ -70,6 +71,9 @@ namespace DataAccess.EF
         public Nullable<bool> SIGNINGAUTH { get; set; }
         public string DESIGNATION { get; set; }
     
+        public virtual ICollection<ACTUAL_SAVINGS> ACTUAL_SAVINGS { get; set; }
+        public virtual ICollection<AGREEMENT_DETAILS> AGREEMENT_DETAILS { get; set; }
+        public virtual aspnet_Users aspnet_Users { get; set; }
         public virtual ICollection<CERTIFICATE_MASTER> CERTIFICATE_MASTER { get; set; }
         public virtual ICollection<CLIENT_COMMENT> CLIENT_COMMENT { get; set; }
         public virtual ICollection<CLIENT_COMMENT> CLIENT_COMMENT1 { get; set; }
@@ -78,21 +82,20 @@ namespace DataAccess.EF
         public virtual ICollection<COMMENT> COMMENTs { get; set; }
         public virtual ICollection<COMMENT> COMMENTs1 { get; set; }
         public virtual ICollection<COMMENT> COMMENTs2 { get; set; }
+        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
         public virtual ICollection<DOCUMENTS_MASTER> DOCUMENTS_MASTER { get; set; }
         public virtual ICollection<EMP_BRANCH> EMP_BRANCH { get; set; }
         public virtual ICollection<EMP_EXPERIENCE> EMP_EXPERIENCE { get; set; }
         public virtual RELIGION RELIGION { get; set; }
         public virtual SELECTION_STATUS_MASTER SELECTION_STATUS_MASTER { get; set; }
+        public virtual ICollection<EMP_SIGN> EMP_SIGN { get; set; }
         public virtual ICollection<EMPLOYEE_CLIENT> EMPLOYEE_CLIENT { get; set; }
         public virtual ICollection<EMPLOYEE_STATUS> EMPLOYEE_STATUS { get; set; }
         public virtual ICollection<EMPLOYEE_STATUS> EMPLOYEE_STATUS1 { get; set; }
         public virtual ICollection<KIN_DETAILS> KIN_DETAILS { get; set; }
-        public virtual COUNTRY_MASTER COUNTRY_MASTER { get; set; }
+        public virtual ICollection<MISC_TAXABLE_INCOME> MISC_TAXABLE_INCOME { get; set; }
         public virtual ICollection<NON_RECOVERY> NON_RECOVERY { get; set; }
         public virtual ICollection<WITHHELD_REFUND> WITHHELD_REFUND { get; set; }
-        public virtual ICollection<ACTUAL_SAVINGS> ACTUAL_SAVINGS { get; set; }
-        public virtual ICollection<MISC_TAXABLE_INCOME> MISC_TAXABLE_INCOME { get; set; }
         public virtual ICollection<WITHHELD_TRANSFER> WITHHELD_TRANSFER { get; set; }
-        public virtual ICollection<AGREEMENT_DETAILS> AGREEMENT_DETAILS { get; set; }
     }
 }

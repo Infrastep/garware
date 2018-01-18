@@ -72,7 +72,7 @@ namespace DataAccess.Infrastructure
             drb.CATEGORY = dr.CATEGORY;
             drb.ACTIVE = dr.ACTIVE;
             drb.EMP_TYPE = dr.EMP_TYPE;
-            drb.CATEGORY1 = CATEGORYDL.generate_Base(dr.CATEGORY1);
+       //     drb.CATEGORY1 = CATEGORYDL.generate_Base(dr.CATEGORY1);
             return drb;
         }
 
@@ -89,7 +89,7 @@ namespace DataAccess.Infrastructure
                 drb.CATEGORY = dr.CATEGORY;
                 drb.ACTIVE = dr.ACTIVE;
                 drb.EMP_TYPE = dr.EMP_TYPE;
-                drb.CATEGORY1 = CATEGORYDL.generate_Base(dr.CATEGORY1);
+            //    drb.CATEGORY1 = CATEGORYDL.generate_Base(dr.CATEGORY1);
                 drbl.Add(drb);
 
                 x++;

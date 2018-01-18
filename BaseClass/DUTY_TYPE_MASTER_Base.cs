@@ -15,6 +15,6 @@ namespace BaseClass
         public string ACTIVE { get; set; }
         public string EMP_TYPE { get; set; }
 
-        public virtual CATEGORY_Base CATEGORY1 { get; set; }
+        //public virtual CATEGORY_Base CATEGORY1 { get; set; }
     }
 }

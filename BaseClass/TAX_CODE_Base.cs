@@ -11,7 +11,7 @@ namespace BaseClass
         public int ID { get; set; }
         public string DESCRIPTIONS { get; set; }
         public string SAVINGS_TYPE { get; set; }
-        public Nullable<int> UNDER_SECTION { get; set; }
+        public string UNDER_SECTION { get; set; }
         public string INCOME_TYPE { get; set; }
 
         public virtual SECTION_LIMIT_Base SECTION_LIMIT { get; set; }

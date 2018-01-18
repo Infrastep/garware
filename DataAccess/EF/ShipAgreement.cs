@@ -21,7 +21,7 @@ namespace DataAccess.EF
         public Nullable<System.DateTime> Enddate { get; set; }
         public Nullable<int> ShipId { get; set; }
     
-        public virtual SHIP_MASTER SHIP_MASTER { get; set; }
         public virtual CLIENT_MASTER CLIENT_MASTER { get; set; }
+        public virtual SHIP_MASTER SHIP_MASTER { get; set; }
     }
 }

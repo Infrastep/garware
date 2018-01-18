@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BaseClass;
 using DataAccess.EF;
+using AutoMapper;
 namespace DataAccess.Infrastructure
 {
    public class TAX_CODEDL :COreEI
@@ -62,36 +63,19 @@ namespace DataAccess.Infrastructure
 
         public static TAX_CODE_Base generate_Base(TAX_CODE dr)
         {
+            TAX_CODE_Base drb = Mapper.DynamicMap<TAX_CODE, TAX_CODE_Base>(dr);
 
-            TAX_CODE_Base drb = new TAX_CODE_Base();
-            drb.ID = dr.ID;
-            drb.DESCRIPTIONS = dr.DESCRIPTIONS;
-            drb.UNDER_SECTION = dr.UNDER_SECTION;
-            drb.INCOME_TYPE = dr.INCOME_TYPE;
-            drb.SAVINGS_TYPE = dr.SAVINGS_TYPE;
-            drb.SECTION_LIMIT = SECTION_LIMITDL.generate_Base(dr.SECTION_LIMIT);
             return drb;
+
+       
         }
 
         public static List<TAX_CODE_Base> generate_Base(ICollection<TAX_CODE> i)
         {
-            List<TAX_CODE_Base> drbl = new List<TAX_CODE_Base>();
-            int x = 0;
-            foreach (TAX_CODE dr in i)
-            {
-                TAX_CODE_Base drb = new TAX_CODE_Base();
-                drb.ID = dr.ID;
-                drb.DESCRIPTIONS = dr.DESCRIPTIONS;
-                drb.UNDER_SECTION = dr.UNDER_SECTION;
-                drb.INCOME_TYPE = dr.INCOME_TYPE;
-                drb.SAVINGS_TYPE = dr.SAVINGS_TYPE;
-                drb.SECTION_LIMIT = SECTION_LIMITDL.generate_Base(dr.SECTION_LIMIT);
-                
-                drbl.Add(drb);
+            List<TAX_CODE_Base> drbl = Mapper.DynamicMap<ICollection<TAX_CODE>, List<TAX_CODE_Base>>(i);
 
-                x++;
-            }
             return drbl;
+        
         }
     }
 }

@@ -22,10 +22,11 @@ namespace DataAccess.EF
         public int RCID { get; set; }
         public Nullable<int> RANKID { get; set; }
         public Nullable<int> CLASSID { get; set; }
-        public string Class_Type { get; set; }
     
         public virtual CLASS CLASS { get; set; }
         public virtual ICollection<EMPLOYEE_CLIENT> EMPLOYEE_CLIENT { get; set; }
+        public virtual RANK_CLASS RANK_CLASS1 { get; set; }
+        public virtual RANK_CLASS RANK_CLASS2 { get; set; }
         public virtual RANK_MASTER RANK_MASTER { get; set; }
     }
 }

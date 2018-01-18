@@ -16,3 +16,8 @@ C:\Users\sony\Documents\project\garware\BaseClass\bin\Debug\BaseClass.pdb
 C:\Users\sony\Documents\project\garware\BaseClass\obj\Debug\BaseClass.dll
 C:\Users\sony\Documents\project\garware\BaseClass\obj\Debug\BaseClass.pdb
 C:\Users\sony\Documents\project\garware\BaseClass\obj\Debug\BaseClass.csprojResolveAssemblyReference.cache
+D:\Garware\GIT\garware\BaseClass\bin\Debug\BaseClass.dll
+D:\Garware\GIT\garware\BaseClass\bin\Debug\BaseClass.pdb
+D:\Garware\GIT\garware\BaseClass\obj\Debug\BaseClass.csprojResolveAssemblyReference.cache
+D:\Garware\GIT\garware\BaseClass\obj\Debug\BaseClass.dll
+D:\Garware\GIT\garware\BaseClass\obj\Debug\BaseClass.pdb

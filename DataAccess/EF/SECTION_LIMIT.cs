@@ -14,16 +14,9 @@ namespace DataAccess.EF
     
     public partial class SECTION_LIMIT
     {
-        public SECTION_LIMIT()
-        {
-            this.TAX_CODE = new HashSet<TAX_CODE>();
-        }
-    
         public int ID { get; set; }
         public string SECTION { get; set; }
         public Nullable<decimal> MAX_LIMIT { get; set; }
         public Nullable<bool> STATUS { get; set; }
-    
-        public virtual ICollection<TAX_CODE> TAX_CODE { get; set; }
     }
 }

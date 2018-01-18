@@ -16,5 +16,7 @@ namespace DataAccess.EF
     {
         public System.Guid UserId { get; set; }
         public System.Guid RoleId { get; set; }
+    
+        public virtual aspnet_Users aspnet_Users { get; set; }
     }
 }

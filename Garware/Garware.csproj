@@ -77,6 +77,7 @@
     <Content Include="AddresseeMaster.aspx" />
     <Content Include="AccountMaster.aspx" />
     <Content Include="AgreementDetails.aspx" />
+    <Content Include="Allotment_Report.aspx" />
     <Content Include="AreaOperation.aspx" />
     <Content Include="assets\admin\layout2\css\custom.css" />
     <Content Include="assets\admin\layout2\css\layout.css" />
@@ -4605,6 +4606,8 @@
     <Content Include="Handler\SelectionStatusHandler.ashx" />
     <Content Include="PagePermission.aspx" />
     <Content Include="PfRemit.aspx" />
+    <Content Include="Report_Duty_Details.aspx" />
+    <Content Include="Report_Employee_List_Monthly_Basic.aspx" />
     <Content Include="Rule0.aspx" />
     <Content Include="Rule1.aspx" />
     <Content Include="Rule2.aspx" />
@@ -4736,6 +4739,13 @@
     </Compile>
     <Compile Include="AgreementDetails.aspx.designer.cs">
       <DependentUpon>AgreementDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Allotment_Report.aspx.cs">
+      <DependentUpon>Allotment_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Allotment_Report.aspx.designer.cs">
+      <DependentUpon>Allotment_Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="AreaOperation.aspx.cs">
       <DependentUpon>AreaOperation.aspx</DependentUpon>
@@ -5255,6 +5265,20 @@
     </Compile>
     <Compile Include="ReligionMaster.aspx.designer.cs">
       <DependentUpon>ReligionMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Duty_Details.aspx.cs">
+      <DependentUpon>Report_Duty_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Duty_Details.aspx.designer.cs">
+      <DependentUpon>Report_Duty_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Employee_List_Monthly_Basic.aspx.cs">
+      <DependentUpon>Report_Employee_List_Monthly_Basic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Employee_List_Monthly_Basic.aspx.designer.cs">
+      <DependentUpon>Report_Employee_List_Monthly_Basic.aspx</DependentUpon>
     </Compile>
     <Compile Include="Rule0.aspx.cs">
       <DependentUpon>Rule0.aspx</DependentUpon>

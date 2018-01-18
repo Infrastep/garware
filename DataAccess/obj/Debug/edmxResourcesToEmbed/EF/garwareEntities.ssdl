@@ -73,6 +73,9 @@
     <Property Name="EMP_CODE" Type="int" Nullable="false" />
     <Property Name="EMP_NAME" Type="varchar" MaxLength="50" />
     <Property Name="CATEGORY_CODE" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CATEGORY_Id" Type="tinyint" />
+    <Property Name="CLASS_Id" Type="tinyint" />
+    <Property Name="RANK_Id" Type="smallint" />
     <Property Name="RANK_CODE" Type="varchar" MaxLength="50" />
     <Property Name="RANK_DESC" Type="char" MaxLength="50" />
     <Property Name="BASIC" Type="numeric" Precision="18" Scale="2" />
@@ -101,6 +104,53 @@
     <Property Name="TRAINEE_CREW" Type="bit" />
     <Property Name="PF_APPLICABLE" Type="bit" />
   </EntityType>
+  <EntityType Name="ALLOTMENT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMPL_CLASS" Type="tinyint" />
+    <Property Name="EMPL_Id" Type="int" />
+    <Property Name="START_DATE" Type="datetime" />
+    <Property Name="END_DATE" Type="datetime" />
+    <Property Name="ALLOT_AMOUNT" Type="money" />
+    <Property Name="PAYMENT_AT" Type="char" MaxLength="1" />
+    <Property Name="PAYMENT_REASON" Type="char" MaxLength="1" />
+    <Property Name="CURRENCY" Type="char" MaxLength="1" />
+    <Property Name="PMNT_MODE" Type="char" MaxLength="2" />
+    <Property Name="ALLOTTEE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_AC_NO" Type="varchar" MaxLength="50" />
+    <Property Name="BANK_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ALLOT_SL_NO" Type="int" />
+    <Property Name="SHIP_Id" Type="int" />
+    <Property Name="CHEQUE_NO" Type="char" MaxLength="10" />
+    <Property Name="PMNT_VOUCHER_NO" Type="char" MaxLength="10" />
+    <Property Name="VOUCHER_DATE" Type="datetime" />
+    <Property Name="CHEQUE_DATE" Type="datetime" />
+    <Property Name="REC_NO" Type="int" Nullable="false" />
+    <Property Name="VCH_ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="VCH_ADD_TIME" Type="datetime" />
+    <Property Name="VCH_EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="VCH_EDIT_TIME" Type="datetime" />
+    <Property Name="VCH_ADD_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="VCH_EDIT_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="PMNT_ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="PMNT_ADD_TIME" Type="datetime" />
+    <Property Name="PMNT_ADD_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="PMNT_EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="PMNT_EDIT_TIME" Type="datetime" />
+    <Property Name="PMNT_EDIT_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="REMARKS" Type="varchar" MaxLength="100" />
+    <Property Name="MON" Type="char" MaxLength="2" />
+    <Property Name="YR" Type="char" MaxLength="4" />
+    <Property Name="CURR_CODE" Type="char" MaxLength="3" />
+    <Property Name="EXCH_RATE" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="REF_RECNO" Type="int" />
+    <Property Name="class_code" Type="char" MaxLength="1" />
+    <Property Name="RANK_CLASS_id" Type="int" />
+    <Property Name="VOUCHER_PRINTED" Type="bit" />
+  </EntityType>
   <EntityType Name="AREA_OPERATION_MASTER">
     <Key>
       <PropertyRef Name="AREAID" />
@@ -110,6 +160,18 @@
     <Property Name="NAME" Type="nvarchar" MaxLength="50" />
     <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
     <Property Name="ISINDIA" Type="bit" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredUserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="aspnet_UsersInRoles">
     <Key>
@@ -428,6 +490,35 @@
     <Property Name="SIGNINGAUTH" Type="bit" />
     <Property Name="DESIGNATION" Type="nvarchar" MaxLength="500" />
   </EntityType>
+  <EntityType Name="EMP_SIGN">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_CODE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="EMP_Id" Type="int" Nullable="false" />
+    <Property Name="RANK_CODE" Type="varchar" MaxLength="5" />
+    <Property Name="NATURE_OF_DUTY" Type="varchar" MaxLength="5" />
+    <Property Name="FROM_DATE" Type="datetime" />
+    <Property Name="TO_DATE" Type="datetime" />
+    <Property Name="SHIP_CODE" Type="varchar" MaxLength="5" />
+    <Property Name="SHIP_Id" Type="int" />
+    <Property Name="ADD_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="ADD_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="50" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="EDIT_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="WAGE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PORT_Id" Type="int" />
+    <Property Name="CLASS_CODE" Type="char" MaxLength="1" />
+    <Property Name="AGREEMENT_Id" Type="int" />
+    <Property Name="BASIC_WAGES" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LEAVE_WAGES" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PF_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PF_APPLICABLE" Type="bit" />
+    <Property Name="ACTIVE" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
   <EntityType Name="EMPLOYEE_CLIENT">
     <Key>
       <PropertyRef Name="EMPCLINTID" />
@@ -451,6 +542,56 @@
     <Property Name="UPDATE_PERSONEL" Type="int" />
     <Property Name="ENTRY_DATE" Type="datetime" />
     <Property Name="REMARKS" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ENDORSEMENT_MASTER">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="END_CODE" Type="char" MaxLength="3" />
+    <Property Name="END_DESC" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FIXED_SALARY_DETAILS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMPSIGN_Id" Type="int" />
+    <Property Name="EMP_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="WEF_DATE" Type="datetime" />
+    <Property Name="TILL_DATE" Type="datetime" />
+    <Property Name="RATE" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ADD_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="50" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="ADD_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="EDIT_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="WITHHELD_PERC" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="WITHHELD_PERC_NRI" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="ACTIVE" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.GRATUITY_CALCULATION_CREW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GRATUITY_CALCULATION_CREW">
+    <Key>
+      <PropertyRef Name="REC_NO" />
+    </Key>
+    <Property Name="REC_NO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLASSID" Type="tinyint" />
+    <Property Name="FROM_DATE" Type="datetime" />
+    <Property Name="TO_DATE" Type="datetime" />
+    <Property Name="ARTICLE_DAYS" Type="smallint" />
+    <Property Name="STAFF_DAYS" Type="smallint" />
+    <Property Name="LEAVE_DAYS" Type="smallint" />
+    <Property Name="ACTIVE" Type="char" MaxLength="1" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="ADD_COMPUTER" Type="varchar" MaxLength="100" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="EDIT_COMPUTER" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="GRATUITY_REMIT">
     <Key>
@@ -543,6 +684,18 @@
     <Property Name="ACTIVITY_CODE_BB_CO_CR" Type="char" MaxLength="3" />
     <Property Name="REC_ID_NO" Type="int" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.MAIN_TABLE_DUTY_TYPE_FLAG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MAIN_TABLE_DUTY_TYPE_FLAG">
+    <Key>
+      <PropertyRef Name="MAIN_REC_ID" />
+      <PropertyRef Name="NATURE_OF_DUTY" />
+      <PropertyRef Name="APPLICABLE" />
+    </Key>
+    <Property Name="MAIN_REC_ID" Type="int" Nullable="false" />
+    <Property Name="NATURE_OF_DUTY" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="APPLICABLE" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
   <EntityType Name="MARITIME_HOLIDAY">
     <Key>
       <PropertyRef Name="MID" />
@@ -581,6 +734,36 @@
     <Property Name="INACTIVE_TIME" Type="datetime" />
     <Property Name="INACTIVE_COMPUTER" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.OTHER_EARNING_DEDUCTION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OTHER_EARNING_DEDUCTION">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="INDIAN_AMT" />
+      <PropertyRef Name="FROM_DATE" />
+      <PropertyRef Name="ACTIVE" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AGREEMENT_Id" Type="int" />
+    <Property Name="PAY_YEAR" Type="char" MaxLength="4" />
+    <Property Name="PAY_MONTH" Type="char" MaxLength="2" />
+    <Property Name="EMP_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EXC_RATE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="INDIAN_AMT" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FROM_DATE" Type="datetime" Nullable="false" />
+    <Property Name="TO_DATE" Type="datetime" />
+    <Property Name="REMARKS" Type="varchar" MaxLength="100" />
+    <Property Name="CURRENCY_Id" Type="int" />
+    <Property Name="ADD_BY" Type="varchar" MaxLength="20" />
+    <Property Name="ADD_COMPUTER" Type="varchar" MaxLength="100" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="20" />
+    <Property Name="EDIT_COMPUTER" Type="varchar" MaxLength="100" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="ACTIVE" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
   <EntityType Name="OTHER_INCOME">
     <Key>
       <PropertyRef Name="ID" />
@@ -605,6 +788,32 @@
     <Property Name="PAGEID" Type="int" />
     <Property Name="ROLENAME" Type="nvarchar" MaxLength="256" />
     <Property Name="PERMISSIONID" Type="int" />
+  </EntityType>
+  <EntityType Name="PAY_MONTH_YEAR">
+    <Key>
+      <PropertyRef Name="PAY_YEAR" />
+      <PropertyRef Name="PAY_MONTH" />
+    </Key>
+    <Property Name="Id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAY_YEAR" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="PAY_MONTH" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="FINANCIAL_YEAR" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.PAYCALCULATION_LOG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PAYCALCULATION_LOG">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMP_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="PAY_YEAR" Type="char" MaxLength="4" />
+    <Property Name="PAY_MONTH" Type="char" MaxLength="2" />
+    <Property Name="EMP_TYPE" Type="char" MaxLength="1" />
+    <Property Name="ALL_SELECTED" Type="char" MaxLength="1" />
+    <Property Name="CALC_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="CALC_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CALC_DATETIME" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="PERSONNEL_MASTER">
     <Key>
@@ -662,7 +871,6 @@
     <Property Name="RCID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RANKID" Type="int" />
     <Property Name="CLASSID" Type="int" />
-    <Property Name="Class_Type" Type="char" MaxLength="1" />
   </EntityType>
   <EntityType Name="RANK_MASTER">
     <Key>
@@ -882,7 +1090,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="SECTION" Type="nvarchar" MaxLength="20" />
     <Property Name="MAX_LIMIT" Type="money" />
     <Property Name="STATUS" Type="bit" />
@@ -976,15 +1184,43 @@
     <Property Name="CODE" Type="nvarchar" MaxLength="50" />
     <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.STATEMENT_WAGES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STATEMENT_WAGES">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REF_PREFIX" Type="char" MaxLength="8" />
+    <Property Name="REF_NO" Type="int" />
+    <Property Name="REF_DT" Type="datetime" />
+    <Property Name="EMP_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="AGREEMENT_Id" Type="int" />
+    <Property Name="SIGN_ON" Type="datetime" />
+    <Property Name="SIGN_OFF" Type="datetime" />
+    <Property Name="PAYMENT_AMOUNT" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="PREVIOUS_AGREEMENT_Id" Type="int" />
+    <Property Name="PREVIOUYS_DUE" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="BALANCE_SALARY" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="ADD_BY" Type="varchar" MaxLength="50" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="ADD_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="EDIT_BY" Type="varchar" MaxLength="50" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="EDIT_COMPUTER" Type="varchar" MaxLength="50" />
+    <Property Name="ACTIVE" Type="char" MaxLength="1" />
+  </EntityType>
   <EntityType Name="TAX_CODE">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TAX_CODE" Type="varchar" MaxLength="5" />
     <Property Name="DESCRIPTIONS" Type="nvarchar" MaxLength="50" />
     <Property Name="SAVINGS_TYPE" Type="char" MaxLength="1" />
-    <Property Name="UNDER_SECTION" Type="int" />
+    <Property Name="UNDER_SECTION" Type="nvarchar" MaxLength="50" />
     <Property Name="INCOME_TYPE" Type="char" MaxLength="1" />
+    <Property Name="SECTION_ID" Type="tinyint" />
   </EntityType>
   <EntityType Name="TAX_SLAB">
     <Key>
@@ -999,6 +1235,66 @@
     <Property Name="TAX_AMT" Type="money" />
     <Property Name="STATUS" Type="bit" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.TEMP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TEMP">
+    <Key>
+      <PropertyRef Name="REC_ID_NO" />
+    </Key>
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="EMPL_CLASS" Type="tinyint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="RULE_TILL_DATE" Type="datetime" />
+    <Property Name="RULE_TYPE" Type="tinyint" />
+    <Property Name="INPUT_TYPE" Type="char" MaxLength="1" />
+    <Property Name="TAXABLE_FLAG" Type="char" MaxLength="1" />
+    <Property Name="IT_FORECAST_INDIC" Type="char" MaxLength="1" />
+    <Property Name="ACNT_CODE" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE" Type="char" MaxLength="3" />
+    <Property Name="ACC_SUB_CODE" Type="char" MaxLength="7" />
+    <Property Name="OFF_ON_BRD_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_HRB_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_STF_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_LEAVE_EARND_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_MDCLI_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="OFF_MDCLF_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_STF_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_ON_BRD_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_RETN1_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_RETN2_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_LEAVE_EARND_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_HOSPTLSD_IND_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_HOSPTLSD_ABROAD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_MDCLI_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_UNFIT_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_ADV_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_MDCLF_PRD_FLAG" Type="char" MaxLength="1" />
+    <Property Name="CRW_CONTNS_SERVICE_FLAG" Type="char" MaxLength="1" />
+    <Property Name="RATE_TYPE" Type="char" MaxLength="5" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="BIFURCATE" Type="char" MaxLength="1" />
+    <Property Name="ADD_BY" Type="char" MaxLength="10" />
+    <Property Name="ADD_TIME" Type="datetime" />
+    <Property Name="EDIT_BY" Type="char" MaxLength="10" />
+    <Property Name="EDIT_TIME" Type="datetime" />
+    <Property Name="ACNT_CODE_CO_DR" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_CO_DR" Type="char" MaxLength="3" />
+    <Property Name="ACNT_CODE_CO_CR" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_CO_CR" Type="char" MaxLength="3" />
+    <Property Name="ACNT_CODE_BB" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_BB" Type="char" MaxLength="3" />
+    <Property Name="ACNT_CODE_BB_CO_DR" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_BB_CO_DR" Type="char" MaxLength="3" />
+    <Property Name="ACNT_CODE_BB_CO_CR" Type="char" MaxLength="6" />
+    <Property Name="ACTIVITY_CODE_BB_CO_CR" Type="char" MaxLength="3" />
+    <Property Name="REC_ID_NO" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'fsmanning.dbo.TEST_COMP_EMP' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TEST_COMP_EMP">
+          <Property Name="TESTCOMPREFF" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMPID" Type="int" />
+        </EntityType>-->
   <EntityType Name="WITHHELD_REFUND">
     <Key>
       <PropertyRef Name="ID" />
@@ -1022,6 +1318,50 @@
     <Property Name="EMP_CODE" Type="int" />
     <Property Name="TRANS_AMT" Type="decimal" Precision="12" Scale="2" />
     <Property Name="AGREEMENT_CODE" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'fsmanning.dbo.YEAR_DETAIL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="YEAR_DETAIL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAY_YEAR" Type="char" MaxLength="4" />
+    <Property Name="PAY_MONTH" Type="char" MaxLength="2" />
+    <Property Name="EMP_CODE" Type="char" MaxLength="10" />
+    <Property Name="AGREEMENT_Id" Type="int" />
+    <Property Name="EMP_TYPE" Type="char" MaxLength="1" />
+    <Property Name="NATURE_OF_DUTY" Type="char" MaxLength="3" />
+    <Property Name="SHIP_CODE" Type="char" MaxLength="3" />
+    <Property Name="EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="SECONDARY_EARN_DEDN_CODE" Type="smallint" />
+    <Property Name="RULE_TYPE" Type="tinyint" />
+    <Property Name="RULE_WEF_DATE" Type="datetime" />
+    <Property Name="RATE_TYPE" Type="char" MaxLength="2" />
+    <Property Name="EARNING_DEDUCTION" Type="char" MaxLength="1" />
+    <Property Name="RANK_CODE" Type="varchar" MaxLength="5" />
+    <Property Name="CLASS" Type="char" MaxLength="1" />
+    <Property Name="TAXABLE" Type="char" MaxLength="1" />
+    <Property Name="TAX_FORECAST" Type="char" MaxLength="1" />
+    <Property Name="RATE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PAY_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FROM_DATE" Type="datetime" />
+    <Property Name="TO_DATE" Type="datetime" />
+    <Property Name="FOR_DAYS" Type="smallint" />
+    <Property Name="AMT_OR_PRCNT" Type="char" MaxLength="1" />
+    <Property Name="INDIAN_DAYS" Type="smallint" />
+    <Property Name="FOREIGN_DAYS" Type="smallint" />
+    <Property Name="INDIAN_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FOREIGN_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PROJ_TAX_PERCENT" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="NRI_CALC" Type="char" MaxLength="1" />
+    <Property Name="SR_CITIZEN" Type="char" MaxLength="1" />
+    <Property Name="SIGN_ON_DATE" Type="datetime" />
+    <Property Name="BASIC_FOR_PF" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LVWAGE_FOR_PF" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EMP_SIGN_Id" Type="int" />
+    <Property Name="MISC_Id" Type="bigint" />
+    <Property Name="WITHHELD_REFUND_ID" Type="bigint" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'fsmanning.dbo.vw_EmployeeDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1139,6 +1479,18 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <Property Name="SIGNINGAUTH" Type="bit" />
     <Property Name="DESIGNATION" Type="nvarchar" MaxLength="500" />
   </EntityType>
+  <Association Name="FK__aspnet_Us__UserI__1BC821DD">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_ACTUAL_SAVINGS_AGREEMENT_DETAILS">
     <End Role="AGREEMENT_DETAILS" Type="Self.AGREEMENT_DETAILS" Multiplicity="0..1" />
     <End Role="ACTUAL_SAVINGS" Type="Self.ACTUAL_SAVINGS" Multiplicity="*" />
@@ -1280,18 +1632,6 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       </Principal>
       <Dependent Role="CERTIFICATE_MASTER">
         <PropertyRef Name="EMP_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CLASS_CLASS">
-    <End Role="CLASS" Type="Self.CLASS" Multiplicity="1" />
-    <End Role="CLASS1" Type="Self.CLASS" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="CLASS">
-        <PropertyRef Name="CLASSID" />
-      </Principal>
-      <Dependent Role="CLASS1">
-        <PropertyRef Name="CLASSID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1537,6 +1877,18 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_EMP_FIXED_aspnet_Users">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="EMP_FIXED">
+        <PropertyRef Name="ASP_USER_DETAILS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_EMP_FIXED_COUNTRY_MASTER">
     <End Role="COUNTRY_MASTER" Type="Self.COUNTRY_MASTER" Multiplicity="0..1" />
     <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="*" />
@@ -1570,6 +1922,18 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       </Principal>
       <Dependent Role="EMP_FIXED">
         <PropertyRef Name="STATUS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMP_SIGN_EMP_FIXED">
+    <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="1" />
+    <End Role="EMP_SIGN" Type="Self.EMP_SIGN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_FIXED">
+        <PropertyRef Name="EMPID" />
+      </Principal>
+      <Dependent Role="EMP_SIGN">
+        <PropertyRef Name="EMP_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1644,6 +2008,18 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       </Principal>
       <Dependent Role="EMPLOYEE_STATUS">
         <PropertyRef Name="STATUS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FIXED_SALARY_DETAILS_EMP_SIGN">
+    <End Role="EMP_SIGN" Type="Self.EMP_SIGN" Multiplicity="0..1" />
+    <End Role="FIXED_SALARY_DETAILS" Type="Self.FIXED_SALARY_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMP_SIGN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FIXED_SALARY_DETAILS">
+        <PropertyRef Name="EMPSIGN_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1744,9 +2120,7 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_RANK_CLASS_CLASS">
-    <End Role="CLASS" Type="Self.CLASS" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="CLASS" Type="Self.CLASS" Multiplicity="0..1" />
     <End Role="RANK_CLASS" Type="Self.RANK_CLASS" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CLASS">
@@ -1754,6 +2128,18 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       </Principal>
       <Dependent Role="RANK_CLASS">
         <PropertyRef Name="CLASSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RANK_CLASS_RANK_CLASS">
+    <End Role="RANK_CLASS" Type="Self.RANK_CLASS" Multiplicity="1" />
+    <End Role="RANK_CLASS1" Type="Self.RANK_CLASS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RANK_CLASS">
+        <PropertyRef Name="RCID" />
+      </Principal>
+      <Dependent Role="RANK_CLASS1">
+        <PropertyRef Name="RCID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1865,18 +2251,6 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TAX_CODE_SECTION_LIMIT">
-    <End Role="SECTION_LIMIT" Type="Self.SECTION_LIMIT" Multiplicity="0..1" />
-    <End Role="TAX_CODE" Type="Self.TAX_CODE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="SECTION_LIMIT">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="TAX_CODE">
-        <PropertyRef Name="UNDER_SECTION" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_WITHHELD_REFUND_EMP_FIXED">
     <End Role="EMP_FIXED" Type="Self.EMP_FIXED" Multiplicity="1" />
     <End Role="WITHHELD_REFUND" Type="Self.WITHHELD_REFUND" Multiplicity="*" />
@@ -1922,7 +2296,9 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <EntitySet Name="ADDRESSEE_MASTER" EntityType="Self.ADDRESSEE_MASTER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AEDCODE" EntityType="Self.AEDCODE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AGREEMENT_DETAILS" EntityType="Self.AGREEMENT_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ALLOTMENT" EntityType="Self.ALLOTMENT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AREA_OPERATION_MASTER" EntityType="Self.AREA_OPERATION_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Users" EntityType="Self.aspnet_Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BANK_MASTER" EntityType="Self.BANK_MASTER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BRANCH_DETAILS" EntityType="Self.BRANCH_DETAILS" Schema="dbo" store:Type="Tables" />
@@ -1946,8 +2322,11 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <EntitySet Name="EMP_BRANCH" EntityType="Self.EMP_BRANCH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EMP_EXPERIENCE" EntityType="Self.EMP_EXPERIENCE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EMP_FIXED" EntityType="Self.EMP_FIXED" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMP_SIGN" EntityType="Self.EMP_SIGN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EMPLOYEE_CLIENT" EntityType="Self.EMPLOYEE_CLIENT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EMPLOYEE_STATUS" EntityType="Self.EMPLOYEE_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENDORSEMENT_MASTER" EntityType="Self.ENDORSEMENT_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FIXED_SALARY_DETAILS" EntityType="Self.FIXED_SALARY_DETAILS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GRATUITY_REMIT" EntityType="Self.GRATUITY_REMIT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KIN_DETAILS" EntityType="Self.KIN_DETAILS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MAIN_TABLE" EntityType="Self.MAIN_TABLE" Schema="dbo" store:Type="Tables" />
@@ -1957,6 +2336,7 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <EntitySet Name="OTHER_INCOME" EntityType="Self.OTHER_INCOME" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PAGE_MASTER" EntityType="Self.PAGE_MASTER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PAGE_PERMISSION" EntityType="Self.PAGE_PERMISSION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAY_MONTH_YEAR" EntityType="Self.PAY_MONTH_YEAR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PERSONNEL_MASTER" EntityType="Self.PERSONNEL_MASTER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PF_REMIT" EntityType="Self.PF_REMIT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PORT_MASTER" EntityType="Self.PORT_MASTER" Schema="dbo" store:Type="Tables" />
@@ -1987,6 +2367,183 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <EntitySet Name="TAX_SLAB" EntityType="Self.TAX_SLAB" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WITHHELD_REFUND" EntityType="Self.WITHHELD_REFUND" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WITHHELD_TRANSFER" EntityType="Self.WITHHELD_TRANSFER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GRATUITY_CALCULATION_CREW" EntityType="Self.GRATUITY_CALCULATION_CREW" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GRATUITY_CALCULATION_CREW].[REC_NO] AS [REC_NO], 
+    [GRATUITY_CALCULATION_CREW].[CLASSID] AS [CLASSID], 
+    [GRATUITY_CALCULATION_CREW].[FROM_DATE] AS [FROM_DATE], 
+    [GRATUITY_CALCULATION_CREW].[TO_DATE] AS [TO_DATE], 
+    [GRATUITY_CALCULATION_CREW].[ARTICLE_DAYS] AS [ARTICLE_DAYS], 
+    [GRATUITY_CALCULATION_CREW].[STAFF_DAYS] AS [STAFF_DAYS], 
+    [GRATUITY_CALCULATION_CREW].[LEAVE_DAYS] AS [LEAVE_DAYS], 
+    [GRATUITY_CALCULATION_CREW].[ACTIVE] AS [ACTIVE], 
+    [GRATUITY_CALCULATION_CREW].[ADD_BY] AS [ADD_BY], 
+    [GRATUITY_CALCULATION_CREW].[ADD_TIME] AS [ADD_TIME], 
+    [GRATUITY_CALCULATION_CREW].[ADD_COMPUTER] AS [ADD_COMPUTER], 
+    [GRATUITY_CALCULATION_CREW].[EDIT_BY] AS [EDIT_BY], 
+    [GRATUITY_CALCULATION_CREW].[EDIT_TIME] AS [EDIT_TIME], 
+    [GRATUITY_CALCULATION_CREW].[EDIT_COMPUTER] AS [EDIT_COMPUTER]
+    FROM [dbo].[GRATUITY_CALCULATION_CREW] AS [GRATUITY_CALCULATION_CREW]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MAIN_TABLE_DUTY_TYPE_FLAG" EntityType="Self.MAIN_TABLE_DUTY_TYPE_FLAG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MAIN_TABLE_DUTY_TYPE_FLAG].[MAIN_REC_ID] AS [MAIN_REC_ID], 
+    [MAIN_TABLE_DUTY_TYPE_FLAG].[NATURE_OF_DUTY] AS [NATURE_OF_DUTY], 
+    [MAIN_TABLE_DUTY_TYPE_FLAG].[APPLICABLE] AS [APPLICABLE]
+    FROM [dbo].[MAIN_TABLE_DUTY_TYPE_FLAG] AS [MAIN_TABLE_DUTY_TYPE_FLAG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OTHER_EARNING_DEDUCTION" EntityType="Self.OTHER_EARNING_DEDUCTION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OTHER_EARNING_DEDUCTION].[Id] AS [Id], 
+    [OTHER_EARNING_DEDUCTION].[AGREEMENT_Id] AS [AGREEMENT_Id], 
+    [OTHER_EARNING_DEDUCTION].[PAY_YEAR] AS [PAY_YEAR], 
+    [OTHER_EARNING_DEDUCTION].[PAY_MONTH] AS [PAY_MONTH], 
+    [OTHER_EARNING_DEDUCTION].[EMP_CODE] AS [EMP_CODE], 
+    [OTHER_EARNING_DEDUCTION].[EARN_DEDN_CODE] AS [EARN_DEDN_CODE], 
+    [OTHER_EARNING_DEDUCTION].[EXC_RATE] AS [EXC_RATE], 
+    [OTHER_EARNING_DEDUCTION].[AMOUNT] AS [AMOUNT], 
+    [OTHER_EARNING_DEDUCTION].[INDIAN_AMT] AS [INDIAN_AMT], 
+    [OTHER_EARNING_DEDUCTION].[FROM_DATE] AS [FROM_DATE], 
+    [OTHER_EARNING_DEDUCTION].[TO_DATE] AS [TO_DATE], 
+    [OTHER_EARNING_DEDUCTION].[REMARKS] AS [REMARKS], 
+    [OTHER_EARNING_DEDUCTION].[CURRENCY_Id] AS [CURRENCY_Id], 
+    [OTHER_EARNING_DEDUCTION].[ADD_BY] AS [ADD_BY], 
+    [OTHER_EARNING_DEDUCTION].[ADD_COMPUTER] AS [ADD_COMPUTER], 
+    [OTHER_EARNING_DEDUCTION].[ADD_TIME] AS [ADD_TIME], 
+    [OTHER_EARNING_DEDUCTION].[EDIT_BY] AS [EDIT_BY], 
+    [OTHER_EARNING_DEDUCTION].[EDIT_COMPUTER] AS [EDIT_COMPUTER], 
+    [OTHER_EARNING_DEDUCTION].[EDIT_TIME] AS [EDIT_TIME], 
+    [OTHER_EARNING_DEDUCTION].[ACTIVE] AS [ACTIVE]
+    FROM [dbo].[OTHER_EARNING_DEDUCTION] AS [OTHER_EARNING_DEDUCTION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PAYCALCULATION_LOG" EntityType="Self.PAYCALCULATION_LOG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PAYCALCULATION_LOG].[Id] AS [Id], 
+    [PAYCALCULATION_LOG].[EMP_CODE] AS [EMP_CODE], 
+    [PAYCALCULATION_LOG].[PAY_YEAR] AS [PAY_YEAR], 
+    [PAYCALCULATION_LOG].[PAY_MONTH] AS [PAY_MONTH], 
+    [PAYCALCULATION_LOG].[EMP_TYPE] AS [EMP_TYPE], 
+    [PAYCALCULATION_LOG].[ALL_SELECTED] AS [ALL_SELECTED], 
+    [PAYCALCULATION_LOG].[CALC_COMPUTER] AS [CALC_COMPUTER], 
+    [PAYCALCULATION_LOG].[CALC_BY] AS [CALC_BY], 
+    [PAYCALCULATION_LOG].[CALC_DATETIME] AS [CALC_DATETIME]
+    FROM [dbo].[PAYCALCULATION_LOG] AS [PAYCALCULATION_LOG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STATEMENT_WAGES" EntityType="Self.STATEMENT_WAGES" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [STATEMENT_WAGES].[Id] AS [Id], 
+    [STATEMENT_WAGES].[REF_PREFIX] AS [REF_PREFIX], 
+    [STATEMENT_WAGES].[REF_NO] AS [REF_NO], 
+    [STATEMENT_WAGES].[REF_DT] AS [REF_DT], 
+    [STATEMENT_WAGES].[EMP_CODE] AS [EMP_CODE], 
+    [STATEMENT_WAGES].[AGREEMENT_Id] AS [AGREEMENT_Id], 
+    [STATEMENT_WAGES].[SIGN_ON] AS [SIGN_ON], 
+    [STATEMENT_WAGES].[SIGN_OFF] AS [SIGN_OFF], 
+    [STATEMENT_WAGES].[PAYMENT_AMOUNT] AS [PAYMENT_AMOUNT], 
+    [STATEMENT_WAGES].[PREVIOUS_AGREEMENT_Id] AS [PREVIOUS_AGREEMENT_Id], 
+    [STATEMENT_WAGES].[PREVIOUYS_DUE] AS [PREVIOUYS_DUE], 
+    [STATEMENT_WAGES].[BALANCE_SALARY] AS [BALANCE_SALARY], 
+    [STATEMENT_WAGES].[ADD_BY] AS [ADD_BY], 
+    [STATEMENT_WAGES].[ADD_TIME] AS [ADD_TIME], 
+    [STATEMENT_WAGES].[ADD_COMPUTER] AS [ADD_COMPUTER], 
+    [STATEMENT_WAGES].[EDIT_BY] AS [EDIT_BY], 
+    [STATEMENT_WAGES].[EDIT_TIME] AS [EDIT_TIME], 
+    [STATEMENT_WAGES].[EDIT_COMPUTER] AS [EDIT_COMPUTER], 
+    [STATEMENT_WAGES].[ACTIVE] AS [ACTIVE]
+    FROM [dbo].[STATEMENT_WAGES] AS [STATEMENT_WAGES]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TEMP" EntityType="Self.TEMP" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TEMP].[EARN_DEDN_CODE] AS [EARN_DEDN_CODE], 
+    [TEMP].[EMPL_CLASS] AS [EMPL_CLASS], 
+    [TEMP].[RULE_WEF_DATE] AS [RULE_WEF_DATE], 
+    [TEMP].[RULE_TILL_DATE] AS [RULE_TILL_DATE], 
+    [TEMP].[RULE_TYPE] AS [RULE_TYPE], 
+    [TEMP].[INPUT_TYPE] AS [INPUT_TYPE], 
+    [TEMP].[TAXABLE_FLAG] AS [TAXABLE_FLAG], 
+    [TEMP].[IT_FORECAST_INDIC] AS [IT_FORECAST_INDIC], 
+    [TEMP].[ACNT_CODE] AS [ACNT_CODE], 
+    [TEMP].[ACTIVITY_CODE] AS [ACTIVITY_CODE], 
+    [TEMP].[ACC_SUB_CODE] AS [ACC_SUB_CODE], 
+    [TEMP].[OFF_ON_BRD_PRD_FLAG] AS [OFF_ON_BRD_PRD_FLAG], 
+    [TEMP].[OFF_HRB_PRD_FLAG] AS [OFF_HRB_PRD_FLAG], 
+    [TEMP].[OFF_STF_PRD_FLAG] AS [OFF_STF_PRD_FLAG], 
+    [TEMP].[OFF_LEAVE_EARND_FLAG] AS [OFF_LEAVE_EARND_FLAG], 
+    [TEMP].[OFF_MDCLI_PRD_FLAG] AS [OFF_MDCLI_PRD_FLAG], 
+    [TEMP].[OFF_MDCLF_PRD_FLAG] AS [OFF_MDCLF_PRD_FLAG], 
+    [TEMP].[CRW_STF_PRD_FLAG] AS [CRW_STF_PRD_FLAG], 
+    [TEMP].[CRW_ON_BRD_PRD_FLAG] AS [CRW_ON_BRD_PRD_FLAG], 
+    [TEMP].[CRW_RETN1_PRD_FLAG] AS [CRW_RETN1_PRD_FLAG], 
+    [TEMP].[CRW_RETN2_PRD_FLAG] AS [CRW_RETN2_PRD_FLAG], 
+    [TEMP].[CRW_LEAVE_EARND_FLAG] AS [CRW_LEAVE_EARND_FLAG], 
+    [TEMP].[CRW_HOSPTLSD_IND_FLAG] AS [CRW_HOSPTLSD_IND_FLAG], 
+    [TEMP].[CRW_HOSPTLSD_ABROAD_FLAG] AS [CRW_HOSPTLSD_ABROAD_FLAG], 
+    [TEMP].[CRW_MDCLI_PRD_FLAG] AS [CRW_MDCLI_PRD_FLAG], 
+    [TEMP].[CRW_UNFIT_PRD_FLAG] AS [CRW_UNFIT_PRD_FLAG], 
+    [TEMP].[CRW_ADV_FLAG] AS [CRW_ADV_FLAG], 
+    [TEMP].[CRW_MDCLF_PRD_FLAG] AS [CRW_MDCLF_PRD_FLAG], 
+    [TEMP].[CRW_CONTNS_SERVICE_FLAG] AS [CRW_CONTNS_SERVICE_FLAG], 
+    [TEMP].[RATE_TYPE] AS [RATE_TYPE], 
+    [TEMP].[SECONDARY_EARN_DEDN_CODE] AS [SECONDARY_EARN_DEDN_CODE], 
+    [TEMP].[BIFURCATE] AS [BIFURCATE], 
+    [TEMP].[ADD_BY] AS [ADD_BY], 
+    [TEMP].[ADD_TIME] AS [ADD_TIME], 
+    [TEMP].[EDIT_BY] AS [EDIT_BY], 
+    [TEMP].[EDIT_TIME] AS [EDIT_TIME], 
+    [TEMP].[ACNT_CODE_CO_DR] AS [ACNT_CODE_CO_DR], 
+    [TEMP].[ACTIVITY_CODE_CO_DR] AS [ACTIVITY_CODE_CO_DR], 
+    [TEMP].[ACNT_CODE_CO_CR] AS [ACNT_CODE_CO_CR], 
+    [TEMP].[ACTIVITY_CODE_CO_CR] AS [ACTIVITY_CODE_CO_CR], 
+    [TEMP].[ACNT_CODE_BB] AS [ACNT_CODE_BB], 
+    [TEMP].[ACTIVITY_CODE_BB] AS [ACTIVITY_CODE_BB], 
+    [TEMP].[ACNT_CODE_BB_CO_DR] AS [ACNT_CODE_BB_CO_DR], 
+    [TEMP].[ACTIVITY_CODE_BB_CO_DR] AS [ACTIVITY_CODE_BB_CO_DR], 
+    [TEMP].[ACNT_CODE_BB_CO_CR] AS [ACNT_CODE_BB_CO_CR], 
+    [TEMP].[ACTIVITY_CODE_BB_CO_CR] AS [ACTIVITY_CODE_BB_CO_CR], 
+    [TEMP].[REC_ID_NO] AS [REC_ID_NO]
+    FROM [dbo].[TEMP] AS [TEMP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="YEAR_DETAIL" EntityType="Self.YEAR_DETAIL" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [YEAR_DETAIL].[Id] AS [Id], 
+    [YEAR_DETAIL].[PAY_YEAR] AS [PAY_YEAR], 
+    [YEAR_DETAIL].[PAY_MONTH] AS [PAY_MONTH], 
+    [YEAR_DETAIL].[EMP_CODE] AS [EMP_CODE], 
+    [YEAR_DETAIL].[AGREEMENT_Id] AS [AGREEMENT_Id], 
+    [YEAR_DETAIL].[EMP_TYPE] AS [EMP_TYPE], 
+    [YEAR_DETAIL].[NATURE_OF_DUTY] AS [NATURE_OF_DUTY], 
+    [YEAR_DETAIL].[SHIP_CODE] AS [SHIP_CODE], 
+    [YEAR_DETAIL].[EARN_DEDN_CODE] AS [EARN_DEDN_CODE], 
+    [YEAR_DETAIL].[SECONDARY_EARN_DEDN_CODE] AS [SECONDARY_EARN_DEDN_CODE], 
+    [YEAR_DETAIL].[RULE_TYPE] AS [RULE_TYPE], 
+    [YEAR_DETAIL].[RULE_WEF_DATE] AS [RULE_WEF_DATE], 
+    [YEAR_DETAIL].[RATE_TYPE] AS [RATE_TYPE], 
+    [YEAR_DETAIL].[EARNING_DEDUCTION] AS [EARNING_DEDUCTION], 
+    [YEAR_DETAIL].[RANK_CODE] AS [RANK_CODE], 
+    [YEAR_DETAIL].[CLASS] AS [CLASS], 
+    [YEAR_DETAIL].[TAXABLE] AS [TAXABLE], 
+    [YEAR_DETAIL].[TAX_FORECAST] AS [TAX_FORECAST], 
+    [YEAR_DETAIL].[RATE] AS [RATE], 
+    [YEAR_DETAIL].[PAY_AMOUNT] AS [PAY_AMOUNT], 
+    [YEAR_DETAIL].[FROM_DATE] AS [FROM_DATE], 
+    [YEAR_DETAIL].[TO_DATE] AS [TO_DATE], 
+    [YEAR_DETAIL].[FOR_DAYS] AS [FOR_DAYS], 
+    [YEAR_DETAIL].[AMT_OR_PRCNT] AS [AMT_OR_PRCNT], 
+    [YEAR_DETAIL].[INDIAN_DAYS] AS [INDIAN_DAYS], 
+    [YEAR_DETAIL].[FOREIGN_DAYS] AS [FOREIGN_DAYS], 
+    [YEAR_DETAIL].[INDIAN_AMOUNT] AS [INDIAN_AMOUNT], 
+    [YEAR_DETAIL].[FOREIGN_AMOUNT] AS [FOREIGN_AMOUNT], 
+    [YEAR_DETAIL].[PROJ_TAX_PERCENT] AS [PROJ_TAX_PERCENT], 
+    [YEAR_DETAIL].[NRI_CALC] AS [NRI_CALC], 
+    [YEAR_DETAIL].[SR_CITIZEN] AS [SR_CITIZEN], 
+    [YEAR_DETAIL].[SIGN_ON_DATE] AS [SIGN_ON_DATE], 
+    [YEAR_DETAIL].[BASIC_FOR_PF] AS [BASIC_FOR_PF], 
+    [YEAR_DETAIL].[LVWAGE_FOR_PF] AS [LVWAGE_FOR_PF], 
+    [YEAR_DETAIL].[EMP_SIGN_Id] AS [EMP_SIGN_Id], 
+    [YEAR_DETAIL].[MISC_Id] AS [MISC_Id], 
+    [YEAR_DETAIL].[WITHHELD_REFUND_ID] AS [WITHHELD_REFUND_ID]
+    FROM [dbo].[YEAR_DETAIL] AS [YEAR_DETAIL]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="vw_EmployeeDetails" EntityType="Self.vw_EmployeeDetails" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [vw_EmployeeDetails].[EMPID] AS [EMPID], 
@@ -2077,6 +2634,10 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     [vw_UserRoleDetails].[DESIGNATION] AS [DESIGNATION]
     FROM [dbo].[vw_UserRoleDetails] AS [vw_UserRoleDetails]</DefiningQuery>
     </EntitySet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__1BC821DD" Association="Self.FK__aspnet_Us__UserI__1BC821DD">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
     <AssociationSet Name="FK_ACTUAL_SAVINGS_AGREEMENT_DETAILS" Association="Self.FK_ACTUAL_SAVINGS_AGREEMENT_DETAILS">
       <End Role="AGREEMENT_DETAILS" EntitySet="AGREEMENT_DETAILS" />
       <End Role="ACTUAL_SAVINGS" EntitySet="ACTUAL_SAVINGS" />
@@ -2124,10 +2685,6 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <AssociationSet Name="FK_CERTIFICATE_MASTER_EMP_FIXED" Association="Self.FK_CERTIFICATE_MASTER_EMP_FIXED">
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
       <End Role="CERTIFICATE_MASTER" EntitySet="CERTIFICATE_MASTER" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CLASS_CLASS" Association="Self.FK_CLASS_CLASS">
-      <End Role="CLASS" EntitySet="CLASS" />
-      <End Role="CLASS1" EntitySet="CLASS" />
     </AssociationSet>
     <AssociationSet Name="FK_CLIENT_COMMENT_EMP_FIXED" Association="Self.FK_CLIENT_COMMENT_EMP_FIXED">
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
@@ -2209,6 +2766,10 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
       <End Role="EMP_EXPERIENCE" EntitySet="EMP_EXPERIENCE" />
     </AssociationSet>
+    <AssociationSet Name="FK_EMP_FIXED_aspnet_Users" Association="Self.FK_EMP_FIXED_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+    </AssociationSet>
     <AssociationSet Name="FK_EMP_FIXED_COUNTRY_MASTER" Association="Self.FK_EMP_FIXED_COUNTRY_MASTER">
       <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
@@ -2220,6 +2781,10 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <AssociationSet Name="FK_EMP_FIXED_SELECTION_STATUS_MASTER" Association="Self.FK_EMP_FIXED_SELECTION_STATUS_MASTER">
       <End Role="SELECTION_STATUS_MASTER" EntitySet="SELECTION_STATUS_MASTER" />
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMP_SIGN_EMP_FIXED" Association="Self.FK_EMP_SIGN_EMP_FIXED">
+      <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
+      <End Role="EMP_SIGN" EntitySet="EMP_SIGN" />
     </AssociationSet>
     <AssociationSet Name="FK_EMPLOYEE_CLIENT_EMP_FIXED" Association="Self.FK_EMPLOYEE_CLIENT_EMP_FIXED">
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />
@@ -2244,6 +2809,10 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <AssociationSet Name="FK_EMPLOYEE_STATUS_SELECTION_STATUS_MASTER" Association="Self.FK_EMPLOYEE_STATUS_SELECTION_STATUS_MASTER">
       <End Role="SELECTION_STATUS_MASTER" EntitySet="SELECTION_STATUS_MASTER" />
       <End Role="EMPLOYEE_STATUS" EntitySet="EMPLOYEE_STATUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FIXED_SALARY_DETAILS_EMP_SIGN" Association="Self.FK_FIXED_SALARY_DETAILS_EMP_SIGN">
+      <End Role="EMP_SIGN" EntitySet="EMP_SIGN" />
+      <End Role="FIXED_SALARY_DETAILS" EntitySet="FIXED_SALARY_DETAILS" />
     </AssociationSet>
     <AssociationSet Name="FK_KIN_DETAILS_COUNTRY_MASTER" Association="Self.FK_KIN_DETAILS_COUNTRY_MASTER">
       <End Role="COUNTRY_MASTER" EntitySet="COUNTRY_MASTER" />
@@ -2281,6 +2850,10 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
       <End Role="CLASS" EntitySet="CLASS" />
       <End Role="RANK_CLASS" EntitySet="RANK_CLASS" />
     </AssociationSet>
+    <AssociationSet Name="FK_RANK_CLASS_RANK_CLASS" Association="Self.FK_RANK_CLASS_RANK_CLASS">
+      <End Role="RANK_CLASS" EntitySet="RANK_CLASS" />
+      <End Role="RANK_CLASS1" EntitySet="RANK_CLASS" />
+    </AssociationSet>
     <AssociationSet Name="FK_RANK_CLASS_RANK_MASTER" Association="Self.FK_RANK_CLASS_RANK_MASTER">
       <End Role="RANK_MASTER" EntitySet="RANK_MASTER" />
       <End Role="RANK_CLASS" EntitySet="RANK_CLASS" />
@@ -2316,10 +2889,6 @@ warning 6002: The table/view 'fsmanning.dbo.vw_UserRoleDetails' does not have a 
     <AssociationSet Name="FK_ShipAgreement_SHIP_MASTER" Association="Self.FK_ShipAgreement_SHIP_MASTER">
       <End Role="SHIP_MASTER" EntitySet="SHIP_MASTER" />
       <End Role="ShipAgreement" EntitySet="ShipAgreement" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TAX_CODE_SECTION_LIMIT" Association="Self.FK_TAX_CODE_SECTION_LIMIT">
-      <End Role="SECTION_LIMIT" EntitySet="SECTION_LIMIT" />
-      <End Role="TAX_CODE" EntitySet="TAX_CODE" />
     </AssociationSet>
     <AssociationSet Name="FK_WITHHELD_REFUND_EMP_FIXED" Association="Self.FK_WITHHELD_REFUND_EMP_FIXED">
       <End Role="EMP_FIXED" EntitySet="EMP_FIXED" />

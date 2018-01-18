@@ -21,7 +21,7 @@ namespace DataAccess.EF
         public Nullable<decimal> TRANS_AMT { get; set; }
         public Nullable<int> AGREEMENT_CODE { get; set; }
     
-        public virtual EMP_FIXED EMP_FIXED { get; set; }
         public virtual AGREEMENT_DETAILS AGREEMENT_DETAILS { get; set; }
+        public virtual EMP_FIXED EMP_FIXED { get; set; }
     }
 }

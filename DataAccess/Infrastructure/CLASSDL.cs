@@ -47,7 +47,7 @@ namespace DataAccess.Infrastructure
                 CLASS result = db1.CLASSes.Where(q => q.CLASSID == id).Single();
                 if (result != null)
                 {
-                    result.CLASSID = dr.CLASSID;
+                    result.CLASSID = dr.CLASSID ;
                     result.CLASS_NAME = dr.CLASS_NAME;                  
                     result.ACTIVE = dr.ACTIVE;
                     result.CLASS_TYPE = dr.CLASS_TYPE;
