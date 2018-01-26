@@ -14,7 +14,6 @@
         $("#ShipType").val("");
         $("#NRT").val("");
         $("#Country").val("");
-        $("#client").val("");
         $("#photo").val("");
         $("input:radio[name='Status']").each(function (i) {
             this.checked = false;
@@ -23,7 +22,7 @@
         $("#stfalse").parents('span').removeClass("checked");
     }
 
-    var initTable2 = function () {
+    var initTable2 = function (Shiptype) {
         var table = $('#ShipTable');
 
         /* Table tools samples: https://www.datatables.net/release-datatables/extras/TableTools/ */
@@ -68,7 +67,12 @@
 
         var urlToHandler = "/Handler/ShipMasterHandler.ashx";
         var jsonData;
-        jsonData = '{ "Method": "GetSM"}';
+        if (Shiptype === 0) {
+            jsonData = '{ "Method": "GetSM"}';
+        }
+        else {
+            jsonData = '{ "Method": "GetSMT","Type":' + Shiptype+'}';
+        }
 
 
         var orders
@@ -134,7 +138,6 @@
             "columns": [
 
                         { "data": "VNAME" },
-                        { "data": "CLIENT_MASTER.CLIENT_NAME" },
                         { "data": "OFF_IMO_NO" },
                         { "data": "GT_POWER" },
                         { "data": "NO_OF_CREW" },
@@ -252,7 +255,7 @@
     return {
 
         //main function to initiate the module
-        init: function () {
+        init: function (Shiptype) {
 
             if (!jQuery().dataTable) {
                 return;
@@ -261,7 +264,7 @@
             console.log('me 1');
             restoreRow();
 
-            initTable2();
+            initTable2(Shiptype);
 
 
             console.log('me 2');
@@ -276,13 +279,15 @@
 
 
 
-$("#Client1").change(function () {
-    var table = $('#ShipTable').DataTable();
-    table.draw();;
-});
+//$("#Client1").change(function () {
+//    var table = $('#ShipTable').DataTable();
+//    table.draw();;
+//});
 $("#ShipType1").change(function () {
     var table = $('#ShipTable').DataTable();
-    table.draw();;
+    table.destroy();
+
+    ShipViewModel.init(1);
 });
 
 
@@ -310,7 +315,7 @@ $("#Insertdata").click(function () {
             var urlToHandler = "/Handler/ShipMasterHandler.ashx";
 
 
-            jsonData = '{ "Method": "InsertSM","id":"' + $("#SMID").val() + '","name":"' + $("#VesselName").val() + '","port":"' + $("#Port").val() + '","trade":"' + $("#Trade").val() + '","offno":"' + $("#OffNo").val() + '","imo":"' + $("#IMO").val() + '","gt":"' + $("#GT").val() + '","power":"' + $("#Power").val() + '","crew":"' + $("#Crew").val() + '","type":"' + $("#ShipType").val() + '","nrt":"' + $("#NRT").val() + '","country":"' + $("#Country").val() + '","client":"' + $("#Client").val() + '","photo":"' + result + '","status":"' + status + '"}';
+            jsonData = '{ "Method": "InsertSM","id":"' + $("#SMID").val() + '","name":"' + $("#VesselName").val() + '","port":"' + $("#Port").val() + '","trade":"' + $("#Trade").val() + '","offno":"' + $("#OffNo").val() + '","imo":"' + $("#IMO").val() + '","gt":"' + $("#GT").val() + '","power":"' + $("#Power").val() + '","crew":"' + $("#Crew").val() + '","type":"' + $("#ShipType").val() + '","nrt":"' + $("#NRT").val() + '","country":"' + $("#Country").val() + '","photo":"' + result + '","status":"' + status + '"}';
 
             var datax;
             $.ajax({

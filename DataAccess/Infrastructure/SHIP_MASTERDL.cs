@@ -35,6 +35,14 @@ namespace DataAccess.Infrastructure
             return drb;
 
         }
+        public List<SHIP_MASTER_Base> getdatabytypeid(int comid)
+        {
+
+            List<SHIP_MASTER> dr = db1.SHIP_MASTER.Where(q => q.TYPEID == comid).ToList();
+            List<SHIP_MASTER_Base> drb = generate_Base(dr);
+            return drb;
+
+        }
         public SHIP_MASTER_Base insertdata(SHIP_MASTER_Base dr)
         {
             int id = dr.SMID;
@@ -62,7 +70,7 @@ namespace DataAccess.Infrastructure
                     result.AREA_OF_OPERATION = dr.AREA_OF_OPERATION;
                     result.OFFICIAL_NO = dr.OFFICIAL_NO;
                     result.POWER_KW_BHP = dr.POWER_KW_BHP;
-                    result.CLIENT_ID = dr.CLIENT_ID;
+                   // result.CLIENT_ID = dr.CLIENT_ID;
                     result.COUNTRY_FLAG = dr.COUNTRY_FLAG;
                     result.TYPEID = dr.TYPEID;
                     result.STATUS = dr.STATUS;
@@ -99,7 +107,7 @@ namespace DataAccess.Infrastructure
                 result.AREA_OF_OPERATION = dr.AREA_OF_OPERATION;
                 result.OFFICIAL_NO = dr.OFFICIAL_NO;
                 result.POWER_KW_BHP = dr.POWER_KW_BHP;
-                result.CLIENT_ID = dr.CLIENT_ID;
+              //  result.CLIENT_ID = dr.CLIENT_ID;
                 result.COUNTRY_FLAG = dr.COUNTRY_FLAG;
                 result.TYPEID = dr.TYPEID;
                 result.PHOTO = dr.PHOTO;
@@ -140,7 +148,7 @@ namespace DataAccess.Infrastructure
                 drb.AREA_OF_OPERATION = dr.AREA_OF_OPERATION;
                 drb.OFFICIAL_NO = dr.OFFICIAL_NO;
                 drb.POWER_KW_BHP = dr.POWER_KW_BHP;
-                drb.CLIENT_ID = dr.CLIENT_ID;
+             //   drb.CLIENT_ID = dr.CLIENT_ID;
                 drb.COUNTRY_FLAG = dr.COUNTRY_FLAG;
                 drb.TYPEID = dr.TYPEID;
                 if (dr.PHOTO != null && dr.PHOTO != "")
@@ -187,7 +195,7 @@ namespace DataAccess.Infrastructure
                 drb.AREA_OF_OPERATION = dr.AREA_OF_OPERATION;
                 drb.OFFICIAL_NO = dr.OFFICIAL_NO;
                 drb.POWER_KW_BHP = dr.POWER_KW_BHP;
-                drb.CLIENT_ID = dr.CLIENT_ID;
+              //  drb.CLIENT_ID = dr.CLIENT_ID;
                 drb.COUNTRY_FLAG = dr.COUNTRY_FLAG;
                 drb.TYPEID = dr.TYPEID;
                 if (dr.PHOTO != null && dr.PHOTO != "")

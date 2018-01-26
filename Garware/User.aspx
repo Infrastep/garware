@@ -173,8 +173,8 @@
                                                                     <div class="form-group">
                                                                         <label class="control-label col-md-3">Status</label>
                                                                         <div class="col-md-9">
-                                                                            <input type="radio" name="Status" value="9" id="stenable" class="rdubtn"  /><label  for="stenable">Enable</label>
-                                                                            <input type="radio" name="Status" value="10" id="stendisable" class="rdubtn" /><label  for="stendisable">Disable</label>
+                                                                            <input type="radio" name="Status" value="1" id="stenable" class="rdubtn"  /><label  for="stenable">Enable</label>
+                                                                            <input type="radio" name="Status" value="2" id="stendisable" class="rdubtn" /><label  for="stendisable">Disable</label>
                                                                         </div>
                                                                     </div>
                                                                 </div>

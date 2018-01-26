@@ -31,5 +31,10 @@ namespace BuisnessController
             SHIP_MASTERDL ed = new SHIP_MASTERDL();
             return ed.getdatabyclientid(comid);
         }
+        public static List<SHIP_MASTER_Base> getdatabytypeid(int typeid)
+        {
+            SHIP_MASTERDL ed = new SHIP_MASTERDL();
+            return ed.getdatabytypeid(typeid);
+        }
     }
 }

@@ -67,3 +67,16 @@ D:\Garware\GIT\garware\BuisnessController\bin\Debug\AutoMapper.xml
 D:\Garware\GIT\garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
 D:\Garware\GIT\garware\BuisnessController\obj\Debug\BuisnessController.dll
 D:\Garware\GIT\garware\BuisnessController\obj\Debug\BuisnessController.pdb
+I:\garwaregit\garware\BuisnessController\bin\Debug\BuisnessController.dll
+I:\garwaregit\garware\BuisnessController\bin\Debug\BuisnessController.pdb
+I:\garwaregit\garware\BuisnessController\bin\Debug\BaseClass.dll
+I:\garwaregit\garware\BuisnessController\bin\Debug\DataAccess.dll
+I:\garwaregit\garware\BuisnessController\bin\Debug\EntityFramework.dll
+I:\garwaregit\garware\BuisnessController\bin\Debug\AutoMapper.dll
+I:\garwaregit\garware\BuisnessController\bin\Debug\BaseClass.pdb
+I:\garwaregit\garware\BuisnessController\bin\Debug\DataAccess.pdb
+I:\garwaregit\garware\BuisnessController\bin\Debug\DataAccess.dll.config
+I:\garwaregit\garware\BuisnessController\bin\Debug\AutoMapper.xml
+I:\garwaregit\garware\BuisnessController\obj\Debug\BuisnessController.csprojResolveAssemblyReference.cache
+I:\garwaregit\garware\BuisnessController\obj\Debug\BuisnessController.dll
+I:\garwaregit\garware\BuisnessController\obj\Debug\BuisnessController.pdb

@@ -52,7 +52,7 @@ namespace Garware.Handler
                     obj.NATIONALITY = 1;
                     obj.PHOTO = postdata.photo.ToString();
 
-                    obj.RELIGIONID = Convert.ToInt32(2);
+                    obj.RELIGIONID = Convert.ToInt32(1);
                     obj.FATHER_NAME = "";
                     obj.EMAIL = postdata.pmemail.ToString();
                     obj.SEX = postdata.prefix.ToString();

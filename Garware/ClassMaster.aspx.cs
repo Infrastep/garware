@@ -12,11 +12,11 @@ namespace Garware
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoginView1.RoleGroups[0].Roles = getper("testuser", 3);
+            LoginView1.RoleGroups[0].Roles = getper("ClassMaster", 3);
 
-            LoginView1.RoleGroups[1].Roles = getper("testuser", 2);
+            LoginView1.RoleGroups[1].Roles = getper("ClassMaster", 2);
 
-            LoginView1.RoleGroups[2].Roles = getper("testuser", 1); 
+            LoginView1.RoleGroups[2].Roles = getper("ClassMaster", 1); 
         }
     }
 }

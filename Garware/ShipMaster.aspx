@@ -217,7 +217,7 @@
 
                                     <div class="clearfix"></div>
                                     <!--/span-->
-                                    <div class="col-md-6">
+                               <%--     <div class="col-md-6">
                                         <div class="form-group ">
                                             <label class="control-label col-md-3">Owner</label>
                                             <div class="col-md-9">
@@ -226,7 +226,7 @@
                                                 <span class="help-block"></span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>--%>
 
                                     <div class="col-md-6">
                                         <div class="form-group ">
@@ -299,7 +299,7 @@
                         <div class="row">
 
 
-                            <div class="col-md-6">
+                           <%-- <div class="col-md-6">
                                 <div class="form-group ">
                                     <label class="control-label col-md-3">Client:</label>
                                     <div class="col-md-6">
@@ -307,7 +307,7 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--%>
                             <div class="col-md-6">
                                 <div class="form-group ">
                                     <label class="control-label col-md-3">Ship Type:</label>
@@ -323,7 +323,6 @@
                             <thead>
                                 <tr>
                                     <th>Ship Name</th>
-                                    <th>Client Name</th>
                                     <th>IMO No</th>
                                     <th>GT Power</th>
                                     <th>Number Of Crew</th>
@@ -418,7 +417,7 @@
                         <div class="row">
 
 
-                            <div class="col-md-6">
+                       <%--     <div class="col-md-6">
                                 <div class="form-group ">
                                     <label class="control-label col-md-3">Client:</label>
                                     <div class="col-md-6">
@@ -426,7 +425,7 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--%>
                             <div class="col-md-6">
                                 <div class="form-group ">
                                     <label class="control-label col-md-3">Ship Type:</label>
@@ -442,7 +441,6 @@
                             <thead>
                                 <tr>
                                     <th>Ship Name</th>
-                                    <th>Client Name</th>
                                     <th>IMO No</th>
                                     <th>GT Power</th>
                                     <th>Number Of Crew</th>
@@ -494,7 +492,7 @@
             Layout.init(); // init current layout
             QuickSidebar.init(); // init quick sidebar
             Demo.init(); // init demo features
-            ShipViewModel.init();
+            ShipViewModel.init(0);
             BindCountry();
             BindShipType();
             BindClient();

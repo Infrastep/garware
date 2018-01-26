@@ -57,7 +57,7 @@ namespace Garware.Handler
                
                 if(Membership.GetUser() !=null)
                 {
-                    var usr = Roles.GetUsersInRole("Subscriber");
+                    var usr = Roles.GetUsersInRole("Floating_Stuff");
                     roles=Roles.GetRolesForUser(Membership.GetUser().UserName);
                     if (roles.Length > 0)
                     { rolename = roles[0]; }

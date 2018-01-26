@@ -39,7 +39,7 @@ namespace Garware.Handler
                 obj.POWER_KW_BHP = Convert.ToString(postdata.power.ToString());                
                 obj.TYPEID = Convert.ToInt32(postdata.type.ToString());                
                 obj.COUNTRY_FLAG = Convert.ToInt32(postdata.country.ToString());
-                obj.CLIENT_ID = Convert.ToInt32(postdata.client.ToString());
+              //  obj.CLIENT_ID = Convert.ToInt32(postdata.client.ToString());
                 obj.PHOTO = Convert.ToString(postdata.photo.ToString()); 
                 obj.ADD_BY = "";
                 obj.EDIT_BY = "";
@@ -63,6 +63,14 @@ namespace Garware.Handler
                 lst = ShipMasterBC.getdatabyclientid(CLIENT_ID);
                 jstring = JsonConvert.SerializeObject(lst);
             }
+            if (data == "GetSMT")
+            {
+                List<SHIP_MASTER_Base> lst = new List<SHIP_MASTER_Base>();
+                int Type_ID = Convert.ToInt32(postdata.Type.ToString());
+                lst = ShipMasterBC.getdatabytypeid(Type_ID);
+                jstring = JsonConvert.SerializeObject(lst);
+            }
+
             if (data == "GetSMByID")
             {
                 SHIP_MASTER_Base lst = new SHIP_MASTER_Base();

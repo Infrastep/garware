@@ -100,7 +100,7 @@
                                             <a href="#general" data-toggle="tab" aria-expanded="true">General</a>
                                         </li>
                                         <li class="">
-                                            <a href="#CompanyBranch" data-toggle="tab" aria-expanded="false">Branch</a>
+                                            <a href="#CompanyBranch" data-toggle="tab" aria-expanded="false">Bank Details</a>
                                         </li>
 
                                     </ul>

@@ -30,12 +30,12 @@ var UserViewModel = function () {
             restoreRow();
             var aData = oTable.fnGetData(nRow);
             
-            if (aData.STATUS == 9) {
+            if (aData.STATUS == 1) {
 
                 $("#stenable").attr('checked', 'checked');
                 $("#stenable").parents('span').addClass("checked");
             }
-            else if (aData.STATUS == 10)
+            else if (aData.STATUS == 2)
             {
                 $("#stendisable").attr('checked', 'checked');
                 $("#stendisable").parents('span').addClass("checked");

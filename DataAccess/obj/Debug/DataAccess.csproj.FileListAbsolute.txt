@@ -51,3 +51,14 @@ D:\Garware\GIT\garware\DataAccess\bin\Debug\AutoMapper.xml
 D:\Garware\GIT\garware\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 D:\Garware\GIT\garware\DataAccess\obj\Debug\DataAccess.dll
 D:\Garware\GIT\garware\DataAccess\obj\Debug\DataAccess.pdb
+I:\garwaregit\garware\DataAccess\bin\Debug\DataAccess.dll.config
+I:\garwaregit\garware\DataAccess\bin\Debug\DataAccess.dll
+I:\garwaregit\garware\DataAccess\bin\Debug\DataAccess.pdb
+I:\garwaregit\garware\DataAccess\bin\Debug\AutoMapper.dll
+I:\garwaregit\garware\DataAccess\bin\Debug\BaseClass.dll
+I:\garwaregit\garware\DataAccess\bin\Debug\System.Data.dll
+I:\garwaregit\garware\DataAccess\bin\Debug\BaseClass.pdb
+I:\garwaregit\garware\DataAccess\bin\Debug\AutoMapper.xml
+I:\garwaregit\garware\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+I:\garwaregit\garware\DataAccess\obj\Debug\DataAccess.dll
+I:\garwaregit\garware\DataAccess\obj\Debug\DataAccess.pdb

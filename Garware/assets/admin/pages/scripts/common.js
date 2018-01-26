@@ -45,13 +45,44 @@ function BindRPTMonth() {
     var month = moment.localeData().monthsShort();
     $.each(year, function (valyr, textyr) {
         $.each(month, function (valmo, textmo) {
-            $('#RPTMonth').append(
+            $('.RPTMonth').append(
                 $('<option></option>').val(textyr + "," + textmo).html(textmo + "   " + textyr)
             );
         });
     });
 
 }
+
+function BindDutyType() {
+   
+    var urlToHandler1 = "/Handler/DutytypeMasterHandler.ashx";
+    jsonData1 = '{ "Method": "Getdata"}';
+
+    var datax;
+    $.ajax({
+        url: urlToHandler1,
+        data: jsonData1,
+        dataType: 'json',
+        type: 'POST',
+        async: false,
+        contentType: 'application/json',
+        success: function (msg) {
+
+            $('#Dutytype').append($("<option />").val(0).text("Select"));
+            $.each(msg, function (key, value) {
+
+
+                $('#Dutytype').append($("<option />").val(value.ID).text(value.DESCRIPTION));
+
+
+
+            });
+
+
+        }
+    });
+}
+
 
 function BindClass() {
     var urlToHandler2 = "/Handler/ClassMasterHandler.ashx";

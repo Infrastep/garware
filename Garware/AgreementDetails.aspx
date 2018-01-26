@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-md-12">
 
-                <%--<div class="portlet box red bg-inverse">
+                <div class="portlet box red bg-inverse">
                     <div class="portlet-title">
                         <div class="caption">
                             <i class="fa fa-globe"></i>Insert Update Data
@@ -64,7 +64,57 @@
                             <div class="form-body">
                                 <div class="row">
                                     <input id="ACID" type="hidden" value="0" />
-                                    <div class="col-md-12">
+
+                                        <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label class="control-label col-md-3">Company</label>
+
+                                            <div class="col-md-9">
+                                                <select class="form-control" id="Company">
+                                                </select>
+                                                <span class="help-block"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="col-md-4">
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Ref No</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" id="RefNo" type="text" />
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                         <div class="col-md-4">
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Ref Date</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" id="RefDate" type="text" />
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                     <div class="col-md-12">
+                                        <div class="form-group ">
+                                            <label class="control-label col-md-3">Ship</label>
+
+                                            <div class="col-md-9">
+                                                <select class="form-control" id="Ship">
+                                                </select>
+                                                <span class="help-block"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                      <div class="col-md-6">
                                         <div class="form-group ">
                                             <label class="control-label col-md-3">Employee Code</label>
 
@@ -75,11 +125,34 @@
                                             </div>
                                         </div>
                                     </div>
+                                     <div class="col-md-6">
+                                        <div class="form-group ">
+                                            <label class="control-label col-md-3">Employee Name</label>
 
+                                            <div class="col-md-9">
+                                              <input class="form-control" id="EmpName" type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                      <div class="col-md-12">
+                                        <div class="form-group ">
+                                            <label class="control-label col-md-3">Rank</label>
+
+                                            <div class="col-md-9">
+                                                <select class="form-control" id="Rank">
+                                                </select>
+                                                <span class="help-block"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                   
 
 
                                 </div>
-                                <div class="row">
+                               <%-- <div class="row">
 
                                     <div class="col-md-12">
                                         <div class="form-group ">
@@ -95,8 +168,8 @@
 
 
 
-                                </div>
-                                <div class="row">
+                                </div>--%>
+                               <%-- <div class="row">
 
                                     <div class="col-md-12">
                                         <div class="form-group ">
@@ -112,7 +185,7 @@
 
 
 
-                                </div>
+                                </div>--%>
                                 <div id="dvmo" class="row" style="display:none">
                                     <div class="col-md-12">
                                 	<div class="form-group">
@@ -139,13 +212,39 @@
                                 </div>
                                  <div class="row">
 
-                                    <div class="col-md-12">
+                                    <div class="col-md-4">
 
 
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Amount</label>
+                                            <label class="control-label col-md-3">Basic</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" id="Basicamount" type="text" />
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
                                             <div class="col-md-4">
-                                                <input class="form-control" id="amount" type="text" />
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Bonus</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" id="Bonusamount" type="text" />
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                     <div class="col-md-4">
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3">Gross</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" id="Grossamount" type="text" />
 
                                             </div>
                                         </div>
@@ -245,7 +344,7 @@
                         </div>
                         <!-- END FORM-->
                     </div>
-                </div>--%>
+                </div>
 
             </div>
 
@@ -275,10 +374,13 @@
                                     <th>Ship Name
                                  
                                     </th>
-                                    
-                                    
+                                    <th>Rank
+                                 
+                                    </th>                                   
                                     
                                     <th>Edit
+                                    </th>
+                                    <th>Contract Letter
                                     </th>
                                 </tr>
                             </thead>
@@ -322,7 +424,10 @@
             Demo.init(); // init demo features
             ComponentsPickers.init();
             handleDMSpinners();
-            //BindEmployee();
+            BindCompany();
+            BindRank();
+            BindShip();
+            BindEmployee();
             //BindAgreement();
             //BindTaxCode();
             handleDatePickers();
