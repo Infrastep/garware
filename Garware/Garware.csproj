@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -4607,7 +4610,11 @@
     <Content Include="PagePermission.aspx" />
     <Content Include="PfRemit.aspx" />
     <Content Include="Report_Duty_Details.aspx" />
+    <Content Include="Report_Employee_List.aspx" />
     <Content Include="Report_Employee_List_Monthly_Basic.aspx" />
+    <Content Include="Report_Master.aspx" />
+    <Content Include="Report_Payslip.aspx" />
+    <Content Include="Report_Salary_Statement.aspx" />
     <Content Include="Rule0.aspx" />
     <Content Include="Rule1.aspx" />
     <Content Include="Rule2.aspx" />
@@ -4663,6 +4670,8 @@
     <Content Include="Handler\GratuityRemitHandler.ashx" />
     <Content Include="Handler\ActualSavingsHandler.ashx" />
     <Content Include="Handler\MiscTaxableIncomeHandler.ashx" />
+    <Content Include="Handler\ReportHandler.ashx" />
+    <Content Include="Handler\DutytypeMasterHandler.ashx" />
     <None Include="Properties\PublishProfiles\garware.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -4954,6 +4963,9 @@
     <Compile Include="Handler\AgreementDetailsHandler.ashx.cs">
       <DependentUpon>AgreementDetailsHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\DutytypeMasterHandler.ashx.cs">
+      <DependentUpon>DutytypeMasterHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\EarningDeductionMasterHandler.ashx.cs">
       <DependentUpon>EarningDeductionMasterHandler.ashx</DependentUpon>
     </Compile>
@@ -4983,6 +4995,9 @@
     </Compile>
     <Compile Include="Handler\PfRemitHandler.ashx.cs">
       <DependentUpon>PfRemitHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ReportHandler.ashx.cs">
+      <DependentUpon>ReportHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Handler\Rule0Handler.ashx.cs">
       <DependentUpon>Rule0Handler.ashx</DependentUpon>
@@ -5266,6 +5281,60 @@
     <Compile Include="ReligionMaster.aspx.designer.cs">
       <DependentUpon>ReligionMaster.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Allotment_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Allotment_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Allotment_Voucher.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Allotment_Voucher.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Article_of_Agreement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Article_of_Agreement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Bank_letter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bank_letter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Contract_Letter_Crew.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contract_Letter_Crew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\employee_list.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employee_list.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Gratuity_Letter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gratuity_Letter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PF_Letter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PF_Letter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\withheld_refund_statement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>withheld_refund_statement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report_Duty_Details.aspx.cs">
       <DependentUpon>Report_Duty_Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5273,12 +5342,40 @@
     <Compile Include="Report_Duty_Details.aspx.designer.cs">
       <DependentUpon>Report_Duty_Details.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Report_Employee_List.aspx.cs">
+      <DependentUpon>Report_Employee_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Employee_List.aspx.designer.cs">
+      <DependentUpon>Report_Employee_List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Report_Employee_List_Monthly_Basic.aspx.cs">
       <DependentUpon>Report_Employee_List_Monthly_Basic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Report_Employee_List_Monthly_Basic.aspx.designer.cs">
       <DependentUpon>Report_Employee_List_Monthly_Basic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Master.aspx.cs">
+      <DependentUpon>Report_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Master.aspx.designer.cs">
+      <DependentUpon>Report_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Payslip.aspx.cs">
+      <DependentUpon>Report_Payslip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Payslip.aspx.designer.cs">
+      <DependentUpon>Report_Payslip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Salary_Statement.aspx.cs">
+      <DependentUpon>Report_Salary_Statement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Salary_Statement.aspx.designer.cs">
+      <DependentUpon>Report_Salary_Statement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Rule0.aspx.cs">
       <DependentUpon>Rule0.aspx</DependentUpon>
@@ -5491,6 +5588,47 @@
       <Project>{0eaf3f6f-a6f6-4a45-bfc7-e345c6efe9ec}</Project>
       <Name>BuisnessController</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\Allotment_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Allotment_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Allotment_Voucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Allotment_Voucher.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Article_of_Agreement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Article_of_Agreement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Bank_letter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bank_letter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Contract_Letter_Crew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Contract_Letter_Crew.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\employee_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>employee_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Gratuity_Letter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Gratuity_Letter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PF_Letter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PF_Letter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\withheld_refund_statement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>withheld_refund_statement.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

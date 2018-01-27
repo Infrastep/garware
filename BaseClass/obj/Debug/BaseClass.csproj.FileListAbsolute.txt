@@ -21,3 +21,8 @@ D:\Garware\GIT\garware\BaseClass\bin\Debug\BaseClass.pdb
 D:\Garware\GIT\garware\BaseClass\obj\Debug\BaseClass.csprojResolveAssemblyReference.cache
 D:\Garware\GIT\garware\BaseClass\obj\Debug\BaseClass.dll
 D:\Garware\GIT\garware\BaseClass\obj\Debug\BaseClass.pdb
+I:\garwaregit\garware\BaseClass\bin\Debug\BaseClass.dll
+I:\garwaregit\garware\BaseClass\bin\Debug\BaseClass.pdb
+I:\garwaregit\garware\BaseClass\obj\Debug\BaseClass.csprojResolveAssemblyReference.cache
+I:\garwaregit\garware\BaseClass\obj\Debug\BaseClass.dll
+I:\garwaregit\garware\BaseClass\obj\Debug\BaseClass.pdb

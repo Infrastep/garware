@@ -30,6 +30,18 @@ namespace DataAccess.Infrastructure
 
         }
 
+
+        public AGREEMENT_DETAILS_Base_AD getdata(String Ref)
+        {
+
+            AGREEMENT_DETAILS dr = db1.AGREEMENT_DETAILS.Where(q => q.ref_no == Ref).Single();
+            AGREEMENT_DETAILS_Base_AD STM = generate_Base(dr);
+            return STM;
+
+
+        }
+
+
         public AGREEMENT_DETAILS_Base_AD insertdata(AGREEMENT_DETAILS_Base_AD dr)
         {
             Int64 id = dr.AGREEMENT_DETAILS_ID;

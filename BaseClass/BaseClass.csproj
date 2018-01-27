@@ -126,6 +126,8 @@
     <Compile Include="VM\ShipMovemnet\COUNTRY_MASTER_Base.cs" />
     <Compile Include="VM\ShipMovemnet\SHIP_MOVEMENT_Base.cs" />
     <Compile Include="VM\ShipMovemnet\SHIP_MASTER_Base.cs" />
+    <Compile Include="VM\WithheldRefund\EMP_FIXED_Base.cs" />
+    <Compile Include="VM\WithheldRefund\WITHHELD_REFUND_Base.cs" />
     <Compile Include="vw_EmployeeDetails_Base.cs" />
     <Compile Include="WITHHELD_REFUND_Base.cs" />
     <Compile Include="WITHHELD_TRANSFER_Base.cs" />

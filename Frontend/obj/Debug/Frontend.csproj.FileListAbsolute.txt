@@ -113,7 +113,6 @@ I:\garwaregit\garware\Frontend\bin\BuisnessController.pdb
 I:\garwaregit\garware\Frontend\bin\EntityFramework.xml
 I:\garwaregit\garware\Frontend\bin\EntityFramework.SqlServer.xml
 I:\garwaregit\garware\Frontend\bin\DataAccess.pdb
-I:\garwaregit\garware\Frontend\bin\DataAccess.dll.config
 I:\garwaregit\garware\Frontend\bin\AutoMapper.xml
 I:\garwaregit\garware\Frontend\obj\Debug\Frontend.csprojResolveAssemblyReference.cache
 I:\garwaregit\garware\Frontend\obj\Debug\Frontend.dll

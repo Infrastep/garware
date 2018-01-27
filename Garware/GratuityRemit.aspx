@@ -320,7 +320,8 @@
                         <table class="table table-striped table-bordered table-hover" id="GratuityRemitTable">
                             <thead>
                                 <tr>
-
+                                      <th>ID
+                                    </th>
                                     <th>Letter No
                                     </th>
                                     <th>Letter Date
@@ -330,6 +331,8 @@
                                     </th>
                                     
                                     <th>Edit
+                                    </th>
+                                    <th>Letter Print
                                     </th>
                                 </tr>
                             </thead>

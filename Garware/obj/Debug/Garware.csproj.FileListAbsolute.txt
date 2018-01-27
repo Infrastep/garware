@@ -82,7 +82,6 @@ I:\garwaregit\garware\Garware\bin\AutoMapper.dll
 I:\garwaregit\garware\Garware\bin\BaseClass.pdb
 I:\garwaregit\garware\Garware\bin\BuisnessController.pdb
 I:\garwaregit\garware\Garware\bin\DataAccess.pdb
-I:\garwaregit\garware\Garware\bin\DataAccess.dll.config
 I:\garwaregit\garware\Garware\bin\AutoMapper.xml
 I:\garwaregit\garware\Garware\obj\Debug\Garware.csprojResolveAssemblyReference.cache
 I:\garwaregit\garware\Garware\obj\Debug\Garware.dll

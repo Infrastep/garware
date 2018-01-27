@@ -46,7 +46,7 @@ function BindRPTMonth() {
     $.each(year, function (valyr, textyr) {
         $.each(month, function (valmo, textmo) {
             $('.RPTMonth').append(
-                $('<option></option>').val(textyr + "," + textmo).html(textmo + "   " + textyr)
+                $('<option></option>').val(textyr + "," + valmo).html(textmo + "   " + textyr)
             );
         });
     });
@@ -68,7 +68,7 @@ function BindDutyType() {
         contentType: 'application/json',
         success: function (msg) {
 
-            $('#Dutytype').append($("<option />").val(0).text("Select"));
+        //    $('#Dutytype').append($("<option />").val(0).text("Select"));
             $.each(msg, function (key, value) {
 
 
@@ -1323,7 +1323,7 @@ function BindAgreement() {
             $.each(msg, function (key, value) {
 
 
-                $('#agreement').append($("<option />").val(value.AGREEMENT_DETAILS_ID).text(value.AGREEMENT_CODE));
+                $('#agreement').append($("<option />").val(value.AGREEMENT_DETAILS_ID).text(value.ref_no));
 
 
 

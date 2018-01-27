@@ -40,6 +40,17 @@ namespace Garware.Handler
                     jstring = JsonConvert.SerializeObject("Success");
                     break;
 
+                case "Getdataref":
+
+                    jstring = JsonConvert.SerializeObject(AGREEMENT_DETAILSBC.getdata(postdata.refno.ToString()));
+                    break;
+
+                case "Getdataid":
+
+                    jstring = JsonConvert.SerializeObject(AGREEMENT_DETAILSBC.getdata(Convert.ToInt32(postdata.id)));
+                    break;
+
+
                 case "Getdata":
 
                     jstring = JsonConvert.SerializeObject(AGREEMENT_DETAILSBC.getdata());

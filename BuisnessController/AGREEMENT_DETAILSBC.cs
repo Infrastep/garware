@@ -26,5 +26,10 @@ namespace BuisnessController
             AGREEMENT_DETAILSDL ed = new AGREEMENT_DETAILSDL();
             return ed.getdata(id);
         }
+        public static AGREEMENT_DETAILS_Base_AD getdata(string Ref)
+        {
+            AGREEMENT_DETAILSDL ed = new AGREEMENT_DETAILSDL();
+            return ed.getdata(Ref);
+        }
     }
 }

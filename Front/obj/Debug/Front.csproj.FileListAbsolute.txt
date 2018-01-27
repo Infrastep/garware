@@ -54,7 +54,6 @@ I:\garwaregit\garware\Front\bin\AutoMapper.dll
 I:\garwaregit\garware\Front\bin\BaseClass.pdb
 I:\garwaregit\garware\Front\bin\BuisnessController.pdb
 I:\garwaregit\garware\Front\bin\DataAccess.pdb
-I:\garwaregit\garware\Front\bin\DataAccess.dll.config
 I:\garwaregit\garware\Front\bin\AutoMapper.xml
 I:\garwaregit\garware\Front\obj\Debug\Front.csprojResolveAssemblyReference.cache
 I:\garwaregit\garware\Front\obj\Debug\Front.dll

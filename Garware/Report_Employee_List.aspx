@@ -128,6 +128,8 @@
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-offset-3 col-md-9">
+                                                  <button type="button" data-toggle="modal" data-target="#empModal" class="btn green" id="openempmodal">Select Employee</button>
+                                               
                                                 <button type="button" class="btn green" id="Insertdata">Ok</button>
                                                 <button type="button" class="btn default">Cancel</button>
                                             </div>
@@ -147,6 +149,27 @@
 
         </div>
     </div>
+       <!-- Modal -->
+<div class="modal fade" id="empModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <select multiple id="Emp" class="form-control">
+                                                 
+                                                </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footercontent" runat="server">
       <!-- BEGIN PAGE LEVEL PLUGINS -->
@@ -175,6 +198,33 @@
             BindCategory();
             BindShip();
             BindDutyType();
+            BindEmployee();
         });
+        var ReportHandler = "/Handler/ReportHandler.ashx";
+        $("#Insertdata").click(function () {
+            var selectedRank = [];
+            $("#Rank :selected").each(function () {
+                selectedRank.push($(this).val());
+            });
+
+            var selectedDt = [];
+            $("#Dutytype :selected").each(function () {
+                selectedDt.push($(this).val());
+            });
+
+            var selectedshp = [];
+            $("#Ship :selected").each(function () {
+                selectedshp.push($(this).val());
+            });
+
+         //   alert(selectedRank);
+
+            window.open(ReportHandler + "?Method=employee_list&Rank=" + selectedRank + "&Dt=" + selectedDt + "&shp=" + selectedshp);
+            return false;
+        });
+
+      
+
+
     </script>
 </asp:Content>

@@ -22,12 +22,18 @@
     }
 
     var initTablecer = function () {
+        var ReportHandler = "/Handler/ReportHandler.ashx";
         var table = $('#PfRemitTable');
 
         /* Table tools samples: https://www.datatables.net/release-datatables/extras/TableTools/ */
 
         /* Set tabletools buttons and button container */
+        function PrintContract(oTable, nRow) {
 
+            var aData = oTable.fnGetData(nRow);
+            //alert(aData.GRATUITY_REMITID);
+            window.open(ReportHandler + "?Method=PF_Letter&id=" + aData.PF_REMIT_ID);
+        }
 
 
         function editRow(oTable, nRow) {
@@ -135,7 +141,7 @@
             data: orders,
 
             "columns": [
-
+                  { "data": "PF_REMIT_ID"},
                         { "data": "REF_NO" },
                         {
                             "data": "REF_DT",
@@ -161,7 +167,14 @@
                               "render": function (data, type, full, meta) {
                                   return '<a class="edit" href="javascript:;">Edit </a>';
                               }
-                          }],
+                          },
+                           {
+                               "data": null,
+                               "render": function (data, type, full, meta) {
+                                   return '<a class="Rptprint" href="javascript:;">Print </a>';
+                               }
+                           }
+            ],
 
             deferRender: true,
 
@@ -223,6 +236,17 @@
                 editRow(oTable, nRow);
                 nEditing = nRow;
             }
+        });
+        table.on('click', '.Rptprint', function (e) {
+            e.preventDefault();
+
+            /* Get the row as a parent of the link that was clicked on */
+            var nRow = $(this).parents('tr')[0];
+
+            /* No edit in progress - let's start one */
+            PrintContract(oTable, nRow);
+            nEditing = nRow;
+
         });
     }
 

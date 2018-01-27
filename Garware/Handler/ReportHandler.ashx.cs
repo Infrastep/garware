@@ -6,6 +6,7 @@ using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using System.IO;
 using Newtonsoft.Json;
+using System.Configuration;
 
 namespace Garware.Handler
 {
@@ -23,17 +24,54 @@ namespace Garware.Handler
             string sBuf = str.ReadToEnd();
             dynamic postdata = JsonConvert.DeserializeObject(sBuf);
             string data = context.Request.QueryString["Method"];// postdata.Method.ToString();
-
+            ReportPath = ConfigurationManager.AppSettings["Reportpath"] + data + ".rpt";
 
 
             switch (data)
             {
-                case "FirstReport":
+                case "Allotment_Report":
 
-                    ReportPath = "D:\\Garware\\GIT\\garware\\Garware\\Reports\\" + context.Request.QueryString["ReportName"].ToString() + ".rpt";
+                  
                     SelectionFormula = "{EMP_FIXED.EMPID}=" + Convert.ToInt32(context.Request.QueryString["id"]);
            
                     break;
+
+                case "Gratuity_Letter":
+
+
+                    SelectionFormula = "{PF_REMIT.GRATUITY_REMITID}=" + Convert.ToInt32(context.Request.QueryString["id"]);
+
+                    break;
+                case "PF_Letter":
+
+
+                    SelectionFormula = "{PF_REMIT.PF_REMIT_ID}=" + Convert.ToInt32(context.Request.QueryString["id"]);
+
+                    break;
+
+                    case "employee_list":
+
+                    string _rank = string.Empty;
+                    if (context.Request.QueryString["Rank"] == "")
+                        _rank = "{RANK_MASTER.RANKID}in [{RANK_MASTER.RANKID}]";
+                    else
+                        _rank = "{RANK_MASTER.RANKID} in[" + context.Request.QueryString["Rank"] + "]";
+
+                    string _dt = string.Empty;
+                    if (context.Request.QueryString["Dt"] == "")
+                        _dt = "{DUTY_TYPE_MASTER.ID} in[{DUTY_TYPE_MASTER.ID}]";
+                    else
+                        _dt = "{DUTY_TYPE_MASTER.ID} in[" + context.Request.QueryString["Dt"] + "] ";
+
+                                        string _shp = string.Empty;
+                    if (context.Request.QueryString["shp"] == "")
+                        _shp = "{SHIP_MASTER.SMID} in[{SHIP_MASTER.SMID}]";
+                    else
+                        _shp = "{SHIP_MASTER.SMID} in[" + context.Request.QueryString["shp"] + "] ";
+
+                     SelectionFormula = _rank + " and "+_dt+" and "+ _shp;
+                    break;
+
             }
            
          

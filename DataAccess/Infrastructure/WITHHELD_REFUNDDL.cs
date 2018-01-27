@@ -7,30 +7,33 @@ using System.Threading.Tasks;
 using BaseClass;
 using DataAccess.EF;
 using AutoMapper;
+
+using BaseClass.VM.WithheldRefund;
+
 namespace DataAccess.Infrastructure
 {
     public class WITHHELD_REFUNDDL : COreEI
    {
-       public List<WITHHELD_REFUND_Base> getdata()
+       public List<WITHHELD_REFUND_Base_WR> getdata()
        {
 
            List<WITHHELD_REFUND> dr = db1.WITHHELD_REFUND.ToList();
-           List<WITHHELD_REFUND_Base> drb = generate_Base(dr);
+           List<WITHHELD_REFUND_Base_WR> drb = generate_Base(dr);
            return drb;
 
        }
 
-       public WITHHELD_REFUND_Base getdata(int id)
+       public WITHHELD_REFUND_Base_WR getdata(int id)
        {
 
            WITHHELD_REFUND dr = db1.WITHHELD_REFUND.Where(q => q.ID == id).Single();
-           WITHHELD_REFUND_Base STM = generate_Base(dr);
+           WITHHELD_REFUND_Base_WR STM = generate_Base(dr);
            return STM;
 
 
        }
 
-       public WITHHELD_REFUND_Base insertdata(WITHHELD_REFUND_Base dr)
+       public WITHHELD_REFUND_Base_WR insertdata(WITHHELD_REFUND_Base dr)
        {
            int id = dr.ID;
            if (id != 0)
@@ -70,17 +73,17 @@ namespace DataAccess.Infrastructure
            }
        }
 
-       public static WITHHELD_REFUND_Base generate_Base(WITHHELD_REFUND dr)
+       public static WITHHELD_REFUND_Base_WR generate_Base(WITHHELD_REFUND dr)
        {
 
-           WITHHELD_REFUND_Base drb = Mapper.DynamicMap<WITHHELD_REFUND, WITHHELD_REFUND_Base>(dr);
+           WITHHELD_REFUND_Base_WR drb = Mapper.DynamicMap<WITHHELD_REFUND, WITHHELD_REFUND_Base_WR>(dr);
 
            return drb;
        }
 
-       public static List<WITHHELD_REFUND_Base> generate_Base(ICollection<WITHHELD_REFUND> i)
+       public static List<WITHHELD_REFUND_Base_WR> generate_Base(ICollection<WITHHELD_REFUND> i)
        {
-           List<WITHHELD_REFUND_Base> drbl = Mapper.DynamicMap<ICollection<WITHHELD_REFUND>, List<WITHHELD_REFUND_Base>>(i);
+           List<WITHHELD_REFUND_Base_WR> drbl = Mapper.DynamicMap<ICollection<WITHHELD_REFUND>, List<WITHHELD_REFUND_Base_WR>>(i);
 
            return drbl;
        }

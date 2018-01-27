@@ -45,6 +45,7 @@
     <Compile Include="ADDRESSEE_MASTERBC.cs" />
     <Compile Include="ACCOUNT_MASTERBC.cs" />
     <Compile Include="AGREEMENT_DETAILSBC.cs" />
+    <Compile Include="DUTY_TYPE_MASTERBC.cs" />
     <Compile Include="EARNING_DEDUCTION_MASTERBC.cs" />
     <Compile Include="GRATUITY_REMITBC.cs" />
     <Compile Include="MAIN_TABLEBC.cs" />
